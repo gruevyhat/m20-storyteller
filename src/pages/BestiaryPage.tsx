@@ -150,6 +150,10 @@ function BeastDetail({ beast }: { beast: Beast }) {
             {beast.notes && <div><h2 className="h-section mb-2">Powers & notes</h2><p className="text-sm leading-relaxed">{beast.notes}</p></div>}
             <p className="text-xs text-muted">Damage pools are separate from attack rolls. Resolve these homebrew actions manually using your chronicle’s combat rules.</p>
           </section>
+          <section aria-labelledby="beast-ecology-heading">
+            <h2 id="beast-ecology-heading" className="h-section mb-2">Ecology</h2>
+            <p className="text-sm leading-relaxed">{beast.ecology}</p>
+          </section>
         </div>
       </div>
 

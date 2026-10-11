@@ -54,6 +54,7 @@ describe('Bestiary workflow', () => {
     expect(host.querySelector('[role="status"]')?.textContent).toBe('1 creature');
     await click('View stat block');
     expect(host.querySelector('h1')?.textContent).toBe('Hushpelt Tracker');
+    expect(host.querySelector('[aria-labelledby="beast-ecology-heading"]')?.textContent).toContain('windthrown roots');
     const range = host.querySelector('select')!;
     await act(async () => { range.value = 'high'; range.dispatchEvent(new Event('change', { bubbles: true })); });
     await click('Add NPC to chronicle');
@@ -87,6 +88,7 @@ describe('Bestiary workflow', () => {
   it('shows a reference-only entity and an unknown-entry fallback', async () => {
     await render('/bestiary/unclaimed-applause');
     expect(host.textContent).toContain('No physical health track.');
+    expect(host.querySelector('[aria-labelledby="beast-ecology-heading"]')?.textContent).toContain('Unclaimed Applause');
     expect(host.querySelector('button')).toBeNull();
     await act(async () => root.unmount());
     root = createRoot(host);

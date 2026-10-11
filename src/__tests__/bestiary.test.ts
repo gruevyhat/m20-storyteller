@@ -22,6 +22,7 @@ describe('bestiary catalog', () => {
       expect(entry.appearance).toBeTruthy();
       expect(HABITATS).toContain(entry.habitat);
       expect(entry.description).toBeTruthy();
+      expect(entry.ecology.trim(), entry.name).not.toBe('');
       expect(entry.attacks).toBeTruthy();
       expect(entry.abilities.length).toBeGreaterThan(0);
       expect(new Set(entry.abilities.map((t) => t.name)).size).toBe(entry.abilities.length);
@@ -44,6 +45,7 @@ describe('bestiary catalog', () => {
     expect(filterBestiary('glass', 'Aberrations').map((entry) => entry.id)).toContain('windowreef');
     expect(filterBestiary('hushpelt', '', 'City')).toEqual([]);
     expect(filterBestiary('no such creature')).toEqual([]);
+    expect(filterBestiary('cinder seedlings').map((entry) => entry.id)).toEqual(['cinder-skipper']);
     expect(filterBestiary('', 'Unknown type', 'City')).toEqual([]);
   });
 });
@@ -63,6 +65,8 @@ describe('creature NPCs', () => {
     expect(low.abilities.skills.find((t) => t.name === 'Survival')).toEqual({ name: 'Survival', rating: 3, specialty: 'Tracking' });
     expect(low.extra.Attacks).toContain('lethal');
     expect(low.notes).toContain(BESTIARY_ORIGIN);
+    expect(low.notes).toContain(`Ecology: ${beast('hushpelt-tracker').ecology}`);
+    expect(low.extra.Ecology).toBe(beast('hushpelt-tracker').ecology);
   });
 
   it('retains large ratings and uses the creature health track for wounds', () => {
@@ -117,6 +121,7 @@ describe('creature NPCs', () => {
       for (const [name, trait] of Object.entries(c.attributes)) expect(back.attributes[name], entry.name).toEqual(trait);
       if (!entry.attributes.Charisma) expect(back.attributes.Charisma.rating).toBe(0);
       expect(back.extra.Attacks).toBe(c.extra.Attacks);
+      expect(back.extra.Ecology, entry.name).toBe(entry.ecology);
     }
   });
 });

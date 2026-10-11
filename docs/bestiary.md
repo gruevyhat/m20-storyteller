@@ -11,7 +11,13 @@ The roster has eighteen entries in each of four categories. The last sixteen are
 
 Habitats replace the former book filter: City, Industrial, Thresholds, Underground, Waterways and Wilderness. Each entry has an appearance, encounter premise, attack guidance and a bounded special interaction. Creature-specific mechanics include triggers, durations, limits or ways to respond. The app does not automatically resolve them. Use your chronicle's normal combat rules for attack, damage and armor rolls.
 
+## Creature distinctions
+
+The [catalog review](bestiary-review.md) records the role and signature interaction of every entry, plus the nine revisions made to separate overlapping encounters. Shared basic attack pools or health tracks do not imply the same creature. The review compares concepts and player choices as well as names and text.
+
 ## Data and NPC copies
+
+Every entry includes an Ecology section describing its food or other source of sustenance, habitat use, breeding or origin, and effects on its surroundings. These are original homebrew details. Ecology appears on the detail page, is included in catalog search, and is copied into new NPC notes and the `Ecology` reference field for JSON and Markdown backups. Previously saved NPCs remain independent copies.
 
 `src/bestiary/creatures.json` is the complete authored catalog. It contains no book references, extracted source headings, copied stat blocks or imported power lists. The previous `stats.json` and `notes.ts` were removed.
 
