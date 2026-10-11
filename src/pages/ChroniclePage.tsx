@@ -88,8 +88,7 @@ export default function ChroniclePage() {
         <div className="flex items-center gap-3">
           <img src={darkPackLogo} alt="Dark Pack" className="h-16 w-16 shrink-0" />
           <p>
-            Made under Paradox Interactive's Dark Pack Agreement. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used
-            with permission. All rights reserved. For more information please visit worldofdarkness.com.
+            Made under Paradox Interactive's Dark Pack Agreement. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB. All rights reserved. For more information please visit worldofdarkness.com.
           </p>
         </div>
         <p>Page references are to the M20 core rulebook (Onyx Path, 2015).</p>

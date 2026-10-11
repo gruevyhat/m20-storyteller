@@ -190,7 +190,7 @@ export async function characterPdf(c: Character, opts: { chronicle?: string } = 
   if (logo) doc.addImage(logo, 'PNG', 40, H - 58, 24, 24);
   text('Unofficial fan-made sheet from M20 Storyteller; not official World of Darkness material.', W / 2, H - 40, { align: 'center' });
   text(
-    'Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. worldofdarkness.com',
+    'Portions of the materials are the copyrights and trademarks of Paradox Interactive AB. All rights reserved. worldofdarkness.com',
     W / 2,
     H - 32,
     { align: 'center' },
