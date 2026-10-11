@@ -58,11 +58,13 @@ export function parseHealthTrack(track: unknown, count?: number): HealthLevel[] 
   const s = String(track ?? '').split('(')[0];
   const levels: HealthLevel[] = [];
   for (const part of s.split('·')) {
-    const m = part.trim().match(/^([A-Za-z]+)\s*(?:×\s*(\d+))?\s*([−-]\s*\d+)?/);
+    const m = part.trim().match(/^([A-Za-z]+|[−-]\d+)\s*(?:×\s*(\d+))?\s*([−-]\s*\d+)?/);
     if (!m) continue;
     const name = m[1];
     const times = m[2] ? Number(m[2]) : 1;
-    const penalty = name === 'Incapacitated' ? -99 : m[3] ? -Number(m[3].replace(/[\s−-]/g, '')) : 0;
+    const terminal = ['incapacitated', 'dead', 'squished', 'dematerialized', 'dissolved'].includes(name.toLowerCase());
+    const numericPenalty = m[3] ?? (/^[−-]\d+$/.test(name) ? name : undefined);
+    const penalty = terminal ? -99 : numericPenalty ? -Number(numericPenalty.replace(/[\s−-]/g, '')) : 0;
     for (let i = 0; i < times; i++) levels.push({ name, penalty });
   }
   const base = levels.length ? levels : STANDARD_HEALTH.map((l) => ({ ...l }));

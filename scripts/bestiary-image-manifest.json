@@ -1,0 +1,722 @@
+{
+  "cinder-skipper": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 101,
+    "steps": 9,
+    "computePrecision": "bfloat16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. A single Cinder Skipper: a tiny rust-red six-legged lizard with wide ribbed ear fins and a blunt charcoal snout, perched on a cooled black volcanic stone; tiny orange sparks hang behind its leaping feet. Creature is endearing but uncanny, anatomically coherent. Full creature visible, large clear silhouette, three-quarter side view, centered in landscape composition with generous margins. Atmospheric burnt woodland softly recedes behind it, muted charcoal and verdigris palette, warm amber rim light. Painterly rather than photographic. No text, lettering, borders, logos, watermark, or extra creatures."
+  },
+  "rainspool-grazer": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 102,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Rainspool Grazer: Low barrel-shaped teal amphibian with four paddle feet and a spiral of woven reeds on its back, standing in a shallow marsh under drizzle. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "bellreed-darter": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 103,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Bellreed Darter: A single delicate silver insect with long tuning-fork antennae and clear paddle-shaped wings, balanced on the rim of a hollow reed above a pond. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "chalkback-burrower": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 104,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Chalkback Burrower: Squat six-footed cream-colored burrowing animal with blunt shovel tusks and layered chalk plates across its back, beside pale limestone tunnels. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "mossveil-glider": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 105,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Mossveil Glider: Small emerald mammal with a fringed mosslike gliding membrane stretched between four limbs, hanging beneath a wet branch in a shadowy canopy. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "pebblejaw-forager": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 106,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Pebblejaw Forager: Round ochre seed-eating animal with short legs, oversized stone-filled cheek pouches and two tiny ivory incisors, arranging shiny pebbles on a woodland path. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "bristlefin-wader": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 107,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Bristlefin Wader: Long green aquatic animal on four stiltlike legs with a high comb of stiff copper bristles along its spine, braced in a rushing stream. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "coppercrest-runner": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 108,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Coppercrest Runner: Lean flightless rust-feathered bird with long springy legs and a broad burnished copper head crest, standing among railway ballast and discarded wire. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "hushpelt-tracker": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 109,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Hushpelt Tracker: Long low indigo-furred hunter with six slender legs, a broad sensitive nose and velvet ears folded flat, sniffing a warm hollow in twilight grass. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "saltglass-crawler": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 110,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Saltglass Crawler: Hand-sized translucent snail-like shoreline animal with angular salt-crystal plates and four soft feelers, creeping over black tidal rocks. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "thornbasket-nestling": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 111,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Thornbasket Nestling: Tiny tawny climbing mammal with huge black eyes and a curling tail, peeking from a spherical nest woven of green thorn stems on a shrub. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "dewcup-drifter": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 112,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Dewcup Drifter: A single small pale-gold airborne animal with a cup-shaped leaf sail, dangling soft tendrils and a bead of dew in its sail, floating in a misty meadow. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "sootpatch-scavenger": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 113,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Sootpatch Scavenger: A stocky slate-gray alley animal with a broad flat tail and soot-black patches around amber eyes, sitting beside brickwork with dark paw smudges. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "rootknuckle-browser": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 114,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Rootknuckle Browser: Heavy moss-brown herbivore with four walking legs and two thick jointed digging arms, a blunt beak and ridged shoulders, pulling roots beside a fallen tree. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "kiln-porter": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 115,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Kiln Porter: A stout walking automaton made from stacked terracotta kiln rings, thick ceramic arms and a glowing furnace slit, carrying an empty iron tray in a pottery workshop. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "cable-shepherd": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 116,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Cable Shepherd: A low wheeled brass maintenance creature with a sheaf of flexible cable arms and a single blue inspection lamp, sorting tangled wires in a dark service corridor. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "brass-orchard-tender": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 117,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Brass Orchard Tender: Tall brass gardening automaton on three narrow legs with curved pruning-shear hands and a watering-can torso, beneath leafless orchard trees. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "foldpaper-bailiff": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 118,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Foldpaper Bailiff: A small angular humanoid folded entirely from unmarked cream paper, wearing a folded triangular hat and carrying blank notices, before a scarred apartment door. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "rivet-choir": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 119,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Rivet Choir: One barrel-shaped iron machine on short piston legs, six organ-pipe mouths arranged above its riveted chest, venting delicate steam in an old factory. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "glassrail-courier": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 120,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Glassrail Courier: A slender transparent glass automaton balanced on two narrow wheel-feet, a brass parcel compartment in its chest, reflected streetlamps in wet pavement. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "ashcan-archivist": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 121,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Ashcan Archivist: A lidded metal-bin automaton with delicate sorting fingers, a hinged round face and drawers full of ash, working over burned paper in a dim archive. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "stitchwheel-surgeon": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 122,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Stitchwheel Surgeon: A compact antique sewing-machine automaton on spoked wheels with two articulated needle arms, soft spools of thread and brass spectacles, on a workroom floor. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "waxkey-usher": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 123,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Waxkey Usher: An elegant small figure of cloudy candle wax with a hollow key-shaped face and gloved wax hands, offering a single soft key beside an old locked door. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "quarry-cradle": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 124,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Quarry Cradle: An enormous squat quarry machine with six broad stone wheels, a cradle of iron lifting arms and a granite counterweight body, dwarfing an abandoned loading platform. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "surveyor-tripod": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 125,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Surveyor Tripod: A walking brass surveying telescope with three long articulated wooden legs and hanging plumb weights, studying a crooked boundary stone on a moor. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "porcelain-switchman": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 126,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Porcelain Switchman: A broad porcelain transit automaton with a green signal lamp for a face, cracked uniform-shaped ceramic shell and one long lever arm, in an abandoned subway siding. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "tinwake-dredger": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 127,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Tinwake Dredger: A squat floating tin salvage creature with paddle wheels, a bucket-chain neck and two yellow glass eyes, emerging under a canal bridge with an empty bucket. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "turnstile-hound": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 9129,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "A low, four-legged mechanical quadruped made entirely from subway ticket-gate parts, shown from the side in an abandoned station. Its horizontal rectangular steel farebox torso is supported by FOUR bent articulated metal legs, one at each corner, all four rubber feet resting on the floor. A small elongated steel sensor head with one green lens extends forward from the front of the horizontal body. Rotating turnstile bars form its rib cage. It crouches like a stalking mechanical hound, with its back parallel to the floor. Brushed steel panels, bolts, hinges, ticket slot. Full body clearly visible, single subject, no human figure, no arms, no hands, no upright stance, no fur. Textured ink and watercolor dark fantasy field-guide illustration, muted charcoal and verdigris colors, amber rim lighting, quiet shadowy subway backdrop. Landscape composition, generous margins, no text, logos or watermark."
+  },
+  "borrowed-door": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 129,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Borrowed Door: An old freestanding blue door with a brass knob, thick jointed wooden feet and rootlike hinges, standing at an impossible angle in a bare corridor. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "latchling": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 130,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Latchling: A palm-sized crablike knot of brass door latches and tiny key teeth, crawling from an old keyhole onto peeling paint. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "inkfall-eater": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 131,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Inkfall Eater: A flat ray-shaped creature made of glossy black ink, with curling paper-thin fins and pale pinprick eyes, hovering just above a desk of crossed-out handwritten pages with unreadable marks. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "yesterday-larva": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 132,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Yesterday Larva: A translucent opalescent grub curled around a discarded pocket watch, yesterday's dust suspended within its body, on a threshold of old wood. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "seam-raker": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 133,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Seam Raker: A narrow bone-white mantislike creature with long hooked forelimbs and a body shaped like a split wooden seam, prying at the join of metal and timber in a workshop. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "windowreef": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 134,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Windowreef: A living fan of translucent glass coral rooted in a cracked urban window frame, faint featureless silhouettes trapped inside angular branches. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "pocket-orchard": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 135,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Pocket Orchard: A knee-high walking fruit tree with fine fingerlike roots, growing from the pocket of an abandoned coat, tiny wooden keys and buttons hanging as fruit. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "gravel-lung": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 136,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Gravel Lung: A broad squat cave creature with a ribbed gravel-filled throat, mineral hide and tiny recessed eyes, exhaling a few pebbles beside dark tunnel walls. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "furnace-molar": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 137,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Furnace Molar: A hulking ivory tooth-shaped creature on short iron root legs, with an orange grinding mouth across its belly, among rusted machines in a cold foundry. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "compass-leech": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 138,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Compass Leech: A dark blue ribbonlike invertebrate with a tiny brass-colored directional crest, coiled around a traveler's discarded compass on a forest floor. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "vacancy-stalker": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 139,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Vacancy Stalker: A tall hollow humanoid frame like an empty coat stand, draped in dusty curtain fabric with a vacant oval face, waiting in an abandoned apartment. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "threadtide-brood": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 140,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Threadtide Brood: One cohesive jellyfishlike colony of braided red and cream threads with a dense central knot, drifting in dark drain water under a grate. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "candlebone-herd": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 141,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Candlebone Herd: One deer-sized invented quadruped with a smooth charcoal body, branching wax antlers and a row of short candle growths along its spine, in a dusk clearing. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "mirror-bramble": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 142,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Mirror Bramble: A creeping thorn shrub with polished mirror leaves and rootlike walking tendrils, leaning into a deserted courtyard doorway, moonlight fractured across its foliage. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "unclaimed-applause": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 143,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Unclaimed Applause: An empty dusty theater with a single pool of amber stage light, floating white glove impressions poised in applause across several otherwise empty seats, eerie and quiet. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "last-stop-passenger": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 144,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Last Stop Passenger: A damp empty overcoat shaped like a seated traveler, hundreds of faded blank ticket stubs filling its collar, a worn suitcase beside it on a deserted night bus. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "margin-walker": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 145,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Margin Walker: A thin charcoal humanoid no taller than a hand, walking along the blank edge of a large open book, its coat trailing like a pencil line under lamplight. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "rain-debt-collector": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 146,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Rain Debt Collector: A tall person-shaped bundle of folded black umbrellas, rainwater dripping from a faceless brass handle head, beside a dry planter on a canal walkway. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "blue-hour-host": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 147,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Blue Hour Host: An elegant indigo silhouette with a face like a blue porcelain saucer, setting a single extra cup at an abandoned outdoor table during blue twilight. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "unsent-witness": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 148,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Unsent Witness: A small upright figure assembled from cream sealed envelopes with blank faces and red wax seals, standing beneath a city mailbox at night. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "stairwell-tenant": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 149,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Stairwell Tenant: A stooped humanoid made of weathered stair treads and banister spindles, a dim landing light inside its chest, crouched on a concrete basement staircase. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "lantern-census": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 150,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Lantern Census: A walking constellation of five brass lanterns linked by thin rootlike branches, balanced on two wooden feet at the edge of a deserted campsite. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "quiet-auctioneer": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 151,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Quiet Auctioneer: A faceless auctioneer in a charcoal frock coat behind an empty miniature rostrum, holding a tiny silver gavel in a room of covered furniture. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "pale-rehearsal": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 152,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Pale Rehearsal: An unfinished pale wooden stage mannequin with loose ribbon joints, caught halfway through a bow on a deserted rehearsal stage under a single spotlight. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "wrong-room-guest": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 153,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Wrong Room Guest: A dark humanlike silhouette almost hidden behind mismatched vintage luggage, a blank room-number plaque for a face, paused in a hotel corridor. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "afterimage-gardener": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 154,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Afterimage Gardener: A translucent amber gardener with a broad leaf-shaped hat, watering pale glowing outlines of missing flowers in a moonlit bare garden bed. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "toll-of-names": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 155,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Toll of Names: A broad standing bronze bell with two heavy feet, small expressive handlike clappers and a narrow eye slit, guarding an ordinary wooden garden gate. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "snowprint-pilgrim": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 156,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy field-guide illustration, rich ink and watercolor with fine textured brushwork. Snowprint Pilgrim: A bundled faceless pilgrim in a pale patchwork cloak carrying a forked walking stick, fresh snowy footprints on a warm mossy forest path beneath summer leaves. Full subject visible, large readable silhouette, three-quarter view, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal and verdigris palette with warm amber rim light. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "hollow-congregant": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 157,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Hollow Congregant: A tall stooped figure in a worn Sunday suit standing in an empty pew, the pale face slack like an ill-fitting mask, a slit at the collar showing darkness and long pale fingers folding inside, candlelit chapel. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "tidewrong-abbot": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 158,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Tidewrong Abbot: A bloated grey-green cleric in sodden vestments standing waist deep in a black tidal flat at dusk, the face split vertically into gill-like folds, one webbed hand raised in benediction, a ruined fishing village behind. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "deep-tallyman": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 159,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Deep Tallyman: A pale emaciated creature with far too many finger joints crouched on a ledge in a flooded mine shaft, head tilted, lips moving, faint chalk tally marks covering the rock wall behind it, single lamp glow. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "mended-lover": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 173,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Mended Lover: A gaunt androgynous figure wrapped in a long high-collared dark coat and gloves, standing in a half-open doorway; only its face and one bare outstretched hand show, and both are visibly pieced together from mismatched skin tones joined by fine silver stitches; warm low light behind, peeling wallpaper. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "drowned-bellringer": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 161,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Drowned Bellringer: A drowned bell-ringer in a rotted cassock, waterweed in its hair, walking out of a fog-bound reservoir dragging a frayed rope, the tip of a submerged church steeple rising from the dark water behind. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "facetaker-procession": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 162,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Facetaker Procession: A line of black-clad mourners with smooth featureless faces walking slowly down a misty lamplit street behind an empty space where a hearse should be, one at the front just beginning to have features. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "static-saint": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 163,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Static Saint: An old cathode-ray television in a dark apartment glowing with snow, a haloed human silhouette with open arms visible through the static, the pale light spilling across an unmade bed. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "noonstar-vigil": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 174,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A desolate highland meadow at midday under a sky gone black and full of stars, a single shepherd hut, and between the stars an immense faint shape like a slowly turning eye, cosmic dread. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "flesh-loom": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 165,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Flesh Loom: A huge iron power loom in a ruined Victorian mill at night, its shuttles moving on their own, the long cloth spilling from it dark red and woven with faint human faces, moonlight through broken windows. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "reliquary-engine": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 166,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Reliquary Engine: A colossal machine built of human bones, ribs and skulls arranged like cathedral pipes and gears, crawling slowly on rails through a candlelit catacomb, ornate and terrible. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "ecorche-tutor": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 167,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Écorché Tutor: A lifesize antique anatomical model of a man with painted muscles and removable organs, peeling back a panel of its own chest, standing in a dusty Victorian lecture theatre with tiered benches. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "black-orrery": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 168,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Black Orrery: A great black and brass orrery in a dim observatory, seven strange dark planets on arms around a lightless central sphere, a door-shaped rift of cold starlight beginning to open in the wall beside it. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "lamprey-swan": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 178,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Lamprey Swan: A white swan rearing up on black pond water at dusk, wings half raised, hissing straight at the viewer with its beak gaping unnaturally wide, the open throat revealed as a dark tube lined with rings of needle teeth all the way down, eerie and predatory, bare trees and park railings behind. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "carrion-psalmist": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 170,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Carrion Psalmist: A ragged flock of black birds with pale bare faces perched on a dead tree over a misty moorland at twilight, beaks open as if speaking, one bird staring straight at the viewer. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "shaftwinder-eel": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 176,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Shaftwinder Eel: A gigantic eyeless pale eel with a gaping round mouth and slimy translucent skin, its endless body coiled up a flooded vertical mine shaft, lit from above by a single lamp, rotten timber supports, black water, menacing. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "marrow-moth": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 172,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Marrow Moth: Large grey dusty moths with bone-white patterned wings clustered on the bare shoulder of a sleeping figure in a dim bedroom, moonlight through net curtains, unsettling and quiet. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  }
+}

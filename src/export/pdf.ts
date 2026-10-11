@@ -107,7 +107,7 @@ export async function characterPdf(c: Character, opts: { chronicle?: string } = 
   let y = section(doc, 'Attributes', 148);
   (['physical', 'social', 'mental'] as const).forEach((g, i) => {
     subhead(doc, g[0].toUpperCase() + g.slice(1), COL[i], y);
-    ATTRIBUTES[g].forEach((n, r) => traitRow(doc, c.attributes[n] ?? { name: n, rating: 1 }, COL[i], y + 14 + r * 12));
+    ATTRIBUTES[g].forEach((n, r) => traitRow(doc, c.attributes[n] ?? { name: n, rating: 0 }, COL[i], y + 14 + r * 12));
   });
 
   // Abilities

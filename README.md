@@ -8,14 +8,15 @@ A Storyteller's console for *Mage: The Ascension 20th Anniversary Edition*, buil
 - **Characters** — full sheet editor with sheet-style Arete, Willpower and Quintessence/Paradox trackers, a pop-up roller with sensible Attribute + Ability defaults, Merits & Flaws, random Markov-chain names, and import from Obsidian Fantasy Statblocks notes.
 - **Create** — guided character creation that follows the M20 process step by step, with live checks and a freebie budget.
 - **Fortune** — a tarot reading that becomes a legal starting mage. Each card decides part of the character; suits and Major Arcana decide priorities. Two optional extra cards bring balanced Merits and Flaws. Deck art is drawn in SVG.
-- **Grimoire** — 720 generated rotes in six styles, filterable by Sphere and by what a character can cast, plus a randomizer.
+- **Grimoire** — 1,080 generated rotes in nine styles, filterable by Sphere and by what a character can cast, plus a randomizer.
+- **Bestiary** — 72 original homebrew creatures, from strange wildlife to darker things, with locally generated Z-Image illustrations, search, type/habitat filters, random selection and custom encounter rules. Add independent NPC copies with their own health and Willpower, choosing lower or upper Attribute ratings where a template gives a range.
 - **Exports** — Markdown (Obsidian statblock format, round-trips through the importer) and a printable two-page PDF sheet.
 - **Player screen** — a second window for public rolls, handouts and a clock.
 - **Rules search** — load markdown you own and search it locally.
 
 ## Privacy and content
 
-There's no server: data lives in your browser (IndexedDB) until you export it. No rulebook text ships with the app; rules search only works on files you load yourself, and those never leave your browser. Merit and Flaw names and costs come from *M20: The Book of Secrets*; their one-line summaries, all card meanings, rote text and descriptions are original.
+There's no server: data lives in your browser (IndexedDB) until you export it. Full rulebook text does not ship with the app; rules search only works on files you load yourself, and those never leave your browser. Merit and Flaw names and costs come from *M20: The Book of Secrets*; their one-line summaries, all card meanings, rote text and descriptions are original. The Bestiary’s creature concepts, stat blocks and encounter rules are original homebrew; its illustrations are generated locally using mflux and Z-Image Turbo. See [Bestiary design notes](docs/bestiary.md) for coverage and artwork provenance.
 
 ## Development
 

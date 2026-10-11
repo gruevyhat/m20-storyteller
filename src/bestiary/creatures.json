@@ -1,0 +1,5312 @@
+[
+  {
+    "id": "cinder-skipper",
+    "name": "Cinder Skipper",
+    "category": "Wildlife",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        5
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 4
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      }
+    ],
+    "willpower": 2,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A palm-sized lizard grazes on charcoal after forest fires, leaving warm footprints that fade in seconds.",
+    "attacks": "Spark kick: Dexterity + Athletics to hit; 1 bashing damage die.",
+    "notes": "Once per scene, it scatters embers in a one-meter patch. Crossing that patch costs one extra meter of movement for two turns. Wet ground prevents this trick.",
+    "appearance": "Tiny rust-red lizard with six legs, broad ribbed ear fins and a blunt charcoal snout, perched on cooled volcanic stone in a burned forest; faint sparks trail its feet.",
+    "imageSeed": 101
+  },
+  {
+    "id": "rainspool-grazer",
+    "name": "Rainspool Grazer",
+    "category": "Wildlife",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 1
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      },
+      {
+        "name": "Survival",
+        "rating": 3
+      }
+    ],
+    "willpower": 3,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "This barrel-shaped marsh herbivore winds fallen reeds around its back, carrying an accidental floating garden.",
+    "attacks": "Shoulder shove: Dexterity + Athletics; Strength bashing.",
+    "notes": "After spending a turn drinking, it can spray stored water over a two-meter patch. This extinguishes ordinary candles and reveals footprints in loose dust, but causes no damage.",
+    "appearance": "Low barrel-shaped teal amphibian with four paddle feet and a spiral of woven reeds on its back, standing in a shallow marsh under drizzle.",
+    "imageSeed": 102
+  },
+  {
+    "id": "bellreed-darter",
+    "name": "Bellreed Darter",
+    "category": "Wildlife",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        1
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 4
+      },
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      }
+    ],
+    "willpower": 1,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A silver marsh insect rings hollow reeds with its rigid antennae to announce approaching rain.",
+    "attacks": "Needle jab: Dexterity + Athletics; 1 bashing damage die.",
+    "notes": "Its alarm carries 100 meters in still air. A listener who spends a turn attending to the rhythm gains one die on the next roll to locate moving water during the scene.",
+    "appearance": "A single delicate silver insect with long tuning-fork antennae and clear paddle-shaped wings, balanced on the rim of a hollow reed above a pond.",
+    "imageSeed": 103
+  },
+  {
+    "id": "chalkback-burrower",
+    "name": "Chalkback Burrower",
+    "category": "Wildlife",
+    "habitat": "Underground",
+    "attributes": {
+      "Strength": [
+        2,
+        3
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4,
+        5
+      ],
+      "Perception": [
+        1
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      },
+      {
+        "name": "Survival",
+        "rating": 3
+      }
+    ],
+    "willpower": 4,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A squat digger feeds on soft mineral seams and coughs up chalk pellets that map its tunnel network.",
+    "attacks": "Blunt tusks: Dexterity + Athletics; Strength bashing.",
+    "notes": "A turn of frantic digging raises a one-meter dust cloud lasting two turns. Sight-based searches through it lose two dice; sound and scent are unaffected.",
+    "appearance": "Squat six-footed cream-colored burrowing animal with blunt shovel tusks and layered chalk plates across its back, beside pale limestone tunnels.",
+    "imageSeed": 104
+  },
+  {
+    "id": "mossveil-glider",
+    "name": "Mossveil Glider",
+    "category": "Wildlife",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        5
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 4
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Stealth",
+        "rating": 4
+      }
+    ],
+    "willpower": 2,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A canopy scavenger folds its fringed flight membrane over itself to resemble a hanging clump of moss.",
+    "attacks": "Hooked feet: Dexterity + Athletics; 1 lethal damage die.",
+    "notes": "It can glide twenty meters from a five-meter perch but cannot gain height. While hanging motionless in foliage, it gains two dice to Stealth; movement ends the bonus.",
+    "appearance": "Small emerald mammal with a fringed mosslike gliding membrane stretched between four limbs, hanging beneath a wet branch in a shadowy canopy.",
+    "imageSeed": 105
+  },
+  {
+    "id": "pebblejaw-forager",
+    "name": "Pebblejaw Forager",
+    "category": "Wildlife",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Survival",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 1
+      }
+    ],
+    "willpower": 3,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "This short-legged seed eater stores polished stones in cheek pouches and trades them for unfamiliar food.",
+    "attacks": "Stone spit: Dexterity + Athletics; 2 bashing damage dice within five meters.",
+    "notes": "It carries three stones and spends a turn retrieving each replacement. A new flavor of food distracts it for one turn unless it has already tasted that food this scene.",
+    "appearance": "Round ochre seed-eating animal with short legs, oversized stone-filled cheek pouches and two tiny ivory incisors, arranging shiny pebbles on a woodland path.",
+    "imageSeed": 106
+  },
+  {
+    "id": "bristlefin-wader",
+    "name": "Bristlefin Wader",
+    "category": "Wildlife",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 1
+      }
+    ],
+    "willpower": 2,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A shoreline hunter spreads stiff dorsal bristles to hold its place in fast currents.",
+    "attacks": "Fin rake: Dexterity + Athletics; Strength lethal.",
+    "notes": "If it remains still for a turn in running water, dislodging it requires three successes on Strength + Athletics. The anchor ends as soon as it attacks or moves.",
+    "appearance": "Long green aquatic animal on four stiltlike legs with a high comb of stiff copper bristles along its spine, braced in a rushing stream.",
+    "imageSeed": 107
+  },
+  {
+    "id": "coppercrest-runner",
+    "name": "Coppercrest Runner",
+    "category": "Wildlife",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        5
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        5
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 4
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 1
+      }
+    ],
+    "willpower": 2,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A flightless scavenger nests near rail yards, polishing its broad crest against discarded wire.",
+    "attacks": "Crest butt: Dexterity + Athletics; Strength + 1 bashing.",
+    "notes": "Metallic clattering draws its attention before voices do. Offering a loose bolt lets a handler attempt Manipulation + Animal Kinship at difficulty 6 to redirect it for one turn.",
+    "appearance": "Lean flightless rust-feathered bird with long springy legs and a broad burnished copper head crest, standing among railway ballast and discarded wire.",
+    "imageSeed": 108
+  },
+  {
+    "id": "hushpelt-tracker",
+    "name": "Hushpelt Tracker",
+    "category": "Wildlife",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        2,
+        4
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        2,
+        3
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Survival",
+        "rating": 3,
+        "specialty": "Tracking"
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A long-bodied dusk hunter follows the warmth left by resting animals rather than their scent.",
+    "attacks": "Clamping jaws: Dexterity + Athletics; Strength lethal.",
+    "notes": "It gains two dice to follow a trail less than ten minutes old on dry ground. Rain or a crossing through water ends this bonus. A heated blanket can create a false resting place.",
+    "appearance": "Long low indigo-furred hunter with six slender legs, a broad sensitive nose and velvet ears folded flat, sniffing a warm hollow in twilight grass.",
+    "imageSeed": 109
+  },
+  {
+    "id": "saltglass-crawler",
+    "name": "Saltglass Crawler",
+    "category": "Wildlife",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        1
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 1
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Survival",
+        "rating": 4
+      }
+    ],
+    "willpower": 2,
+    "armor": 3,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A tidal grazer grows transparent salt scales that cloud over as fresh water approaches.",
+    "attacks": "Shell edge: Dexterity + Athletics; 1 lethal damage die; Athletics defaults to zero.",
+    "notes": "Fresh water dissolves one point of its Armor for the scene after a full turn of contact. A shed scale is a useful humidity indicator but has no protective value.",
+    "appearance": "Hand-sized translucent snail-like shoreline animal with angular salt-crystal plates and four soft feelers, creeping over black tidal rocks.",
+    "imageSeed": 110
+  },
+  {
+    "id": "thornbasket-nestling",
+    "name": "Thornbasket Nestling",
+    "category": "Wildlife",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 1,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A juvenile climber weaves thorn stems into a traveling nest and drags it from shrub to shrub.",
+    "attacks": "Thorn nudge: Dexterity + Athletics; 1 bashing damage die.",
+    "notes": "When frightened it retreats into its basket, gaining one Armor while stationary. A turn spent offering ripe fruit coaxes it back out; the basket bonus then ends.",
+    "appearance": "Tiny tawny climbing mammal with huge black eyes and a curling tail, peeking from a spherical nest woven of green thorn stems on a shrub.",
+    "imageSeed": 111
+  },
+  {
+    "id": "dewcup-drifter",
+    "name": "Dewcup Drifter",
+    "category": "Wildlife",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        0
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        1
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 1
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      }
+    ],
+    "willpower": 1,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "This floating seed-eater traps morning dew in a cup-shaped sail and rides slow currents of warm air.",
+    "attacks": "No damaging attack; an evasive drift uses Dexterity + Athletics.",
+    "notes": "Its sail holds one mouthful of water. A heavy spray grounds it for the scene, while shelter and one turn of drying restore its ability to float a meter above the ground.",
+    "appearance": "A single small pale-gold airborne animal with a cup-shaped leaf sail, dangling soft tendrils and a bead of dew in its sail, floating in a misty meadow.",
+    "imageSeed": 112
+  },
+  {
+    "id": "sootpatch-scavenger",
+    "name": "Sootpatch Scavenger",
+    "category": "Wildlife",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        1
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      },
+      {
+        "name": "Survival",
+        "rating": 2
+      }
+    ],
+    "willpower": 3,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A broad-tailed alley omnivore rubs soot into its coat and leaves misleading smudges around its food caches.",
+    "attacks": "Tail slap: Dexterity + Athletics; Strength bashing; Athletics defaults to zero.",
+    "notes": "It remembers three hidden caches. Following its outward tracks leads to a decoy unless a searcher gets two successes on Perception + Investigation at difficulty 6.",
+    "appearance": "A stocky slate-gray alley animal with a broad flat tail and soot-black patches around amber eyes, sitting beside brickwork with dark paw smudges.",
+    "imageSeed": 113
+  },
+  {
+    "id": "rootknuckle-browser",
+    "name": "Rootknuckle Browser",
+    "category": "Wildlife",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        5
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        6
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        1
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 2
+      },
+      {
+        "name": "Alertness",
+        "rating": 1
+      },
+      {
+        "name": "Survival",
+        "rating": 3
+      }
+    ],
+    "willpower": 4,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A slow forest browser levers buried roots from the earth with a pair of knuckled feeding limbs.",
+    "attacks": "Root lever: Dexterity + Athletics; Strength + 1 bashing.",
+    "notes": "After two uninterrupted turns, it can uproot a small sapling or break a wooden fence panel. Loud repeated tapping makes it stop feeding for one turn, once per scene.",
+    "appearance": "Heavy moss-brown herbivore with four walking legs and two thick jointed digging arms, a blunt beak and ridged shoulders, pulling roots beside a fallen tree.",
+    "imageSeed": 114
+  },
+  {
+    "id": "kiln-porter",
+    "name": "Kiln Porter",
+    "category": "Constructs",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        5
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Crafts",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      }
+    ],
+    "willpower": 3,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A walking stack of fired clay rings carries hot objects for an absent workshop owner.",
+    "attacks": "Ceramic fist: Dexterity + Brawl; Strength bashing; Brawl defaults to zero.",
+    "notes": "It can handle ordinary hot cookware without injury. A direct application of cold water makes its joints seize for one turn; repeated splashing has no further effect that scene.",
+    "appearance": "A stout walking automaton made from stacked terracotta kiln rings, thick ceramic arms and a glowing furnace slit, carrying an empty iron tray in a pottery workshop.",
+    "imageSeed": 115
+  },
+  {
+    "id": "cable-shepherd",
+    "name": "Cable Shepherd",
+    "category": "Constructs",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 4
+      },
+      {
+        "name": "Technology",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A maintenance crawler gathers loose electrical cables into neat bundles, including any wires still attached to people.",
+    "attacks": "Cable snare: Dexterity + Athletics opposed by Dexterity + Athletics; success restrains one limb without damage.",
+    "notes": "A restrained target can pull free with two successes on Strength + Athletics at difficulty 6. Unplugging its captured cable releases the snare immediately.",
+    "appearance": "A low wheeled brass maintenance creature with a sheaf of flexible cable arms and a single blue inspection lamp, sorting tangled wires in a dark service corridor.",
+    "imageSeed": 116
+  },
+  {
+    "id": "brass-orchard-tender",
+    "name": "Brass Orchard Tender",
+    "category": "Constructs",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Crafts",
+        "rating": 4
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 3,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "An abandoned pruning machine continues to cultivate an orchard that no longer exists.",
+    "attacks": "Pruning snip: Dexterity + Crafts; Strength lethal.",
+    "notes": "It marks anything carrying fresh fruit as a tree needing care. Offering a dry branch redirects its next action; it resumes its previous task on the following turn.",
+    "appearance": "Tall brass gardening automaton on three narrow legs with curved pruning-shear hands and a watering-can torso, beneath leafless orchard trees.",
+    "imageSeed": 117
+  },
+  {
+    "id": "foldpaper-bailiff",
+    "name": "Foldpaper Bailiff",
+    "category": "Constructs",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Investigation",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A folded-paper figure serves blank notices on doors that were recently forced open.",
+    "attacks": "Paper edge: Dexterity + Athletics; 1 lethal damage die.",
+    "notes": "Once per scene it can press a notice onto a closed door. The first person opening that door hears a loud paper crackle audible within twenty meters. Water removes the notice harmlessly.",
+    "appearance": "A small angular humanoid folded entirely from unmarked cream paper, wearing a folded triangular hat and carrying blank notices, before a scarred apartment door.",
+    "imageSeed": 118
+  },
+  {
+    "id": "rivet-choir",
+    "name": "Rivet Choir",
+    "category": "Constructs",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        6
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Intimidation",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 3,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A single boiler-shaped machine sings through six pipe mouths whenever its frame feels vibration.",
+    "attacks": "Body crush: Dexterity + Brawl; Strength + 1 bashing.",
+    "notes": "Its chorus prevents ordinary conversation within five meters for two turns after it is struck. Padding its feet with cloth stops the chorus until it is struck again.",
+    "appearance": "One barrel-shaped iron machine on short piston legs, six organ-pipe mouths arranged above its riveted chest, venting delicate steam in an old factory.",
+    "imageSeed": 119
+  },
+  {
+    "id": "glassrail-courier",
+    "name": "Glassrail Courier",
+    "category": "Constructs",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        5
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 4
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Investigation",
+        "rating": 2
+      }
+    ],
+    "willpower": 3,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A glass-bodied courier navigates by reflected streetlights and delivers objects to their last reflection.",
+    "attacks": "Shoulder check: Dexterity + Athletics; Strength bashing.",
+    "notes": "Given a mirrored view of a nearby destination, it remembers the route for a scene. Covering the nearest light source forces it to spend its next turn reorienting.",
+    "appearance": "A slender transparent glass automaton balanced on two narrow wheel-feet, a brass parcel compartment in its chest, reflected streetlamps in wet pavement.",
+    "imageSeed": 120
+  },
+  {
+    "id": "ashcan-archivist",
+    "name": "Ashcan Archivist",
+    "category": "Constructs",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Investigation",
+        "rating": 4
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Crafts",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A soot-filled metal custodian sorts burned scraps into the order in which they entered the fire.",
+    "attacks": "Lid slam: Dexterity + Brawl; Strength bashing; Brawl defaults to zero.",
+    "notes": "With a minute and a handful of ash, it can separate the remains of paper, cloth and wood. It cannot restore writing or identify the former owner.",
+    "appearance": "A lidded metal-bin automaton with delicate sorting fingers, a hinged round face and drawers full of ash, working over burned paper in a dim archive.",
+    "imageSeed": 121
+  },
+  {
+    "id": "stitchwheel-surgeon",
+    "name": "Stitchwheel Surgeon",
+    "category": "Constructs",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Medicine",
+        "rating": 3
+      },
+      {
+        "name": "Crafts",
+        "rating": 4
+      },
+      {
+        "name": "Athletics",
+        "rating": 1
+      }
+    ],
+    "willpower": 4,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A wheeled sewing engine treats torn clothing as an emergency and pursues anyone shedding fabric.",
+    "attacks": "Needle jab: Dexterity + Crafts; 2 lethal damage dice.",
+    "notes": "It repairs one hand-sized tear in cloth per turn if supplied thread. Its mechanism cannot heal flesh; giving it a ripped coat occupies it for three turns.",
+    "appearance": "A compact antique sewing-machine automaton on spoked wheels with two articulated needle arms, soft spools of thread and brass spectacles, on a workroom floor.",
+    "imageSeed": 122
+  },
+  {
+    "id": "waxkey-usher",
+    "name": "Waxkey Usher",
+    "category": "Constructs",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Etiquette",
+        "rating": 3
+      },
+      {
+        "name": "Investigation",
+        "rating": 2
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A wax attendant makes temporary keys for doors whose owners have forgotten why they locked them.",
+    "attacks": "Wax grip: Dexterity + Athletics; Strength bashing; Athletics defaults to zero.",
+    "notes": "With the lock owner's spoken permission, it spends one Willpower and one minute forming a key that works once in that lock. The key melts after use and cannot open another lock.",
+    "appearance": "An elegant small figure of cloudy candle wax with a hollow key-shaped face and gloved wax hands, offering a single soft key beside an old locked door.",
+    "imageSeed": 123
+  },
+  {
+    "id": "quarry-cradle",
+    "name": "Quarry Cradle",
+    "category": "Constructs",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        12
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        11
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        1
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      },
+      {
+        "name": "Alertness",
+        "rating": 1
+      }
+    ],
+    "willpower": 6,
+    "armor": 4,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A stone-hauling engine mistakes fragile structures for injured cargo and tries to lift them to safety.",
+    "attacks": "Lifting ram: Dexterity + Brawl; Strength + 2 bashing.",
+    "notes": "It spends one turn lowering its lifting arms before attacking. During that turn it cannot move. A clearly marked empty pallet redirects it for a turn, once per scene.",
+    "appearance": "An enormous squat quarry machine with six broad stone wheels, a cradle of iron lifting arms and a granite counterweight body, dwarfing an abandoned loading platform.",
+    "imageSeed": 124
+  },
+  {
+    "id": "surveyor-tripod",
+    "name": "Surveyor Tripod",
+    "category": "Constructs",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        6
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 4
+      },
+      {
+        "name": "Investigation",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A brass surveying instrument stalks property boundaries, correcting markers moved by erosion or theft.",
+    "attacks": "Measuring spike: Dexterity + Athletics; Strength lethal.",
+    "notes": "After observing a stationary object for a turn it can report its distance to within a meter out to 100 meters. Moving objects and reflective fog defeat the measurement.",
+    "appearance": "A walking brass surveying telescope with three long articulated wooden legs and hanging plumb weights, studying a crooked boundary stone on a moor.",
+    "imageSeed": 125
+  },
+  {
+    "id": "porcelain-switchman",
+    "name": "Porcelain Switchman",
+    "category": "Constructs",
+    "habitat": "Underground",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Technology",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      }
+    ],
+    "willpower": 4,
+    "armor": 3,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A ceramic transit worker routes abandoned tracks according to a schedule printed on the inside of its shell.",
+    "attacks": "Signal lever: Dexterity + Brawl; Strength + 1 bashing.",
+    "notes": "Presenting an expired ticket makes it inspect the date for two turns. It can physically move an accessible rail switch but has no remote control over trains.",
+    "appearance": "A broad porcelain transit automaton with a green signal lamp for a face, cracked uniform-shaped ceramic shell and one long lever arm, in an abandoned subway siding.",
+    "imageSeed": 126
+  },
+  {
+    "id": "tinwake-dredger",
+    "name": "Tinwake Dredger",
+    "category": "Constructs",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        6
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Crafts",
+        "rating": 1
+      }
+    ],
+    "willpower": 3,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A floating salvage engine compulsively retrieves objects dropped through reflections of bridges.",
+    "attacks": "Bucket strike: Dexterity + Athletics; Strength bashing.",
+    "notes": "It can haul one person-sized object from water within three meters. A full bucket makes it unable to attack until it spends a turn unloading.",
+    "appearance": "A squat floating tin salvage creature with paddle wheels, a bucket-chain neck and two yellow glass eyes, emerging under a canal bridge with an empty bucket.",
+    "imageSeed": 127
+  },
+  {
+    "id": "turnstile-hound",
+    "name": "Turnstile Hound",
+    "category": "Constructs",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 1
+      }
+    ],
+    "willpower": 4,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A four-legged gate mechanism follows fare evaders, politely blocking every route except the one they paid for.",
+    "attacks": "Rotating barrier: Dexterity + Brawl; Strength bashing.",
+    "notes": "Dropping a metal token into its chest causes it to stand aside for three turns. It never accepts the same token twice in one scene.",
+    "appearance": "A quadruped creature assembled from polished subway turnstiles, revolving barrier ribs and a small ticket-slot chest, waiting in an empty station entrance.",
+    "imageSeed": 9129
+  },
+  {
+    "id": "borrowed-door",
+    "name": "Borrowed Door",
+    "category": "Aberrations",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        5
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Brawl",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 1
+      }
+    ],
+    "willpower": 5,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A freestanding door grows feet when unobserved and searches for a wall that will remember it.",
+    "attacks": "Frame slam: Dexterity + Brawl; Strength + 1 bashing.",
+    "notes": "It moves only while nobody directly watches it. Opening it reveals the space immediately behind it; it does not create a portal. A chalk outline of a doorway keeps it still for a scene.",
+    "appearance": "An old freestanding blue door with a brass knob, thick jointed wooden feet and rootlike hinges, standing at an impossible angle in a bare corridor.",
+    "imageSeed": 129
+  },
+  {
+    "id": "latchling",
+    "name": "Latchling",
+    "category": "Aberrations",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        5
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Stealth",
+        "rating": 4
+      },
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Investigation",
+        "rating": 2
+      }
+    ],
+    "willpower": 3,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A small knot of animated latches lives inside neglected locks and collects the clicks of failed keys.",
+    "attacks": "Pinch: Dexterity + Athletics; 1 bashing damage die.",
+    "notes": "It can jam one ordinary lock it occupies. Two successes on Dexterity + Crafts at difficulty 6 evict it, or a drop of warm oil persuades it to leave without a roll.",
+    "appearance": "A palm-sized crablike knot of brass door latches and tiny key teeth, crawling from an old keyhole onto peeling paint.",
+    "imageSeed": 130
+  },
+  {
+    "id": "inkfall-eater",
+    "name": "Inkfall Eater",
+    "category": "Aberrations",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Investigation",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A flat black creature feeds on corrections, leaving the first draft of a document legible beneath later edits.",
+    "attacks": "Ink lash: Dexterity + Brawl; 2 bashing damage dice.",
+    "notes": "Given one minute with a physical page, it removes one layer of ink added after the original writing. It cannot recover erased words or alter digital files; clean paper lures it away.",
+    "appearance": "A flat ray-shaped creature made of glossy black ink, with curling paper-thin fins and pale pinprick eyes, hovering just above a desk of crossed-out handwritten pages with unreadable marks.",
+    "imageSeed": 131
+  },
+  {
+    "id": "yesterday-larva",
+    "name": "Yesterday Larva",
+    "category": "Aberrations",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        1
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 4
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 1
+      }
+    ],
+    "willpower": 2,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A translucent grub nests in objects that were almost thrown away, wearing the dust of their previous owners.",
+    "attacks": "Soft nudge: Dexterity + Athletics; 1 bashing damage die.",
+    "notes": "Touching its host object reveals one brief sensory impression from the previous day. This works once per object per scene and cannot reveal thoughts or names that were never spoken.",
+    "appearance": "A translucent opalescent grub curled around a discarded pocket watch, yesterday's dust suspended within its body, on a threshold of old wood.",
+    "imageSeed": 132
+  },
+  {
+    "id": "seam-raker",
+    "name": "Seam Raker",
+    "category": "Aberrations",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        5
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A narrow scavenger pulls apart joins between mismatched materials and nests in the resulting cracks.",
+    "attacks": "Joint hook: Dexterity + Brawl; Strength lethal.",
+    "notes": "After two turns working on an unattended seam, it separates a hand-sized patch of glued or stitched material. Welding and continuous solid surfaces stop it.",
+    "appearance": "A narrow bone-white mantislike creature with long hooked forelimbs and a body shaped like a split wooden seam, prying at the join of metal and timber in a workshop.",
+    "imageSeed": 133
+  },
+  {
+    "id": "windowreef",
+    "name": "Windowreef",
+    "category": "Aberrations",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        6
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      },
+      {
+        "name": "Stealth",
+        "rating": 1
+      }
+    ],
+    "willpower": 3,
+    "armor": 3,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A living cluster of glass growths spreads across neglected windows, storing the silhouettes that pass outside.",
+    "attacks": "Glass branch: Dexterity + Brawl; Strength lethal.",
+    "notes": "Once per scene it can replay one stored silhouette against its glass for a turn. It reproduces movement, not identity or sound. Covering the window stops both recording and replay.",
+    "appearance": "A living fan of translucent glass coral rooted in a cracked urban window frame, faint featureless silhouettes trapped inside angular branches.",
+    "imageSeed": 134
+  },
+  {
+    "id": "pocket-orchard",
+    "name": "Pocket Orchard",
+    "category": "Aberrations",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      },
+      {
+        "name": "Alertness",
+        "rating": 1
+      }
+    ],
+    "willpower": 3,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A miniature walking tree roots itself in abandoned coats and grows fruit shaped like things their owners misplaced.",
+    "attacks": "Root knot: Dexterity + Athletics; Strength bashing.",
+    "notes": "Its fruit contains a harmless wooden likeness of a lost object, never the object itself. Eating one grants a vivid memory of where the eater last held that object, once per day.",
+    "appearance": "A knee-high walking fruit tree with fine fingerlike roots, growing from the pocket of an abandoned coat, tiny wooden keys and buttons hanging as fruit.",
+    "imageSeed": 135
+  },
+  {
+    "id": "gravel-lung",
+    "name": "Gravel Lung",
+    "category": "Aberrations",
+    "habitat": "Underground",
+    "attributes": {
+      "Strength": [
+        6
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        7
+      ],
+      "Perception": [
+        1
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Brawl",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 1
+      },
+      {
+        "name": "Alertness",
+        "rating": 1
+      }
+    ],
+    "willpower": 3,
+    "armor": 3,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "An underground scavenger inhales loose stones and exhales the sound of rooms above it.",
+    "attacks": "Stone cough: Dexterity + Brawl; 4 bashing damage dice within five meters.",
+    "notes": "After a silent turn it repeats the loudest sound made directly overhead in the last minute. While coughing stones it cannot listen. Thick flowing water above it masks all useful sound.",
+    "appearance": "A broad squat cave creature with a ribbed gravel-filled throat, mineral hide and tiny recessed eyes, exhaling a few pebbles beside dark tunnel walls.",
+    "imageSeed": 136
+  },
+  {
+    "id": "furnace-molar",
+    "name": "Furnace Molar",
+    "category": "Aberrations",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        7
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        6
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        1
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Brawl",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 1
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 3,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A tooth-shaped industrial parasite chews abandoned machinery into warm metal grit.",
+    "attacks": "Grinding bite: Dexterity + Brawl; Strength + 1 lethal.",
+    "notes": "It must spend a turn chewing after each successful bite and cannot attack during that turn. A bucket of cold sand forces this chewing pause even if it has not bitten anything.",
+    "appearance": "A hulking ivory tooth-shaped creature on short iron root legs, with an orange grinding mouth across its belly, among rusted machines in a cold foundry.",
+    "imageSeed": 137
+  },
+  {
+    "id": "compass-leech",
+    "name": "Compass Leech",
+    "category": "Aberrations",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        6
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 4
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 2,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A ribbonlike parasite coils around travelers' possessions and feeds on their certainty about direction.",
+    "attacks": "Cling: Dexterity + Athletics opposed by Dexterity + Athletics; no damage.",
+    "notes": "While attached to an object it pulls nearby magnetic needles toward itself within three meters. Bright sunlight makes it release its hold; electronic maps and landmarks remain reliable.",
+    "appearance": "A dark blue ribbonlike invertebrate with a tiny brass-colored directional crest, coiled around a traveler's discarded compass on a forest floor.",
+    "imageSeed": 138
+  },
+  {
+    "id": "vacancy-stalker",
+    "name": "Vacancy Stalker",
+    "category": "Aberrations",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Stealth",
+        "rating": 4
+      },
+      {
+        "name": "Investigation",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 1
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A tall hollow creature moves into rooms that everyone in a building mistakenly believes are occupied.",
+    "attacks": "Empty-hand strike: Dexterity + Brawl; Strength bashing.",
+    "notes": "Speaking the room's actual occupant list aloud makes it visible for the scene and removes its two-die Stealth bonus. It cannot pass through locked doors or solid walls.",
+    "appearance": "A tall hollow humanoid frame like an empty coat stand, draped in dusty curtain fabric with a vacant oval face, waiting in an abandoned apartment.",
+    "imageSeed": 139
+  },
+  {
+    "id": "threadtide-brood",
+    "name": "Threadtide Brood",
+    "category": "Aberrations",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      },
+      {
+        "name": "Alertness",
+        "rating": 1
+      }
+    ],
+    "willpower": 2,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A single colony of braided filaments drifts through drains, knotting around anything that pulses regularly.",
+    "attacks": "Thread snare: Dexterity + Athletics opposed by Strength + Athletics; no initial damage.",
+    "notes": "A snared limb loses two dice on physical actions until freed by two successes on Strength + Athletics at difficulty 6. Cutting one visible knot releases the limb immediately.",
+    "appearance": "One cohesive jellyfishlike colony of braided red and cream threads with a dense central knot, drifting in dark drain water under a grate.",
+    "imageSeed": 140
+  },
+  {
+    "id": "candlebone-herd",
+    "name": "Candlebone Herd",
+    "category": "Aberrations",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      }
+    ],
+    "willpower": 3,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A single member of this wandering herd carries candlelike growths along its spine, each lit by a remembered campfire.",
+    "attacks": "Waxy antler: Dexterity + Brawl; Strength bashing.",
+    "notes": "Its back lights a three-meter circle without heat. Extinguishing the growths makes it flee for two turns; a story about a campfire calms it after one uninterrupted minute.",
+    "appearance": "One deer-sized invented quadruped with a smooth charcoal body, branching wax antlers and a row of short candle growths along its spine, in a dusk clearing.",
+    "imageSeed": 141
+  },
+  {
+    "id": "mirror-bramble",
+    "name": "Mirror Bramble",
+    "category": "Aberrations",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A creeping thorn bush bears mirrored leaves that turn toward arguments instead of sunlight.",
+    "attacks": "Thorn sweep: Dexterity + Brawl; Strength lethal.",
+    "notes": "Raised voices make it advance one meter per turn toward the speakers. A full turn of shared silence stops it; its reflections show the present scene without revealing hidden thoughts.",
+    "appearance": "A creeping thorn shrub with polished mirror leaves and rootlike walking tendrils, leaning into a deserted courtyard doorway, moonlight fractured across its foliage.",
+    "imageSeed": 142
+  },
+  {
+    "id": "unclaimed-applause",
+    "name": "Unclaimed Applause",
+    "category": "Apparitions",
+    "habitat": "Thresholds",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Awareness",
+        "rating": 3
+      },
+      {
+        "name": "Expression",
+        "rating": 4
+      },
+      {
+        "name": "Intimidation",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": null,
+    "health": [],
+    "description": "An invisible audience applauds accomplishments that nobody present remembers performing.",
+    "attacks": "No physical attack, Attributes or health track.",
+    "notes": "Once per scene, a listener may spend a turn taking a bow to learn whether the audience approves of a proposed action: soft applause means yes, silence means no. Its judgment is opinion, not prophecy. Closing the stage curtain ends the manifestation.",
+    "appearance": "An empty dusty theater with a single pool of amber stage light, floating white glove impressions poised in applause across several otherwise empty seats, eerie and quiet.",
+    "imageSeed": 143
+  },
+  {
+    "id": "last-stop-passenger",
+    "name": "Last Stop Passenger",
+    "category": "Apparitions",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Awareness",
+        "rating": 3
+      },
+      {
+        "name": "Etiquette",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A damp coat full of ticket stubs asks strangers to wake it before a destination that has vanished from the route.",
+    "attacks": "Suitcase swing: Dexterity + Athletics; 2 bashing damage dice.",
+    "notes": "Naming a real stop and promising to announce it gives one die on the next social roll with the passenger. Breaking that promise makes it refuse further conversation for the scene.",
+    "appearance": "A damp empty overcoat shaped like a seated traveler, hundreds of faded blank ticket stubs filling its collar, a worn suitcase beside it on a deserted night bus.",
+    "imageSeed": 144
+  },
+  {
+    "id": "margin-walker",
+    "name": "Margin Walker",
+    "category": "Apparitions",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Investigation",
+        "rating": 4
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Awareness",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A thin figure steps along the blank margins of open books, searching for a sentence that will let it rest.",
+    "attacks": "Page flick: Dexterity + Athletics; 1 bashing damage die; Athletics defaults to zero.",
+    "notes": "It can travel between two open physical pages within two meters after spending a turn reading. Closing either page interrupts the move and leaves it beside the starting book.",
+    "appearance": "A thin charcoal humanoid no taller than a hand, walking along the blank edge of a large open book, its coat trailing like a pencil line under lamplight.",
+    "imageSeed": 145
+  },
+  {
+    "id": "rain-debt-collector",
+    "name": "Rain Debt Collector",
+    "category": "Apparitions",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Investigation",
+        "rating": 3
+      },
+      {
+        "name": "Intimidation",
+        "rating": 2
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A figure of folded umbrellas requests repayment for rain diverted away from thirsty ground.",
+    "attacks": "Umbrella hook: Dexterity + Brawl; Strength bashing.",
+    "notes": "Pouring a liter of clean water onto dry living roots settles one demand and makes it leave for the scene. Money and written promises have no value to it.",
+    "appearance": "A tall person-shaped bundle of folded black umbrellas, rainwater dripping from a faceless brass handle head, beside a dry planter on a canal walkway.",
+    "imageSeed": 146
+  },
+  {
+    "id": "blue-hour-host",
+    "name": "Blue Hour Host",
+    "category": "Apparitions",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        5
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Etiquette",
+        "rating": 4
+      },
+      {
+        "name": "Empathy",
+        "rating": 3
+      },
+      {
+        "name": "Awareness",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A twilight host sets an extra place at deserted tables and remembers everyone who has ever refused the invitation.",
+    "attacks": "Tableware toss: Dexterity + Athletics; 2 bashing damage dice; Athletics defaults to zero.",
+    "notes": "A guest who shares a true memory over a cup of water gains one die on the next Empathy roll that scene. The host withdraws if anyone takes an unoffered place at the table.",
+    "appearance": "An elegant indigo silhouette with a face like a blue porcelain saucer, setting a single extra cup at an abandoned outdoor table during blue twilight.",
+    "imageSeed": 147
+  },
+  {
+    "id": "unsent-witness",
+    "name": "Unsent Witness",
+    "category": "Apparitions",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Investigation",
+        "rating": 4
+      },
+      {
+        "name": "Empathy",
+        "rating": 2
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A figure made of unopened envelopes follows confessions that were written but never delivered.",
+    "attacks": "Envelope flutter: Dexterity + Athletics; 1 bashing damage die; Athletics defaults to zero.",
+    "notes": "It can identify which of two physical letters was written first after a turn of handling them. Reading a letter aloud quiets it for a scene, but it cannot reveal text hidden inside sealed envelopes.",
+    "appearance": "A small upright figure assembled from cream sealed envelopes with blank faces and red wax seals, standing beneath a city mailbox at night.",
+    "imageSeed": 148
+  },
+  {
+    "id": "stairwell-tenant",
+    "name": "Stairwell Tenant",
+    "category": "Apparitions",
+    "habitat": "Underground",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      },
+      {
+        "name": "Awareness",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A stooped stair-shaped presence counts footsteps and resents anyone who skips a step.",
+    "attacks": "Banister shove: Dexterity + Brawl; Strength bashing.",
+    "notes": "Walking every step in order grants safe passage past it for the scene. A skipped step makes it block the landing, but it cannot leave the stairwell or alter the staircase.",
+    "appearance": "A stooped humanoid made of weathered stair treads and banister spindles, a dim landing light inside its chest, crouched on a concrete basement staircase.",
+    "imageSeed": 149
+  },
+  {
+    "id": "lantern-census",
+    "name": "Lantern Census",
+    "category": "Apparitions",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        6
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 4
+      },
+      {
+        "name": "Investigation",
+        "rating": 3
+      },
+      {
+        "name": "Awareness",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A walking cluster of lanterns counts sleepers in campsites and becomes agitated when the count changes unnoticed.",
+    "attacks": "Lantern swing: Dexterity + Athletics; 2 bashing damage dice; Athletics defaults to zero.",
+    "notes": "After watching a campsite for a minute it knows how many sleeping bodies are visible there, not their identities. Announcing an arrival or departure prevents its alarm for that change.",
+    "appearance": "A walking constellation of five brass lanterns linked by thin rootlike branches, balanced on two wooden feet at the edge of a deserted campsite.",
+    "imageSeed": 150
+  },
+  {
+    "id": "quiet-auctioneer",
+    "name": "Quiet Auctioneer",
+    "category": "Apparitions",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        5
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Etiquette",
+        "rating": 3
+      },
+      {
+        "name": "Subterfuge",
+        "rating": 3
+      },
+      {
+        "name": "Awareness",
+        "rating": 2
+      }
+    ],
+    "willpower": 7,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A faceless bidder offers imaginary lots in exchange for sounds that visitors agree not to make.",
+    "attacks": "Gavel tap: Dexterity + Athletics; 1 bashing damage die; Athletics defaults to zero.",
+    "notes": "A visitor may promise one minute of silence to receive a precise description of an object the auctioneer has seen this scene. Speaking early ends the exchange; it cannot compel silence.",
+    "appearance": "A faceless auctioneer in a charcoal frock coat behind an empty miniature rostrum, holding a tiny silver gavel in a room of covered furniture.",
+    "imageSeed": 151
+  },
+  {
+    "id": "pale-rehearsal",
+    "name": "Pale Rehearsal",
+    "category": "Apparitions",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Expression",
+        "rating": 4
+      },
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Awareness",
+        "rating": 1
+      }
+    ],
+    "willpower": 4,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "An unfinished mannequin rehearses the last harmless gesture made in an abandoned performance space.",
+    "attacks": "Stage shove: Dexterity + Athletics; Strength bashing.",
+    "notes": "It repeats a visible nonviolent gesture on the following turn. A deliberately clumsy bow causes it to stumble and lose its next movement; each observer can trick it this way once per scene.",
+    "appearance": "An unfinished pale wooden stage mannequin with loose ribbon joints, caught halfway through a bow on a deserted rehearsal stage under a single spotlight.",
+    "imageSeed": 152
+  },
+  {
+    "id": "wrong-room-guest",
+    "name": "Wrong Room Guest",
+    "category": "Apparitions",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Investigation",
+        "rating": 2
+      },
+      {
+        "name": "Etiquette",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A luggage-laden silhouette politely insists that every room contains the meeting it has already missed.",
+    "attacks": "Luggage bump: Dexterity + Brawl; Strength bashing.",
+    "notes": "A written appointment naming another room redirects it there for the scene. The appointment must describe a place the writer has visited; invented addresses do not work.",
+    "appearance": "A dark humanlike silhouette almost hidden behind mismatched vintage luggage, a blank room-number plaque for a face, paused in a hotel corridor.",
+    "imageSeed": 153
+  },
+  {
+    "id": "afterimage-gardener",
+    "name": "Afterimage Gardener",
+    "category": "Apparitions",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Crafts",
+        "rating": 3
+      },
+      {
+        "name": "Awareness",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A gardener cultivates fading outlines left by plants removed from a place, watering the spaces between them.",
+    "attacks": "Spectral trowel: Dexterity + Crafts; 2 bashing damage dice.",
+    "notes": "After a minute of work, it outlines the shape of one plant removed within the last day. The outline lasts three turns and provides no information about who removed the plant.",
+    "appearance": "A translucent amber gardener with a broad leaf-shaped hat, watering pale glowing outlines of missing flowers in a moonlit bare garden bed.",
+    "imageSeed": 154
+  },
+  {
+    "id": "toll-of-names",
+    "name": "Toll of Names",
+    "category": "Apparitions",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Awareness",
+        "rating": 3
+      },
+      {
+        "name": "Intimidation",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 1
+      }
+    ],
+    "willpower": 6,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A bell-bodied gatekeeper asks travelers for a nickname before letting them cross an otherwise ordinary threshold.",
+    "attacks": "Bell shoulder: Dexterity + Brawl; Strength bashing.",
+    "notes": "Any sincerely used nickname buys passage for the scene. The gatekeeper remembers only that nickname and cannot discover a hidden true name. Covering its bell mutes its voice but does not remove it.",
+    "appearance": "A broad standing bronze bell with two heavy feet, small expressive handlike clappers and a narrow eye slit, guarding an ordinary wooden garden gate.",
+    "imageSeed": 155
+  },
+  {
+    "id": "snowprint-pilgrim",
+    "name": "Snowprint Pilgrim",
+    "category": "Apparitions",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Survival",
+        "rating": 4
+      },
+      {
+        "name": "Awareness",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A bundled traveler leaves snowy footprints in warm weather and asks the way to a home remembered only by its smell.",
+    "attacks": "Walking-stick push: Dexterity + Athletics; Strength bashing.",
+    "notes": "Its last ten footprints remain visible for a scene even on dry stone. Offering a familiar household scent makes it describe one landmark from its journey; the description may be outdated.",
+    "appearance": "A bundled faceless pilgrim in a pale patchwork cloak carrying a forked walking stick, fresh snowy footprints on a warm mossy forest path beneath summer leaves.",
+    "imageSeed": 156
+  },
+  {
+    "id": "hollow-congregant",
+    "name": "Hollow Congregant",
+    "category": "Aberrations",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Charisma": [
+        3
+      ],
+      "Manipulation": [
+        4
+      ],
+      "Appearance": [
+        1
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Subterfuge",
+        "rating": 4,
+        "specialty": "Borrowed voices"
+      },
+      {
+        "name": "Empathy",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      },
+      {
+        "name": "Occult",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Something folded and patient wears the emptied skin of a parishioner, and it has learned every hymn by heart.",
+    "attacks": "Unbuttoning grip: Dexterity + Brawl; Strength + 1 lethal as the skin parts to let the occupant reach out.",
+    "notes": "It speaks in the voice of the last person who trusted the skin. Anyone who knew that person must win a Perception + Empathy roll (difficulty 8) to notice the wrongness. Wounded, it leaks no blood, only dry pages of a prayer book in a hand no one recognises.",
+    "appearance": "A tall stooped figure in a worn Sunday suit standing in an empty pew, the pale face slack like an ill-fitting mask, a slit at the collar showing darkness and long pale fingers folding inside, candlelit chapel.",
+    "imageSeed": 157
+  },
+  {
+    "id": "tidewrong-abbot",
+    "name": "Tidewrong Abbot",
+    "category": "Aberrations",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        5
+      ],
+      "Charisma": [
+        4
+      ],
+      "Manipulation": [
+        3
+      ],
+      "Appearance": [
+        0
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Expression",
+        "rating": 4,
+        "specialty": "Sermons"
+      },
+      {
+        "name": "Intimidation",
+        "rating": 3
+      },
+      {
+        "name": "Occult",
+        "rating": 4
+      },
+      {
+        "name": "Athletics",
+        "rating": 2,
+        "specialty": "Swimming"
+      }
+    ],
+    "willpower": 8,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A bloated preacher stands waist-deep at low tide and delivers a sermon in a language that has too many vowels and no word for mercy.",
+    "attacks": "Brine embrace: Strength + Brawl to grapple; 2 bashing per turn while held under the water.",
+    "notes": "Anyone who hears a full turn of the sermon rolls Willpower (difficulty 7) or takes a step toward the sea; three failures and the listener wades in without resisting. Wax in the ears adds two dice to resist. The Abbot will not leave the water willingly.",
+    "appearance": "A bloated grey-green cleric in sodden vestments standing waist deep in a black tidal flat at dusk, the face split vertically into gill-like folds, one webbed hand raised in benediction, a ruined fishing village behind.",
+    "imageSeed": 158
+  },
+  {
+    "id": "deep-tallyman",
+    "name": "Deep Tallyman",
+    "category": "Aberrations",
+    "habitat": "Underground",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        5
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 4
+      },
+      {
+        "name": "Stealth",
+        "rating": 4
+      },
+      {
+        "name": "Enigmas",
+        "rating": 3
+      },
+      {
+        "name": "Investigation",
+        "rating": 2
+      }
+    ],
+    "willpower": 7,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Older than the mine that found it, a pale many-jointed thing counts living heartbeats aloud, and it never loses count.",
+    "attacks": "Counting fingers: Dexterity + Brawl; 1 lethal, and the victim loses one die from their next action as their pulse stutters.",
+    "notes": "It always knows how many living hearts are within a hundred metres and where each one is. It is patient and will follow a group for days, whispering the shrinking total. A heart slowed by meditation (Meditation roll, difficulty 8) drops out of its count for a scene.",
+    "appearance": "A pale emaciated creature with far too many finger joints crouched on a ledge in a flooded mine shaft, head tilted, lips moving, faint chalk tally marks covering the rock wall behind it, single lamp glow.",
+    "imageSeed": 159
+  },
+  {
+    "id": "mended-lover",
+    "name": "Mended Lover",
+    "category": "Aberrations",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        5
+      ],
+      "Manipulation": [
+        5
+      ],
+      "Appearance": [
+        3,
+        5
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Empathy",
+        "rating": 4,
+        "specialty": "Old wounds"
+      },
+      {
+        "name": "Subterfuge",
+        "rating": 3
+      },
+      {
+        "name": "Medicine",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 1
+      }
+    ],
+    "willpower": 7,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Sewn from the best-loved parts of many people, it waits in doorways and offers to take away any pain you carry, and it means every word.",
+    "attacks": "Tender hands: Dexterity + Medicine; 2 lethal as it unpicks a seam in the victim to make room.",
+    "notes": "It can heal two levels of a willing subject’s damage by touch, but takes something in exchange: a scar, a memory of someone loved, or the colour of one eye. Those it has healed feel it standing behind them in every doorway for a lunar month. It never attacks anyone who refuses it twice.",
+    "appearance": "A gaunt androgynous figure wrapped in a long high-collared dark coat and gloves, standing in a half-open doorway; only its face and one bare outstretched hand show, and both are visibly pieced together from mismatched skin tones joined by fine silver stitches; warm low light behind, peeling wallpaper.",
+    "imageSeed": 173
+  },
+  {
+    "id": "drowned-bellringer",
+    "name": "Drowned Bellringer",
+    "category": "Apparitions",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Intimidation",
+        "rating": 3
+      },
+      {
+        "name": "Awareness",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "When the fog comes in, a bell rings from the reservoir that buried a valley town, and its keeper walks ashore to fetch the congregation.",
+    "attacks": "Bell-rope noose: Dexterity + Athletics to entangle; 1 bashing per turn and the victim is dragged one metre toward the water.",
+    "notes": "Each peal of the bell is heard only by people born within twenty miles; they must roll Willpower (difficulty 6) or walk toward the shore. Ringing any other bell in reply confuses it for one turn. It dissolves when the fog lifts and returns with the next fog.",
+    "appearance": "A drowned bell-ringer in a rotted cassock, waterweed in its hair, walking out of a fog-bound reservoir dragging a frayed rope, the tip of a submerged church steeple rising from the dark water behind.",
+    "imageSeed": 161
+  },
+  {
+    "id": "facetaker-procession",
+    "name": "Facetaker Procession",
+    "category": "Apparitions",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        0
+      ],
+      "Manipulation": [
+        3
+      ],
+      "Appearance": [
+        0
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Subterfuge",
+        "rating": 3
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Blank-faced mourners walk behind a hearse that is not there; whoever they follow home wakes up with one less person who remembers their face.",
+    "attacks": "Mourning touch: Dexterity + Brawl; 1 bashing, and the victim must roll Willpower (difficulty 7) or lose a point of temporary Willpower.",
+    "notes": "Stats are for one mourner; a procession has three to nine. Each night they follow someone, a friend of that person forgets their face. When the last friend forgets, one mourner wears it. Stepping out of their path through a threshold never used by the dead (a new door, a window) breaks the trail.",
+    "appearance": "A line of black-clad mourners with smooth featureless faces walking slowly down a misty lamplit street behind an empty space where a hearse should be, one at the front just beginning to have features.",
+    "imageSeed": 162
+  },
+  {
+    "id": "static-saint",
+    "name": "Static Saint",
+    "category": "Apparitions",
+    "habitat": "City",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Expression",
+        "rating": 4
+      },
+      {
+        "name": "Subterfuge",
+        "rating": 3
+      },
+      {
+        "name": "Empathy",
+        "rating": 3
+      }
+    ],
+    "willpower": 7,
+    "armor": null,
+    "health": [],
+    "description": "A blurred figure with its arms open appears on dead television screens in rooms where someone is alone and awake past three in the morning.",
+    "attacks": "None physical. Its whisper costs one temporary Willpower per scene unless the listener wins a Willpower roll (difficulty 7).",
+    "notes": "It knows the listener’s secret wishes and offers to grant one, in exchange for one new screen in a stranger’s home. Its promises are true and always fulfilled in the most literal way. Unplugging the set does nothing; covering every reflective surface in the room banishes it until the next night.",
+    "appearance": "An old cathode-ray television in a dark apartment glowing with snow, a haloed human silhouette with open arms visible through the static, the pale light spilling across an unmade bed.",
+    "imageSeed": 163
+  },
+  {
+    "id": "noonstar-vigil",
+    "name": "Noonstar Vigil",
+    "category": "Apparitions",
+    "habitat": "Wilderness",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Awareness",
+        "rating": 5
+      },
+      {
+        "name": "Cosmology",
+        "rating": 4
+      },
+      {
+        "name": "Intimidation",
+        "rating": 4
+      }
+    ],
+    "willpower": 9,
+    "armor": null,
+    "health": [],
+    "description": "In certain high fields the stars come out at midday, and something in the gaps between them turns, slowly, to look down.",
+    "attacks": "None physical. Each turn spent under its regard costs a Willpower roll (difficulty 8); failure inflicts one bashing level as the mind tries to understand the scale of what is looking.",
+    "notes": "It does not hate or want anything. Mages who scry it gain a single true answer about the Umbra and one point of Paradox. Lying flat beneath a solid roof, or burying one’s face in the earth, hides a person from it. Animals refuse to enter the field.",
+    "appearance": "A desolate highland meadow at midday under a sky gone black and full of stars, a single shepherd hut, and between the stars an immense faint shape like a slowly turning eye, cosmic dread.",
+    "imageSeed": 174
+  },
+  {
+    "id": "flesh-loom",
+    "name": "Flesh Loom",
+    "category": "Constructs",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        5
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        6
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Crafts",
+        "rating": 5,
+        "specialty": "Weaving"
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      },
+      {
+        "name": "Brawl",
+        "rating": 3
+      }
+    ],
+    "willpower": 5,
+    "armor": 3,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A derelict mill loom still works the night shift, and the tapestries it weaves have warm threads and the faces of missing workers.",
+    "attacks": "Shuttle strike: Dexterity + Brawl; Strength + 1 lethal. On two or more successes the victim is caught in the warp: Strength roll (difficulty 8) to tear free.",
+    "notes": "Anyone caught for three turns becomes part of the cloth, alive and silent. Cutting a figure out of a tapestry with a clean blade and burning the rest frees them, badly scarred. Its belts run on fear: a calm, unafraid target (Willpower roll, difficulty 7) is ignored that turn.",
+    "appearance": "A huge iron power loom in a ruined Victorian mill at night, its shuttles moving on their own, the long cloth spilling from it dark red and woven with faint human faces, moonlight through broken windows.",
+    "imageSeed": 165
+  },
+  {
+    "id": "reliquary-engine",
+    "name": "Reliquary Engine",
+    "category": "Constructs",
+    "habitat": "Underground",
+    "attributes": {
+      "Strength": [
+        7
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        8
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Occult",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 1
+      },
+      {
+        "name": "Brawl",
+        "rating": 3
+      },
+      {
+        "name": "Intimidation",
+        "rating": 3
+      }
+    ],
+    "willpower": 8,
+    "armor": 4,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A forgotten order built a cathedral-sized machine from the bones of its saints so it could keep praying after they were gone. It still prays, and it still needs bones.",
+    "attacks": "Ossuary arms: Dexterity + Brawl; Strength + 2 lethal.",
+    "notes": "Its prayer is a constant grinding hymn. Prime-attuned mages near it regain one Quintessence per scene, at the cost of an unsettling resonance. Reciting the order’s litany correctly (Occult roll, difficulty 8) halts it for a turn. It moves only along the tracks cut into the catacomb floor.",
+    "appearance": "A colossal machine built of human bones, ribs and skulls arranged like cathedral pipes and gears, crawling slowly on rails through a candlelit catacomb, ornate and terrible.",
+    "imageSeed": 166
+  },
+  {
+    "id": "ecorche-tutor",
+    "name": "Écorché Tutor",
+    "category": "Constructs",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        1
+      ],
+      "Manipulation": [
+        3
+      ],
+      "Appearance": [
+        0
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Medicine",
+        "rating": 5,
+        "specialty": "Anatomy"
+      },
+      {
+        "name": "Academics",
+        "rating": 3
+      },
+      {
+        "name": "Melee",
+        "rating": 3,
+        "specialty": "Scalpels"
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A lifesize anatomical model from a closed medical school peels back its own painted layers to show students what they look like inside, and it is eager to check.",
+    "attacks": "Demonstration blade: Dexterity + Melee; Strength + 2 lethal. Each success beyond the first ignores one die of armor.",
+    "notes": "It knows exactly where to cut: any wound it inflicts heals as if one level worse. It will answer any question about the human body truthfully, but asks for a demonstration in return. Closing an old anatomy textbook in its presence makes it stand still, attentive, until the book is opened again.",
+    "appearance": "A lifesize antique anatomical model of a man with painted muscles and removable organs, peeling back a panel of its own chest, standing in a dusty Victorian lecture theatre with tiered benches.",
+    "imageSeed": 167
+  },
+  {
+    "id": "black-orrery",
+    "name": "Black Orrery",
+    "category": "Constructs",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        5
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Cosmology",
+        "rating": 5
+      },
+      {
+        "name": "Enigmas",
+        "rating": 4
+      },
+      {
+        "name": "Awareness",
+        "rating": 3
+      }
+    ],
+    "willpower": 8,
+    "armor": 3,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A brass orrery models seven worlds that astronomers have never found, and it is turning toward an alignment.",
+    "attacks": "Orbiting spheres: Dexterity + Awareness; 2 bashing per sphere that hits, up to three spheres a turn.",
+    "notes": "Each night it advances one notch. When the seven worlds align, a door opens in the room to somewhere cold and very far away, and it stays open for one hour. Anyone who studies it for a scene (Intelligence + Cosmology, difficulty 8) can predict the night of alignment, or slow it by a week at the cost of one temporary Willpower.",
+    "appearance": "A great black and brass orrery in a dim observatory, seven strange dark planets on arms around a lightless central sphere, a door-shaped rift of cold starlight beginning to open in the wall beside it.",
+    "imageSeed": 168
+  },
+  {
+    "id": "lamprey-swan",
+    "name": "Lamprey Swan",
+    "category": "Wildlife",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        3
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3,
+        "specialty": "Swimming"
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Brawl",
+        "rating": 3
+      }
+    ],
+    "willpower": 3,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A white swan glides on park ponds at dusk. When it opens its beak, its throat unfolds into a round mouth lined with rings of teeth.",
+    "attacks": "Lamprey bite: Dexterity + Brawl; 2 lethal, and it stays latched, dealing 1 lethal each turn until pulled free (Strength roll, difficulty 7).",
+    "notes": "Flocks of three to five hunt together, latching onto swimmers and dragging them under. A latched swan drinks one blood point or one health level per turn. They avoid moving water and hiss at running taps.",
+    "appearance": "A white swan rearing up on black pond water at dusk, wings half raised, hissing straight at the viewer with its beak gaping unnaturally wide, the open throat revealed as a dark tube lined with rings of needle teeth all the way down, eerie and predatory, bare trees and park railings behind.",
+    "imageSeed": 178
+  },
+  {
+    "id": "carrion-psalmist",
+    "name": "Carrion Psalmist",
+    "category": "Wildlife",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Expression",
+        "rating": 4,
+        "specialty": "Mimicry"
+      },
+      {
+        "name": "Athletics",
+        "rating": 3,
+        "specialty": "Flight"
+      }
+    ],
+    "willpower": 4,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Black birds gather where something will soon die, and they repeat the last words of everyone they have watched die, perfectly, in the right voices.",
+    "attacks": "Beak and claw: Dexterity + Brawl; 1 lethal. A flock of twelve or more attacks as one creature with Dexterity 5 and 3 lethal.",
+    "notes": "A flock arriving is an omen, never wrong: someone nearby will die within a day. Listening to a scene of their mimicry (Perception + Investigation, difficulty 7) reveals the last words of whoever died here most recently, and sometimes who killed them.",
+    "appearance": "A ragged flock of black birds with pale bare faces perched on a dead tree over a misty moorland at twilight, beaks open as if speaking, one bird staring straight at the viewer.",
+    "imageSeed": 170
+  },
+  {
+    "id": "shaftwinder-eel",
+    "name": "Shaftwinder Eel",
+    "category": "Wildlife",
+    "habitat": "Underground",
+    "attributes": {
+      "Strength": [
+        5
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Stealth",
+        "rating": 4
+      },
+      {
+        "name": "Brawl",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      }
+    ],
+    "willpower": 4,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Blind and colourless, it lives in flooded mine shafts. Divers who measure it always find it is longer than the shaft is deep.",
+    "attacks": "Coil: Strength + Brawl to grapple; 2 bashing per turn and the victim cannot surface. Bite: Dexterity + Brawl; Strength lethal.",
+    "notes": "It senses heartbeat through water and stone; Stealth does not help against it. It never surfaces, and its full length cannot be seen in one place. Cutting off a coil does no lasting harm; the coil keeps moving for a day.",
+    "appearance": "A gigantic eyeless pale eel with a gaping round mouth and slimy translucent skin, its endless body coiled up a flooded vertical mine shaft, lit from above by a single lamp, rotten timber supports, black water, menacing.",
+    "imageSeed": 176
+  },
+  {
+    "id": "marrow-moth",
+    "name": "Marrow Moth",
+    "category": "Wildlife",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        0
+      ],
+      "Dexterity": [
+        5
+      ],
+      "Stamina": [
+        1
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Stealth",
+        "rating": 4
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 3,
+        "specialty": "Flight"
+      }
+    ],
+    "willpower": 2,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Grey moths the size of a hand settle on sleepers and lay their eggs through the skin. The larvae nest in bone marrow and keep the host very tired.",
+    "attacks": "Ovipositor: Dexterity + Stealth against a sleeping target; no damage, but the host is infested.",
+    "notes": "An infested host loses one temporary Willpower each morning and cannot regain it by sleeping. After a lunar month the bones of one limb hollow out (permanent -1 Dexterity or Stamina) and a new swarm emerges. Detecting it needs a Perception + Medicine roll (difficulty 8) or an X-ray; Life 2 magick can kill the larvae.",
+    "appearance": "Large grey dusty moths with bone-white patterned wings clustered on the bare shoulder of a sleeping figure in a dim bedroom, moonlight through net curtains, unsettling and quiet.",
+    "imageSeed": 172
+  }
+]

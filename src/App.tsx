@@ -11,6 +11,7 @@ import PlayerPage from './pages/PlayerPage';
 import FortunePage from './pages/FortunePage';
 import CreatePage from './pages/CreatePage';
 import GrimoirePage from './pages/GrimoirePage';
+import BestiaryPage from './pages/BestiaryPage';
 
 const NAV = [
   { to: '/', label: 'Table' },
@@ -18,6 +19,7 @@ const NAV = [
   { to: '/create', label: 'Create' },
   { to: '/fortune', label: 'Fortune' },
   { to: '/grimoire', label: 'Grimoire' },
+  { to: '/bestiary', label: 'Bestiary' },
   { to: '/handouts', label: 'Handouts' },
   { to: '/rules', label: 'Rules' },
   { to: '/chronicle', label: 'Chronicle' },
@@ -64,6 +66,8 @@ function Shell() {
           <Route path="/create" element={<CreatePage />} />
           <Route path="/fortune" element={<FortunePage />} />
           <Route path="/grimoire" element={<GrimoirePage />} />
+          <Route path="/bestiary" element={<BestiaryPage />} />
+          <Route path="/bestiary/:id" element={<BestiaryPage />} />
           <Route path="/handouts" element={<HandoutsPage />} />
           <Route path="/rules" element={<RulesPage />} />
           <Route path="/chronicle" element={<ChroniclePage />} />

@@ -20,7 +20,7 @@ export function healthTrack(c: Character) {
     let j = i;
     while (j + 1 < levels.length && levels[j + 1].name === levels[i].name && levels[j + 1].penalty === levels[i].penalty) j++;
     const l = levels[i];
-    const pen = l.penalty < 0 && l.penalty > -99 ? ` −${-l.penalty}` : '';
+    const pen = l.penalty < 0 && l.penalty > -99 && l.name.replace('−', '-') !== String(l.penalty) ? ` −${-l.penalty}` : '';
     out.push(`${l.name}${j > i ? ` ×${j - i + 1}` : ''}${pen}`);
     i = j + 1;
   }
@@ -40,7 +40,7 @@ export function toStatblock(c: Character): Record<string, unknown> {
   put('paradigm', c.paradigm);
   put('practice', c.practice);
   put('instruments', c.instruments);
-  for (const g of ['physical', 'social', 'mental'] as const) put(g, ATTRIBUTES[g].map((n) => traitDots(c.attributes[n] ?? { name: n, rating: 1 })));
+  for (const g of ['physical', 'social', 'mental'] as const) put(g, ATTRIBUTES[g].map((n) => traitDots(c.attributes[n] ?? { name: n, rating: 0 })));
   put('talents', traitList(c.abilities.talents));
   put('skills', traitList(c.abilities.skills));
   put('knowledges', traitList(c.abilities.knowledges));

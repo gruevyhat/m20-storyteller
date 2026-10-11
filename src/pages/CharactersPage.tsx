@@ -241,7 +241,10 @@ export function CharacterEditor({ c, onPatch, onDelete }: { c: Character; onPatc
                       {n}
                       {t.specialty && <span className="text-muted"> ({t.specialty})</span>}
                     </span>
-                    <Dots label={n} value={t.rating} onChange={(v) => patch({ attributes: { ...c.attributes, [n]: { ...t, rating: v } } })} />
+                    {c.kind === 'npc' ? (
+                      <input className="w-16 text-right font-mono" type="number" min={0} max={30} aria-label={`${n} rating`} value={t.rating}
+                        onChange={(e) => patch({ attributes: { ...c.attributes, [n]: { ...t, rating: Math.max(0, Math.min(30, Math.trunc(Number(e.target.value) || 0))) } } })} />
+                    ) : <Dots label={n} value={t.rating} onChange={(v) => patch({ attributes: { ...c.attributes, [n]: { ...t, rating: v } } })} />}
                   </div>
                 );
               })}
