@@ -26,6 +26,19 @@ describe('handout templates', () => {
     expect(parseLines('Note: it moved', false)).toEqual([{ kind: 'text', text: 'Note: it moved' }]);
   });
 
+  it('blacks out secrets before the handout is sent to the player screen', () => {
+    let c = reducer(blankChronicle(), {
+      type: 'addHandout',
+      handout: { id: 'h', title: 'Report on [[Marsh Lane]]', text: 'Officer: [[Sgt. Hale]]\nThe soil was [[warm]].', style: 'report' },
+    });
+    c = reducer(c, { type: 'showHandout', id: 'h' });
+    const sent = JSON.stringify(publicState(c));
+    expect(sent).not.toMatch(/Marsh Lane|Hale|warm|\[\[/);
+    expect(publicState(c).handout?.text).toContain('Officer: █');
+    // The Storyteller's own copy is untouched.
+    expect(c.handouts[0].text).toContain('[[Sgt. Hale]]');
+  });
+
   it('sends the look to the player screen with the handout', () => {
     const t = HANDOUT_TEMPLATES.find((x) => x.style === 'telegram')!;
     let c = reducer(blankChronicle(), { type: 'addHandout', handout: { id: 'h', title: t.title, text: t.text, style: t.style } });

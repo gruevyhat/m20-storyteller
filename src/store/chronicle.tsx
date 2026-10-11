@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useReducer, useRef, useState, type ReactNode } from 'react';
 import { get, set } from 'idb-keyval';
 import { blankChronicle, chronicleTitle, newId, type Character, type Chronicle, type Clock, type Handout, type Initiative, type LogEntry, type Scene, type ScreenOptions } from '../model/types';
+import { redact } from '../handouts/templates';
 import { openChannel, type PublicState } from '../sync/channel';
 
 const KEY = 'chronicle';
@@ -72,12 +73,19 @@ export function reducer(state: Chronicle, a: Action): Chronicle {
 
 export const screenOptions = (c: Chronicle): ScreenOptions => ({ showParty: true, showRolls: true, ...c.screen });
 
+/** The shown handout as players may receive it: [[secrets]] are blacked out before it leaves this window. */
+function publicHandout(c: Chronicle): Handout | null {
+  const h = c.handouts.find((x) => x.id === c.shownHandout);
+  if (!h) return null;
+  return { ...h, title: redact(h.title), ...(h.text !== undefined && { text: redact(h.text) }) };
+}
+
 export function publicState(c: Chronicle): PublicState {
   const opts = screenOptions(c);
   return {
     chronicle: chronicleTitle(c),
     rolls: opts.showRolls ? c.log.filter((e) => e.public).slice(0, 5) : [],
-    handout: c.handouts.find((h) => h.id === c.shownHandout) ?? null,
+    handout: publicHandout(c),
     clock: c.clock,
     scene: c.scene ?? null,
     party: opts.showParty
