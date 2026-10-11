@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`readFortune > gives a stable character for a fixed seed 1`] = `
+{
+  "affiliation": "Cult of Ecstasy (Tradition)",
+  "arete": 3,
+  "cards": [
+    "King of Pentacles",
+    "Nine of Pentacles (R)",
+    "Justice",
+    "Nine of Cups",
+    "The Hanged Man",
+    "Wheel of Fortune (R)",
+    "Temperance",
+  ],
+  "demeanor": "Monster",
+  "essence": "Pattern",
+  "nature": "Hacker",
+  "spheres": {
+    "Life": 2,
+    "Mind": 1,
+    "Prime": 1,
+    "Spirit": 3,
+  },
+  "willpower": 5,
+}
+`;

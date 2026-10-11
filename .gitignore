@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+dist/
+.env*
+# Never commit rulebook text; the app loads it from the user's own files at runtime.
+books/
+*.pdf

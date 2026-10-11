@@ -1,0 +1,294 @@
+// Six aesthetic "hands" that flavour generated rotes. They shape tone and imagery only: every name,
+// phrase and entity here is original, and no film, comic, character or product is named.
+import type { Sphere } from '../model/types';
+
+export interface Influence {
+  key: string;
+  label: string;
+  blurb: string;
+  sphereBias: Partial<Record<Sphere, number>>;
+  practices: string[];
+  abilities: string[];
+  factions: string[];
+  instruments: string[];
+  senses: string[];
+  /** Coincidental cover stories: for effects on living things, and on objects and places. */
+  covers: { body: string[]; world: string[] };
+  backlash: string[];
+  quotes: string[];
+  adjectives: string[];
+  abstracts: string[];
+  /** Name templates. {A} adjective, {E} effect noun, {X} abstract, {N} invented name. */
+  templates: string[];
+  names?: string[];
+}
+
+export const INFLUENCES: Influence[] = [
+  {
+    key: 'flesh',
+    label: 'The Flesh Engine',
+    blurb: 'After Clive Barker: flesh and desire, bodies written like books, worlds woven into carpets, carnival masks, monsters who are the real innocents.',
+    sphereBias: { Life: 3, Mind: 2, Spirit: 2, Entropy: 2, Prime: 1 },
+    practices: ['Maleficia', 'High Ritual Magick', 'Medicine Work', 'Alchemy'],
+    abilities: ['Esoterica', 'Medicine', 'Occult', 'Art'],
+    factions: ['Hollow Ones', 'Euthanatoi', 'Cult of Ecstasy'],
+    instruments: [
+      'a carpet with a whole world knotted into its weave',
+      "a surgeon's needle and a length of catgut",
+      'a carnival mask with no eyeholes',
+      'a razor and a whispered confession',
+      "a lover's lock of hair",
+      'a book bound in something that was once skin',
+      'a bell rung once in an empty room',
+      'a mirror smeared with honey and blood',
+    ],
+    senses: [
+      'The air thickens with the smell of hot iron and clove.',
+      'A bell sounds somewhere it should not.',
+      'For a moment every wound in the room aches, even the long-healed ones.',
+      'Somewhere out of sight, a loom begins to clatter.',
+      'Light comes through the walls as if they were skin held up to a lamp.',
+      'Everyone present feels, briefly and shamefully, what they most want.',
+    ],
+    covers: { body: ['a fainting spell', 'an old injury reopening', 'a fever', 'a migraine'], world: ['a fall against broken glass', 'old wiring in an old house', 'a draught from nowhere'] },
+    backlash: [
+      "Backlash opens the caster's skin along old seams.",
+      'Backlash sends something from the far side of the veil to collect what it is owed.',
+      'Backlash leaves the caster able to feel nothing but pain until dawn.',
+      "Backlash writes the caster's sins across their back in a hand they do not recognise.",
+    ],
+    quotes: [
+      'Pleasure and pain are one road. I only charge the toll.',
+      'Every body is a book. I simply read aloud.',
+      'Open it slowly. It has waited a long time.',
+      'Desire is a door that only opens inward.',
+      'The skin is the first and last page.',
+    ],
+    adjectives: ['Exquisite', 'Flayed', 'Sutured', 'Woven', 'Lamenting', 'Opened', 'Ecstatic', 'Unstitched', 'Gilded', 'Scarlet', 'Tender', 'Inward'],
+    abstracts: ['Unbinding', 'the Inner Skin', 'Exquisite Want', 'the Last Sensation', 'the Opened Heart', 'Sweet Agony', 'the Seam Between Worlds', 'the Red Choir'],
+    templates: ['The {A} {E}', '{E} of {X}', 'The {E} of {X}', '{A} {E}', 'The {E}, {A}'],
+  },
+  {
+    key: 'gutter',
+    label: 'Gutter Exorcism',
+    blurb: 'Occult noir: chain-smoking exorcists, bad bargains, pub floors, London rain and the friends it costs you.',
+    sphereBias: { Spirit: 3, Entropy: 3, Mind: 2, Prime: 1 },
+    practices: ['Gutter Magick', 'Chaos Magick', 'Faith', 'Crazy Wisdom'],
+    abilities: ['Streetwise', 'Subterfuge', 'Occult', 'Intimidation'],
+    factions: ['Orphans', 'Celestial Chorus', 'Hollow Ones'],
+    instruments: [
+      'a battered lighter and the last cigarette in the pack',
+      'holy water decanted into a hip flask',
+      'chalk sigils scrawled on a pub floor',
+      'a betting slip with a name written on the back',
+      'a pawned rosary bought back for twice the price',
+      'a pint glass full of salt',
+      "a mate's blood on a handkerchief",
+      'a hymn whistled out of tune',
+    ],
+    senses: [
+      'Every cigarette in the room goes out at once.',
+      "The jukebox skips to a song nobody's chosen.",
+      "Somewhere a dog starts howling and doesn't stop.",
+      'The rain on the window runs upward for a second.',
+      'Under the beer and smoke, there is a smell of sulphur.',
+      'Someone in the room suddenly remembers a debt.',
+    ],
+    covers: { body: ['too many pints', 'a bit of street theatre', 'a bad pint and worse company'], world: ['a lucky break', "someone else's bad night", 'a dodgy fuse'] },
+    backlash: [
+      'Backlash lands on someone the caster loves instead of the caster.',
+      'Backlash adds one more name to the list of people the caster owes.',
+      "Backlash means something below heard the caster's name, and wrote it down.",
+      'Backlash leaves the caster unable to lie for a day, which is worse than it sounds.',
+    ],
+    quotes: [
+      "Every spell's a con. The trick is knowing who the mark is.",
+      "I've got friends in low places. Lower than you'd think.",
+      "Never make a deal you can't wriggle out of.",
+      "Holy water's just tap water with a reputation.",
+      'The Devil keeps receipts. So should you.',
+    ],
+    adjectives: ['Bastard', 'Last', 'Dirty', 'Borrowed', 'Bad', 'Smoked', 'Pawned', 'Second-Hand', 'Cut-Rate', 'Bleeding', 'Closing-Time', 'Crooked'],
+    abstracts: ['Saint Nobody', 'the Bad Deal', 'Last Orders', 'the Crossroads', 'the Small Hours', 'Borrowed Time', 'the Wrong Side of the River', 'the Long Con'],
+    templates: ['The {A} {E}', "{X}'s {E}", '{E} for {X}', '{A} {E}', '{E} at {X}'],
+  },
+  {
+    key: 'code',
+    label: 'Green Rain',
+    blurb: 'Reality as code: mirrored lenses, dial tones, the world as a simulation you can read and rewrite.',
+    sphereBias: { Correspondence: 3, Mind: 3, Forces: 2, Time: 2 },
+    practices: ['Reality Hacking', 'Hypertech', 'Martial Arts', 'Cybernetics'],
+    abilities: ['Computer', 'Technology', 'Martial Arts', 'Alertness'],
+    factions: ['Virtual Adepts', 'New World Order', 'Orphans'],
+    instruments: [
+      'a payphone and a perfectly whistled tone',
+      'mirrored sunglasses that never come off',
+      'a jack wired into the base of the skull',
+      'a cracked laptop scrolling green text',
+      "a long black coat and a modem's handshake",
+      'a mirror that ripples when touched',
+      'a pager that only receives zeros',
+      'a kata performed at the speed of thought',
+    ],
+    senses: [
+      'For a moment the world stutters, as if a frame was dropped.',
+      "Green characters fall across the caster's vision and are gone.",
+      'Everyone in the room blinks at the same instant.',
+      'A phone rings somewhere, then stops mid-ring.',
+      'Reflections in nearby glass lag a beat behind.',
+      'The air tastes, very faintly, of ozone and old electronics.',
+    ],
+    covers: { body: ['déjà vu', 'a trick of the light', 'a moment of vertigo'], world: ['a glitch', 'a dropped call', 'a power surge'] },
+    backlash: [
+      'Backlash draws enforcers of consensus who look like anyone in the crowd.',
+      "Backlash corrupts one of the caster's memories, swapping it for a stranger's.",
+      'Backlash leaves the caster seeing raw code instead of faces until they sleep.',
+      'Backlash locks the caster out: for a scene, doors, phones and screens refuse them.',
+    ],
+    quotes: [
+      'The world is a rumour everyone agreed to repeat.',
+      'Every wall is a suggestion with good PR.',
+      "I don't break the rules. I read the source.",
+      'Doubt is a skeleton key.',
+      'Somebody wrote this place. Somebody can edit it.',
+    ],
+    adjectives: ['Root', 'Backdoor', 'Recursive', 'Mirrored', 'Null', 'Overclocked', 'Hardwired', 'Ghost', 'Daemon', 'Deprecated', 'Patched', 'Looping'],
+    abstracts: ['the Source', 'the Construct', 'the Mainframe', 'the Grid', 'Zero', 'the Mirror World', 'the Signal', 'the Root Directory'],
+    templates: ['{A} {E}', '{E} Protocol', 'Subroutine: {E}', '{E} from {X}', 'The {A} {E}'],
+  },
+  {
+    key: 'chrome',
+    label: 'Chrome Tomorrow',
+    blurb: 'Relentless machines from a burning future, assassins sent back through time, flesh over steel.',
+    sphereBias: { Time: 3, Forces: 3, Matter: 2, Life: 1 },
+    practices: ['Cybernetics', 'Hypertech', 'Weird Science', 'Martial Arts'],
+    abilities: ['Firearms', 'Technology', 'Drive', 'Science'],
+    factions: ['Iteration X', 'Void Engineers', 'Society of Ether'],
+    instruments: [
+      'a red heads-up display only the caster can see',
+      'a shotgun with every shell hand-engraved',
+      'a day planner with every date crossed out',
+      'a chrome skull worn as a charm',
+      'a motorcycle and a leather jacket',
+      'a coolant-stained circuit board',
+      'a pocket watch that runs backward',
+      'a scar where something was implanted, and later removed',
+    ],
+    senses: [
+      "A red grid overlays the caster's vision, tagging every face.",
+      'The air crackles with blue static and smells of ozone.',
+      'Every clock in the room skips forward a minute.',
+      'Somewhere a dog barks at nothing it can see.',
+      'A sphere of lightning flickers for an instant and leaves a scorched circle.',
+      'For a heartbeat, the caster sees the same room in ruins, years from now.',
+    ],
+    covers: { body: ['adrenaline', 'body armour', 'military training'], world: ['a power surge', 'a lucky ricochet', 'a car crash'] },
+    backlash: [
+      "Backlash peels back the caster's skin to show something shining beneath.",
+      "Backlash sends the caster's own future self to stop them.",
+      'Backlash makes every machine in the building turn and watch the caster.',
+      'Backlash drops the caster a few minutes out of time, naked and smoking.',
+    ],
+    quotes: [
+      'It does not feel pity. Neither does reality.',
+      'The future is a hunter, and it is already on its way.',
+      'The future is not fixed. That is what frightens it.',
+      'Steel remembers. Flesh forgets.',
+      'Every mission ends. Not every machine notices.',
+    ],
+    adjectives: ['Chrome', 'Liquid', 'Armoured', 'Relentless', 'Hunter-Killer', 'Endoskeletal', 'Infrared', 'Steel', 'Pre-Programmed', 'Molten', 'Last-Model', 'Coded'],
+    abstracts: ['the Burning Future', 'the Last War', 'Zero Hour', 'the Mission', 'the Machine Dawn', 'the Loop', "Tomorrow's Ashes", 'the Resistance'],
+    templates: ['{A} {E}', 'Protocol: {A} {E}', '{E} from {X}', 'The {A} {E}', '{E} for {X}'],
+  },
+  {
+    key: 'outer',
+    label: 'The Outer Dark',
+    blurb: 'After H. P. Lovecraft: drowned cities, wrong geometry, vast indifferent things beyond the stars.',
+    sphereBias: { Spirit: 3, Mind: 3, Correspondence: 2, Time: 2 },
+    practices: ['High Ritual Magick', 'Alchemy', 'Maleficia', 'Weird Science'],
+    abilities: ['Occult', 'Enigmas', 'Cosmology', 'Academics'],
+    factions: ['Order of Hermes', 'Ahl-i-Batin', 'Void Engineers'],
+    instruments: [
+      'a crumbling grimoire in no known alphabet',
+      'a diagram drawn with too many angles',
+      'salt water and an idol of green soapstone',
+      'a lens ground from black glass',
+      'a chant in a language older than throats',
+      'a seashell held to the ear',
+      'star charts annotated in an unfamiliar hand',
+      'a fish-hook carved from bone',
+    ],
+    senses: [
+      "The room's shadows fall toward a light that isn't there.",
+      'Everyone tastes salt water.',
+      'A colour no one can name lingers at the edge of sight.',
+      'Somewhere far below, something enormous turns over in its sleep.',
+      'Distant voices chant a name: {N}.',
+      'For a moment the caster has too many teeth.',
+    ],
+    covers: { body: ['a seizure', 'sleep paralysis', 'a fever dream'], world: ['a gas leak', 'a sea fog', 'subsidence'] },
+    backlash: [
+      'Backlash leaves the caster remembering a drowned city they have never visited.',
+      'Backlash brings a Derangement as the mind refuses what it saw.',
+      'Backlash draws the attention of something vast that does not blink.',
+      "Backlash sends dreams of {N} every night for a week; they are not the caster's dreams.",
+    ],
+    quotes: [
+      'Sanity is a lighthouse. I have rowed past it.',
+      'The stars are not right. I have been adjusting them.',
+      'Some doors are only locked from the outside.',
+      'We are a rumour the dark has not yet heard.',
+      '{N} does not hate us. It has not noticed us. Pray it never does.',
+    ],
+    adjectives: ['Nameless', 'Non-Euclidean', 'Drowned', 'Cyclopean', 'Gibbous', 'Squamous', 'Antediluvian', 'Sunken', 'Starless', 'Abyssal', 'Pallid', 'Unspoken'],
+    abstracts: ['the Outer Dark', 'the Spaces Between', 'the Drowned City', 'the Sleepers', 'the Far Stars', 'the Old Geometry', 'the Unseen Colour', 'the Abyss'],
+    templates: ['The {A} {E}', '{E} of {X}', 'The {E} of {N}', "{N}'s {E}", '{A} {E}'],
+    names: ["Ulm'qath", 'Zhar-Nuun', "Oth'gorrai", 'Phenquaal', 'the Pale Feaster', 'Ghaa-Tun', "Iyr'mosh", 'Vorhaal Who Waits'],
+  },
+  {
+    key: 'hive',
+    label: 'Hostile Biology',
+    blurb: 'Perfect predators, derelict ships, corporate cargo, cold sleep and blood that eats through steel.',
+    sphereBias: { Life: 3, Matter: 2, Entropy: 2, Correspondence: 1 },
+    practices: ['Weird Science', 'Hypertech', 'Medicine Work', 'Cybernetics'],
+    abilities: ['Science', 'Medicine', 'Survival', 'Technology'],
+    factions: ['Progenitors', 'Void Engineers', 'Syndicate'],
+    instruments: [
+      'a motion tracker that pings twice a second',
+      "a flamethrower's blue pilot light",
+      'a quarantine seal and a sample jar',
+      'a corporate access card with no name on it',
+      'frost scraped from a cryo-pod',
+      "a synthetic's milky fluid in a syringe",
+      'an autopsy saw',
+      'a chest-mounted heart monitor',
+    ],
+    senses: [
+      'Steam vents from somewhere and the lights drop to emergency red.',
+      'Something drips from the ceiling and smokes where it lands.',
+      'A slow ping ticks closer, though nothing is moving.',
+      'The air goes cold and smells of hot metal and wet resin.',
+      'Every surface sweats a thin, clear slime.',
+      'Somewhere in the walls, something shifts its weight.',
+    ],
+    covers: { body: ['contamination', 'a reaction to the sedative', 'shock'], world: ['an industrial accident', 'a chemical spill', 'a ventilation fault'] },
+    backlash: [
+      "Backlash means something hatches from the caster's work, hungry.",
+      'Backlash draws corporate attention: the caster becomes an asset to recover.',
+      "Backlash turns the caster's blood corrosive for a scene; it eats through floor and cloth.",
+      'Backlash seals the caster in quarantine: every door locks, every vent closes.',
+    ],
+    quotes: [
+      'Adapt faster than it does. That is the whole of biology.',
+      'The crew is expendable. The sample is not.',
+      "Never open a sealed bay because the manifest says it's safe.",
+      'It is not evil. It is simply better at being alive.',
+      'Burn the nest. Then burn the place you burned it.',
+    ],
+    adjectives: ['Acid', 'Chitinous', 'Parasitic', 'Biomechanical', 'Derelict', 'Quarantined', 'Cryogenic', 'Hostile', 'Spliced', 'Corporate', 'Hive', 'Moulting'],
+    abstracts: ['the Derelict', 'the Hive', 'the Cold Berth', 'the Company', 'the Long Haul', 'Deep Space', 'the Cargo Hold', 'the Egg Chamber'],
+    templates: ['{A} {E}', 'The {A} {E}', '{E} Procedure', '{E} from {X}', 'Directive: {E}'],
+  },
+];
+
+export const influence = (key: string) => INFLUENCES.find((i) => i.key === key)!;
