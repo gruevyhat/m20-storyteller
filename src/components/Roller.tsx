@@ -212,7 +212,7 @@ export default function Roller() {
   const ritualTarget = ritual ? nextTarget(ritual) : null;
 
   return (
-    <div className="grid items-start gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
       <section className="panel flex flex-col gap-2.5" aria-label="Roll setup">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <Tabs

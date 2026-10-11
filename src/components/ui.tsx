@@ -363,15 +363,16 @@ export function QPWheel({
   );
 }
 
-/** A small die icon button that opens the roller. */
+/** A small d10 icon button that opens the roller. */
 export function DieButton({ label, onClick }: { label: string; onClick: () => void }) {
   return (
     <button className="shrink-0 rounded p-0.5 text-muted hover:bg-raised hover:text-brass-bright" onClick={onClick} aria-label={label} title={label}>
       <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden="true">
-        <rect x={1.5} y={1.5} width={13} height={13} rx={3} fill="none" stroke="currentColor" strokeWidth={1.4} />
-        <circle cx={5.2} cy={5.2} r={1.2} fill="currentColor" />
-        <circle cx={8} cy={8} r={1.2} fill="currentColor" />
-        <circle cx={10.8} cy={10.8} r={1.2} fill="currentColor" />
+        {/* A ten-sided die seen point-on: a tilted kite outline, the kite face on top, and the edges that split the lower faces */}
+        <g fill="none" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round">
+          <path d="M8.4 0.9 L15.2 8 L7.6 15.2 L0.8 7.8Z" strokeWidth={1.4} />
+          <path d="M8.4 0.9 L4 7.3 L7.6 9 L12 7.4Z M0.8 7.8 L4 7.3 M15.2 8 L12 7.4 M7.6 9 V15.2" strokeWidth={1.1} />
+        </g>
       </svg>
     </button>
   );
