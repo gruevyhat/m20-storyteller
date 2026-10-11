@@ -71,10 +71,23 @@ export interface Reading {
   character: Character;
   faction: Faction;
   priorities: { attributes: string[]; abilities: AbilityCategory[] };
+  /** The scores behind those priorities. */
+  scores: { attributes: Record<string, number>; abilities: Record<string, number> };
+  arete: { value: number; reason: 'crown' | 'majors' | 'default' };
   freebies: LedgerEntry[];
   /** One starting rote per Sphere the character has, each castable with their ratings. */
   rotes: { sphere: Sphere; rote: Rote }[];
 }
+
+/** How the whole spread scores each priority group: [suit or Major, weight]. */
+export const SCORE_RECIPES: Record<string, [SuitOrMajor, number][]> = {
+  physical: [['pentacles', 2], ['wands', 1]],
+  social: [['cups', 2], ['wands', 1]],
+  mental: [['swords', 2], ['major', 1]],
+  talents: [['wands', 2], ['cups', 1]],
+  skills: [['pentacles', 2], ['wands', 1]],
+  knowledges: [['swords', 2], ['major', 1], ['cups', 1]],
+};
 
 const meaning = (d: Drawn) => (d.reversed ? d.card.reversed : d.card.upright);
 const title = (d: Drawn) => `${d.card.name}${d.reversed ? ' (reversed)' : ''}`;
@@ -459,6 +472,8 @@ export function readFortune(seed: string, extra = 0): Reading {
     character: c,
     faction: f,
     priorities: { attributes: attrOrder, abilities: abilityOrder },
+    scores: { attributes: groupScore, abilities: abilityScore },
+    arete: { value: arete, reason: crown.card.arcana === 'major' ? 'crown' : majors >= 3 ? 'majors' : 'default' },
     freebies,
     rotes,
   };

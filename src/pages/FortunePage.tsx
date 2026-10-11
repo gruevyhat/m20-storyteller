@@ -2,8 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { CardBack, CardFace } from '../components/TarotCard';
 import { CharacterEditor } from './CharactersPage';
-import { ALL_POSITIONS, EXTRA_POSITIONS, MAX_EXTRA, POSITIONS, newSeed, readFortune, type Drawn, type PositionKey, type Reading } from '../fortune/build';
-import { SUITS } from '../fortune/deck';
+import { ALL_POSITIONS, EXTRA_POSITIONS, MAX_EXTRA, POSITIONS, SCORE_RECIPES, newSeed, readFortune, type Drawn, type PositionKey, type Reading } from '../fortune/build';
 import { newId, type Character } from '../model/types';
 import { useChronicle } from '../store/chronicle';
 
@@ -340,50 +339,152 @@ function ExtraCard({
   );
 }
 
+type Kind = 'wands' | 'cups' | 'swords' | 'pentacles' | 'major';
+
+const KINDS: { key: Kind; label: string; theme: string; color: string }[] = [
+  { key: 'wands', label: 'Wands', theme: 'drive and daring', color: '#d9a43a' },
+  { key: 'cups', label: 'Cups', theme: 'feeling and bonds', color: '#c0504d' },
+  { key: 'swords', label: 'Swords', theme: 'thought and conflict', color: '#b9b4ab' },
+  { key: 'pentacles', label: 'Pentacles', theme: 'body, craft and wealth', color: '#5fb3ad' },
+  { key: 'major', label: 'Major Arcana', theme: 'fate', color: '#b678e0' },
+];
+const kindOf = (d: Drawn): Kind => (d.card.arcana === 'major' ? 'major' : (d.card.suit as Kind));
+
+const RECIPES = SCORE_RECIPES as Record<string, [Kind, number][]>;
+const RAISES: Record<Kind, string[]> = { wands: [], cups: [], swords: [], pentacles: [], major: [] };
+for (const [cat, parts] of Object.entries(RECIPES)) for (const [k] of parts) RAISES[k].push(cat[0].toUpperCase() + cat.slice(1));
+
+const kindLabel = (k: Kind, n: number) => {
+  const l = KINDS.find((x) => x.key === k)!.label;
+  return n === 1 ? l.replace(/s$/, '').replace('Major Arcana', 'Major Arcanum') : l;
+};
+
 function WholeSpread({ reading }: { reading: Reading }) {
-  const kinds = [
-    { key: 'wands', label: SUITS.wands.label, gloss: 'will · Physical, Social, Talents, Skills' },
-    { key: 'cups', label: SUITS.cups.label, gloss: 'feeling · Social, Talents, Knowledges' },
-    { key: 'swords', label: SUITS.swords.label, gloss: 'thought · Mental, Knowledges' },
-    { key: 'pentacles', label: SUITS.pentacles.label, gloss: 'body and craft · Physical, Skills' },
-    { key: 'major', label: 'Major Arcana', gloss: 'fate · Mental, Knowledges, Avatar, Arete' },
-  ] as const;
+  const t = reading.tally as Record<Kind, number>;
+  const c = reading.character;
+  const avatar = c.abilities.backgrounds.find((b) => b.name === 'Avatar')?.rating ?? 1;
+  const crown = reading.spread.find((d) => d.position === 'crown')!;
   return (
-    <section className="panel flex flex-col gap-2" aria-label="The whole spread">
-      <header className="flex flex-wrap items-baseline gap-x-2">
-        <h2 className="font-display text-2xl leading-tight text-brass">The whole spread</h2>
-        <p className="text-xs text-muted">Every card counts here, wherever it fell. These totals decide the priorities and the strength of the Avatar.</p>
+    <section className="panel flex flex-col gap-4" aria-label="The whole spread">
+      <header>
+        <h2 className="font-display text-2xl leading-tight text-brass">How the whole spread shaped you</h2>
+        <p className="max-w-3xl text-sm text-parchment/85">
+          Besides its own position, every card counts toward its suit. The more cards of a suit you drew, the higher the traits that suit stands for come in your
+          priorities. Where a card fell doesn't matter here, and neither does its number or whether it's reversed.
+        </p>
       </header>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
-        {kinds.map((k) => {
-          const cards = reading.spread.filter((d) => (k.key === 'major' ? d.card.arcana === 'major' : d.card.suit === k.key));
-          return (
-            <div key={k.key} className="rounded border border-line px-2 py-1">
-              <div className="flex items-baseline justify-between">
-                <span className="font-display text-lg">{k.label}</span>
-                <span className="font-mono text-2xl leading-none text-brass-bright">{reading.tally[k.key]}</span>
+
+      <div>
+        <h3 className="label mb-1">Your cards by suit</h3>
+        <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-5">
+          {KINDS.map((k) => {
+            const cards = reading.spread.filter((d) => kindOf(d) === k.key);
+            return (
+              <div key={k.key} className={`rounded border border-line px-2 py-1.5 ${cards.length ? '' : 'opacity-50'}`}>
+                <div className="flex items-baseline justify-between gap-2">
+                  <span className="flex items-center gap-1.5 font-display text-lg">
+                    <span className="inline-block h-2.5 w-2.5 rounded-full" style={{ background: k.color }} />
+                    {k.label}
+                  </span>
+                  <span className="font-mono text-2xl leading-none" style={{ color: k.color }}>
+                    {cards.length}
+                  </span>
+                </div>
+                <p className="text-xs text-muted">
+                  {k.theme}; raises {RAISES[k.key].join(', ')}
+                </p>
+                <ul className="mt-0.5 text-xs text-parchment/80">
+                  {cards.map((d) => (
+                    <li key={d.card.id}>
+                      {d.card.name} <span className="text-muted">({pos(d.position).title.replace('The ', '')})</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-xs text-muted">{k.gloss}</p>
-              <ul className="mt-0.5 text-xs text-parchment/80">
-                {cards.map((d) => (
-                  <li key={d.card.id}>
-                    {d.card.name} <span className="text-muted">· {pos(d.position).title.replace('The ', '')}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
-      <dl className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
-        {reading.combined.map((x) => (
-          <div key={x.label} className="rounded bg-raised/40 px-2 py-1">
-            <dt className="label">{x.label}</dt>
-            <dd className="text-brass-bright">{x.value}</dd>
-            <dd className="text-xs text-muted">{x.because}</dd>
-          </div>
-        ))}
-      </dl>
+
+      <div className="grid gap-4 lg:grid-cols-2">
+        <Ranking title="Attributes" order={reading.priorities.attributes} scores={reading.scores.attributes} dots={[7, 5, 3]} tally={t} />
+        <Ranking title="Abilities" order={reading.priorities.abilities} scores={reading.scores.abilities} dots={[13, 9, 5]} tally={t} />
+      </div>
+
+      <div className="grid gap-2 text-sm md:grid-cols-2">
+        <p className="rounded bg-raised/40 px-3 py-2">
+          <b className="text-brass-bright">Avatar {avatar}.</b> Every mage starts with one dot, plus one for each Major Arcana in the spread (up to 4). You drew {t.major}.
+        </p>
+        <p className="rounded bg-raised/40 px-3 py-2">
+          <b className="text-brass-bright">Arete {reading.arete.value}.</b>{' '}
+          {reading.arete.reason === 'crown'
+            ? `A Major Arcana, ${crown.card.name}, crowns the spread, so freebies raise Arete to 3.`
+            : reading.arete.reason === 'majors'
+              ? 'Three or more Major Arcana in the spread raise Arete to 3.'
+              : 'Freebies raise Arete to 2. A Major Arcana at the Crown, or three anywhere in the spread, would have made it 3.'}
+        </p>
+        {reading.rotes.length > 0 && (
+          <p className="rounded bg-raised/40 px-3 py-2">
+            <b className="text-brass-bright">{reading.rotes.length} starting rotes,</b> one for each Sphere you have ({reading.rotes.map((r) => r.sphere).join(', ')}),
+            all within your ratings.
+          </p>
+        )}
+        {(c.meritsFlaws ?? []).length > 0 && (
+          <p className="rounded bg-raised/40 px-3 py-2">
+            <b className="text-brass-bright">Merits & Flaws.</b> Each extra card gave a Merit and a Flaw worth the same points (
+            {(c.meritsFlaws ?? [])
+              .filter((m) => m.kind === 'merit')
+              .reduce((n, m) => n + m.points, 0)}{' '}
+            each in total), so they cancel out and cost no freebies.
+          </p>
+        )}
+      </div>
     </section>
+  );
+}
+
+function Ranking({ title, order, scores, dots, tally }: { title: string; order: string[]; scores: Record<string, number>; dots: number[]; tally: Record<Kind, number> }) {
+  const max = Math.max(1, ...Object.values(scores));
+  const top = order[0];
+  const name = (g: string) => g[0].toUpperCase() + g.slice(1);
+  const ties = order.filter((g, i) => i > 0 && scores[g] === scores[order[i - 1]]).map((g) => [order[order.indexOf(g) - 1], g]);
+  const leaders = RECIPES[top].filter(([k]) => tally[k] > 0);
+  return (
+    <div className="flex flex-col gap-2 rounded border border-line p-3">
+      <h3 className="font-display text-xl leading-tight">{title}</h3>
+      {order.map((g, i) => {
+        const parts = RECIPES[g];
+        return (
+          <div key={g} className="flex flex-col gap-0.5">
+            <div className="flex items-baseline justify-between gap-2">
+              <span>
+                <span className="mr-2 inline-block w-8 font-mono text-xs text-muted">{['1st', '2nd', '3rd'][i]}</span>
+                <b>{name(g)}</b>
+              </span>
+              <span className="text-sm text-brass-bright">{dots[i]} dots</span>
+            </div>
+            <div className="ml-10 flex h-3 overflow-hidden rounded-sm bg-raised" title={`Score ${scores[g]}`}>
+              {parts.map(([k, w]) =>
+                tally[k] * w > 0 ? (
+                  <span key={k} style={{ width: `${(100 * tally[k] * w) / max}%`, background: KINDS.find((x) => x.key === k)!.color }} />
+                ) : null,
+              )}
+            </div>
+            <p className="ml-10 text-xs text-muted">
+              Score {scores[g]} ={' '}
+              {parts
+                .map(([k, w]) => `${tally[k]} ${kindLabel(k, tally[k])}${w > 1 ? ` ×${w}` : ''}`)
+                .join(' + ')}
+            </p>
+          </div>
+        );
+      })}
+      <p className="text-sm text-parchment/85">
+        {scores[top] === 0
+          ? `None of your cards lean toward any ${title.toLowerCase()} group, so the shuffle set the order.`
+          : `${name(top)} comes first mainly because of your ${leaders.map(([k]) => `${tally[k]} ${kindLabel(k, tally[k])}`).join(' and ')}.`}
+        {ties.map(([a, b]) => ` ${name(a)} and ${name(b)} tied at ${scores[a]}; the shuffle put ${name(a)} first.`).join('')}
+      </p>
+    </div>
   );
 }

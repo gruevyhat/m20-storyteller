@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { DECK } from '../fortune/deck';
-import { deal, readFortune, validate } from '../fortune/build';
+import { SCORE_RECIPES, deal, readFortune, validate } from '../fortune/build';
 import { FACTIONS } from '../fortune/lore';
 
 describe('deck', () => {
@@ -91,6 +91,19 @@ describe('readFortune', () => {
     expect(r.combined.map((x) => x.label)).toEqual(expect.arrayContaining(['Attributes', 'Abilities', 'Avatar', 'Arete', 'Merits & Flaws', 'The Witness', 'The Omen']));
     expect(r.lines.map((l) => l.position)).toContain('witness');
     expect(Object.values(r.tally).reduce((a, b) => a + b, 0)).toBe(9);
+  });
+
+  it('reports priority scores that match the published recipe', () => {
+    for (let i = 0; i < 500; i++) {
+      const r = readFortune(`sc${i}`, i % 3);
+      const all = { ...r.scores.attributes, ...r.scores.abilities };
+      for (const [cat, parts] of Object.entries(SCORE_RECIPES)) {
+        expect(all[cat], cat).toBe(parts.reduce((t, [k, w]) => t + r.tally[k] * w, 0));
+      }
+      // Higher scores always rank first.
+      const a = r.priorities.attributes.map((g) => r.scores.attributes[g]);
+      expect([...a].sort((x, y) => y - x)).toEqual(a);
+    }
   });
 
   it('never gives a Nature and Demeanor that match', () => {
