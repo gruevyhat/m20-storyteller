@@ -145,6 +145,16 @@ export default function HomePage() {
         </Feature>
       </Group>
 
+      <a
+        href={`${import.meta.env.BASE_URL}tutorial.html`}
+        className="group flex flex-wrap items-center gap-x-5 gap-y-1 rounded-lg border border-line bg-panel px-5 py-4 transition-colors hover:border-brass-dim"
+      >
+        <span className="label text-brass">Guide</span>
+        <span className="font-display text-2xl text-parchment group-hover:text-brass-bright">Building RPG tools with a coding assistant</span>
+        <span className="text-sm text-muted">How this app was made, with the actual requests and corrections, and what to check along the way.</span>
+        <span className="ml-auto text-sm text-brass">Read the guide →</span>
+      </a>
+
       <p className="text-center text-xs text-muted">
         No account, no server. Your chronicle saves in this browser; export it from{' '}
         <Link className="underline" to="/chronicle">

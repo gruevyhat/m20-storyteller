@@ -80,7 +80,10 @@ function Shell() {
       <footer className="mx-auto flex max-w-[1600px] items-center gap-3 px-4 pb-4 pt-2 text-[11px] text-muted">
         <img src={darkPackLogo} alt="Dark Pack" className="h-10 w-10 shrink-0" />
         <p>
-          Unofficial, free fan tool; not official World of Darkness material. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB. All rights reserved. For more information please visit worldofdarkness.com.
+          <a className="underline hover:text-parchment" href={`${import.meta.env.BASE_URL}tutorial.html`}>
+            How this app was built
+          </a>{' '}
+          · Unofficial, free fan tool; not official World of Darkness material. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB. All rights reserved. For more information please visit worldofdarkness.com.
         </p>
       </footer>
     </div>
