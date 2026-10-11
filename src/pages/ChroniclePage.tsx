@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Field } from '../components/ui';
+import darkPackLogo from '../assets/darkpack-logo.png';
 import { blankChronicle } from '../model/types';
 import { exportChronicle, parseChronicle, useChronicle } from '../store/chronicle';
 
@@ -84,10 +85,13 @@ export default function ChroniclePage() {
           An unofficial, free fan tool for running Mage: The Ascension 20th Anniversary Edition. It contains no rulebook text; rules search works only on files you load
           yourself, and they stay in your browser.
         </p>
-        <p>
-          Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. For more
-          information please visit worldofdarkness.com.
-        </p>
+        <div className="flex items-center gap-3">
+          <img src={darkPackLogo} alt="Dark Pack" className="h-16 w-16 shrink-0" />
+          <p>
+            Made under Paradox Interactive's Dark Pack Agreement. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used
+            with permission. All rights reserved. For more information please visit worldofdarkness.com.
+          </p>
+        </div>
         <p>Page references are to the M20 core rulebook (Onyx Path, 2015).</p>
       </section>
     </div>

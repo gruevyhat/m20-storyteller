@@ -30,4 +30,6 @@ Pushing to `main` deploys to GitHub Pages via `.github/workflows/deploy.yml`.
 
 ## Legal
 
-Unofficial, free fan tool; not affiliated with Paradox Interactive or Onyx Path Publishing. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. For more information please visit worldofdarkness.com.
+<img src="public/darkpack-logo.png" alt="Dark Pack" width="96" align="left">
+
+Made under Paradox Interactive's [Dark Pack Agreement](https://www.paradoxinteractive.com/games/world-of-darkness/community/dark-pack-agreement). Unofficial, free fan tool; not affiliated with Paradox Interactive or Onyx Path Publishing. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. For more information please visit worldofdarkness.com.

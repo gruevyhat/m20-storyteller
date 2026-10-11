@@ -35,8 +35,25 @@ export function pdfSafe(s: string) {
     .join('');
 }
 
+/** The Dark Pack logo as a data URL, for the PDF footer. Null outside a browser. */
+async function darkPackLogo(): Promise<string | null> {
+  try {
+    const url = (await import('../assets/darkpack-logo.png')).default;
+    const blob = await (await fetch(url)).blob();
+    return await new Promise((resolve) => {
+      const r = new FileReader();
+      r.onload = () => resolve(String(r.result));
+      r.onerror = () => resolve(null);
+      r.readAsDataURL(blob);
+    });
+  } catch {
+    return null;
+  }
+}
+
 export async function characterPdf(c: Character, opts: { chronicle?: string } = {}): Promise<JsPDF> {
   const { jsPDF } = await import('jspdf');
+  const logo = await darkPackLogo();
   const doc = new jsPDF({ unit: 'pt', format: 'letter' });
   const text = (s: string, x: number, y: number, opts?: Parameters<JsPDF['text']>[3]) => doc.text(pdfSafe(s), x, y, opts);
 
@@ -170,7 +187,8 @@ export async function characterPdf(c: Character, opts: { chronicle?: string } = 
   doc.setFont('times', 'italic');
   doc.setFontSize(6.5);
   doc.setTextColor(120, 110, 100);
-  text('Unofficial fan-made sheet from M20 Storyteller. Not affiliated with Paradox Interactive or Onyx Path Publishing.', W / 2, H - 40, { align: 'center' });
+  if (logo) doc.addImage(logo, 'PNG', 40, H - 58, 24, 24);
+  text('Unofficial fan-made sheet from M20 Storyteller; not official World of Darkness material.', W / 2, H - 40, { align: 'center' });
   text(
     'Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. worldofdarkness.com',
     W / 2,

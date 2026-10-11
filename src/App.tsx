@@ -1,5 +1,6 @@
 import { HashRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { ChronicleProvider, useChronicle } from './store/chronicle';
+import darkPackLogo from './assets/darkpack-logo.png';
 import TablePage from './pages/TablePage';
 import CharactersPage from './pages/CharactersPage';
 import RulesPage from './pages/RulesPage';
@@ -67,6 +68,13 @@ function Shell() {
           <Route path="/chronicle" element={<ChroniclePage />} />
         </Routes>
       </main>
+      <footer className="mx-auto flex max-w-[1600px] items-center gap-3 px-4 pb-4 pt-2 text-[11px] text-muted">
+        <img src={darkPackLogo} alt="Dark Pack" className="h-10 w-10 shrink-0" />
+        <p>
+          Unofficial, free fan tool; not official World of Darkness material. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are
+          used with permission. All rights reserved. For more information please visit worldofdarkness.com.
+        </p>
+      </footer>
     </div>
   );
 }
