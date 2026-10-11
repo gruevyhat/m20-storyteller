@@ -170,7 +170,7 @@ export function CharacterEditor({ c, onPatch, onDelete }: { c: Character; onPatc
           <input className="min-w-[12rem] flex-1 font-display text-2xl" value={c.name} placeholder="Name" onChange={(e) => patch({ name: e.target.value })} aria-label="Name" />
           <span className="flex items-center gap-1">
             <select value={nameStyle} onChange={(e) => setNameStyle(e.target.value)} aria-label="Naming tradition" title="Naming tradition">
-              <option value="any">Any tradition</option>
+              <option value="any">Onomastics</option>
               {NAME_STYLES.map((n) => (
                 <option key={n.key} value={n.key}>
                   {n.label}

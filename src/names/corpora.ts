@@ -8,6 +8,10 @@ export interface Corpus {
   family: string[];
   /** Lower-case surname particles ("van", "de") added to some generated surnames. */
   particles?: { list: string[]; chance: number };
+  /** Written family name first, as in Japanese, Chinese and Korean. */
+  familyFirst?: boolean;
+  /** Surnames form a small closed set, so use the list as is rather than inventing new ones. */
+  fixedFamily?: boolean;
 }
 
 export const CORPORA: Corpus[] = [
@@ -120,6 +124,7 @@ export const CORPORA: Corpus[] = [
   {
     key: 'japanese',
     label: 'Japanese',
+    familyFirst: true,
     given: [
       'Haruki', 'Akiko', 'Daisuke', 'Emiko', 'Fumio', 'Hiroshi', 'Kazuko', 'Kenji', 'Masako', 'Noriko', 'Ryota', 'Sachiko', 'Takeshi',
       'Yoko', 'Yuki', 'Michiko', 'Shigeru', 'Tomoko', 'Keiko', 'Hideo', 'Atsushi', 'Chiyo', 'Isamu', 'Junko', 'Kaoru', 'Makoto', 'Naoko',
@@ -258,6 +263,155 @@ export const CORPORA: Corpus[] = [
       'Alexiou', 'Angelopoulos', 'Antoniou', 'Christodoulou', 'Dimitriou', 'Georgiou', 'Ioannidis', 'Karagiannis', 'Konstantinidis',
       'Lambrou', 'Makris', 'Nikolaidis', 'Oikonomou', 'Papadakis', 'Papadopoulos', 'Pappas', 'Petrakis', 'Stavropoulos', 'Theodorou',
       'Vlachos', 'Zervas', 'Kyriakou', 'Mavros', 'Raptis', 'Samaras', 'Triantafyllou', 'Vasileiou', 'Xenakis',
+    ],
+  },
+  {
+    key: 'russian',
+    label: 'Russian & Ukrainian',
+    given: [
+      'Aleksandr', 'Anastasia', 'Boris', 'Dmitri', 'Ekaterina', 'Fyodor', 'Galina', 'Grigori', 'Irina', 'Ivan', 'Kseniya',
+      'Lyudmila', 'Mikhail', 'Nadezhda', 'Nikolai', 'Oksana', 'Pavel', 'Polina', 'Sergei', 'Svetlana', 'Tatiana', 'Vasily', 'Vera',
+      'Yaroslav', 'Yelena', 'Zinaida', 'Arkady', 'Bogdana', 'Danylo', 'Larisa', 'Leonid', 'Marina', 'Olena', 'Rostislav', 'Stepan',
+      'Taras', 'Valentina', 'Vladimir', 'Yuliya', 'Zoya',
+    ],
+    family: [
+      'Abramov', 'Belov', 'Chernenko', 'Davydov', 'Fedorov', 'Gorbunov', 'Ignatyev', 'Karpenko', 'Kovalenko', 'Kuznetsov',
+      'Lebedev', 'Melnyk', 'Morozov', 'Nazarov', 'Orlov', 'Petrenko', 'Rostov', 'Savchenko', 'Shevchenko', 'Sokolov', 'Tarasov',
+      'Usenko', 'Volkov', 'Yakovlev', 'Zaitsev', 'Bondarenko', 'Golubev', 'Lysenko', 'Rudenko', 'Tkachenko',
+    ],
+  },
+  {
+    key: 'arabic',
+    label: 'Arabic',
+    given: [
+      'Abdullah', 'Amira', 'Bashir', 'Dalia', 'Fadi', 'Farida', 'Ghassan', 'Hala', 'Hamza', 'Huda', 'Ibrahim', 'Jamila', 'Karim',
+      'Layla', 'Mahmoud', 'Mariam', 'Nabil', 'Nadia', 'Omar', 'Rania', 'Rashid', 'Salma', 'Samir', 'Tariq', 'Yasmin', 'Yusuf',
+      'Zainab', 'Ziad', 'Adnan', 'Basma', 'Khalil', 'Lubna', 'Munir', 'Nour', 'Qasim', 'Rima', 'Sami', 'Wafa', 'Walid', 'Zahra',
+    ],
+    family: [
+      'Abbas', 'Ayoub', 'Barakat', 'Daoud', 'Haddad', 'Hamdan', 'Jaber', 'Kassab', 'Khoury', 'Mansour', 'Masri', 'Nassar',
+      'Qureshi', 'Rahal', 'Saad', 'Saleh', 'Shami', 'Suleiman', 'Tamimi', 'Yassin', 'Zayed', 'Aziz', 'Darwish', 'Farouk', 'Habib',
+      'Karam', 'Nasser', 'Rizk', 'Sabbagh', 'Touma',
+    ],
+  },
+  {
+    key: 'persian',
+    label: 'Persian',
+    given: [
+      'Ali', 'Arash', 'Azadeh', 'Babak', 'Bahram', 'Dariush', 'Farhad', 'Farnaz', 'Golnar', 'Hamid', 'Jaleh', 'Kamran', 'Kaveh',
+      'Laleh', 'Mahnaz', 'Mehrdad', 'Mina', 'Nasrin', 'Parisa', 'Parviz', 'Roya', 'Shirin', 'Siavash', 'Soraya', 'Taraneh',
+      'Yasaman', 'Zohreh', 'Behrouz', 'Dariya', 'Esfandiar', 'Firouzeh', 'Houshang', 'Kourosh', 'Manijeh', 'Navid', 'Pegah',
+      'Rostam', 'Shahrzad', 'Tahmineh', 'Ziba',
+    ],
+    family: [
+      'Ahmadi', 'Alavi', 'Bahrami', 'Daneshvar', 'Ebrahimi', 'Farahani', 'Ghorbani', 'Hosseini', 'Jafari', 'Karimi', 'Khosravi',
+      'Mahmoudi', 'Moradi', 'Nazari', 'Rahimi', 'Rezaei', 'Sadeghi', 'Shirazi', 'Tabrizi', 'Tehrani', 'Yazdani', 'Zand', 'Esfahani',
+      'Hashemi', 'Kazemi', 'Mirzaei', 'Najafi', 'Rostami', 'Sharifi', 'Vaziri',
+    ],
+  },
+  {
+    key: 'indian',
+    label: 'Indian',
+    given: [
+      'Aarav', 'Ananya', 'Arjun', 'Deepa', 'Devika', 'Gaurav', 'Indira', 'Ishaan', 'Kavita', 'Kiran', 'Lakshmi', 'Madhav', 'Meera',
+      'Nikhil', 'Padma', 'Pooja', 'Rahul', 'Rajesh', 'Ravi', 'Rohini', 'Sanjay', 'Shanti', 'Sunita', 'Tara', 'Uma', 'Varun',
+      'Vikram', 'Yamini', 'Aditi', 'Bhaskar', 'Chitra', 'Dhruv', 'Harsha', 'Jayant', 'Kamala', 'Leela', 'Mohan', 'Nandini',
+      'Pranav', 'Savitri',
+    ],
+    family: [
+      'Agarwal', 'Banerjee', 'Bhatt', 'Chatterjee', 'Desai', 'Ghosh', 'Gupta', 'Iyer', 'Joshi', 'Kapoor', 'Khanna', 'Kulkarni',
+      'Malhotra', 'Mehta', 'Menon', 'Mukherjee', 'Nair', 'Patel', 'Pillai', 'Rao', 'Reddy', 'Sharma', 'Shukla', 'Sinha',
+      'Srinivasan', 'Trivedi', 'Varma', 'Chaudhary', 'Krishnan', 'Subramaniam',
+    ],
+  },
+  {
+    key: 'chinese',
+    label: 'Chinese',
+    familyFirst: true,
+    fixedFamily: true,
+    given: [
+      'Jianguo', 'Xiaoming', 'Meilin', 'Weiwei', 'Haoran', 'Yuxuan', 'Zihan', 'Lihua', 'Guoqiang', 'Shufen', 'Jiahui', 'Mingyu',
+      'Xinyi', 'Zhiwei', 'Yiling', 'Junjie', 'Huifang', 'Chunhua', 'Dongmei', 'Haiyan', 'Jingyi', 'Lanying', 'Qiuyue', 'Ruolan',
+      'Shaoqing', 'Tianyu', 'Wenjun', 'Xiaofeng', 'Yunfei', 'Zhenghao', 'Baozhen', 'Chenxi', 'Fengying', 'Guanyu', 'Hongwei',
+      'Kaixin', 'Liqiang', 'Mingzhu', 'Peiyu', 'Ruoxi',
+    ],
+    family: [
+      'Wang', 'Zhang', 'Chen', 'Huang', 'Zhao', 'Zhou', 'Yang', 'Liang', 'Zheng', 'Xiao', 'Shen', 'Jiang', 'Song', 'Deng', 'Feng',
+      'Cheng', 'Wei', 'Tang', 'Xu', 'Lin', 'Guo', 'Luo', 'Gao', 'Hu', 'Ouyang', 'Situ', 'Shangguan', 'Zhuge',
+    ],
+  },
+  {
+    key: 'korean',
+    label: 'Korean',
+    familyFirst: true,
+    fixedFamily: true,
+    given: [
+      'Minjun', 'Seoyeon', 'Jiwoo', 'Hayoon', 'Dohyun', 'Eunji', 'Hyejin', 'Jaehyun', 'Jisoo', 'Kyungmin', 'Minseo', 'Sangwoo',
+      'Seojun', 'Sooyoung', 'Taeyang', 'Yejin', 'Yoonah', 'Dongwook', 'Haneul', 'Hyunwoo', 'Jinhee', 'Junho', 'Mirae', 'Nayeon',
+      'Sejin', 'Sungmin', 'Wonhee', 'Youngjae', 'Chaewon', 'Inhwa', 'Jungsoo', 'Kangdae',
+    ],
+    family: [
+      'Kim', 'Park', 'Choi', 'Jung', 'Kang', 'Yoon', 'Jang', 'Lim', 'Han', 'Shin', 'Seo', 'Kwon', 'Hwang', 'Song', 'Jeon', 'Hong',
+      'Moon', 'Yang', 'Baek', 'Heo', 'Namgung', 'Seonwoo', 'Hwangbo', 'Dokgo',
+    ],
+  },
+  {
+    key: 'turkish',
+    label: 'Turkish',
+    given: [
+      'Ahmet', 'Aylin', 'Burak', 'Cansu', 'Deniz', 'Elif', 'Emre', 'Esra', 'Gokhan', 'Hakan', 'Irmak', 'Kemal', 'Leyla', 'Mehmet',
+      'Melike', 'Murat', 'Nesrin', 'Orhan', 'Ozlem', 'Selim', 'Serap', 'Tolga', 'Tugba', 'Umut', 'Volkan', 'Yasemin', 'Yusuf',
+      'Zeynep', 'Aysel', 'Baris', 'Cemile', 'Ercan', 'Filiz', 'Gulsen', 'Ilker', 'Kerem', 'Nurcan', 'Sevgi', 'Tarkan', 'Yilmaz',
+    ],
+    family: [
+      'Akbulut', 'Aksoy', 'Arslan', 'Aydin', 'Bayram', 'Celik', 'Demir', 'Dogan', 'Erdem', 'Kahraman', 'Kaplan', 'Karaca', 'Kaya',
+      'Korkmaz', 'Kurt', 'Ozdemir', 'Ozturk', 'Polat', 'Sahin', 'Tekin', 'Tunc', 'Yavuz', 'Yildirim', 'Yilmaz', 'Aktas', 'Cetin',
+      'Guler', 'Karakaya', 'Sezer', 'Uysal',
+    ],
+  },
+  {
+    key: 'welsh',
+    label: 'Welsh',
+    given: [
+      'Aled', 'Angharad', 'Bethan', 'Bronwen', 'Cadoc', 'Carys', 'Dafydd', 'Delyth', 'Dylan', 'Eirlys', 'Emrys', 'Ffion', 'Gareth',
+      'Glenys', 'Gwilym', 'Gwyneth', 'Heledd', 'Huw', 'Iestyn', 'Ifan', 'Lowri', 'Llinos', 'Meinir', 'Meredydd', 'Nia', 'Owain',
+      'Rhiannon', 'Rhodri', 'Rhys', 'Siân', 'Siôn', 'Tegwen', 'Tomos', 'Wyn', 'Aneirin', 'Branwen', 'Ceridwen', 'Elis', 'Gethin',
+      'Morwenna',
+    ],
+    family: [
+      'Bevan', 'Bowen', 'Davies', 'Ellis', 'Evans', 'Griffiths', 'Gwynne', 'Howells', 'Hughes', 'Jenkins', 'Lewis', 'Llewellyn',
+      'Lloyd', 'Madoc', 'Meredith', 'Morgan', 'Parry', 'Powell', 'Price', 'Probert', 'Prosser', 'Pritchard', 'Rees', 'Rowlands',
+      'Thomas', 'Vaughan', 'Watkins', 'Pugh', 'Prydderch', 'Gruffydd',
+    ],
+  },
+  {
+    key: 'portuguese',
+    label: 'Portuguese & Brazilian',
+    given: [
+      'Afonso', 'Beatriz', 'Caetano', 'Conceição', 'Duarte', 'Esmeralda', 'Fernão', 'Gonçalo', 'Graça', 'Inês', 'Joaquim', 'Leonor',
+      'Lourenço', 'Luzia', 'Marcelo', 'Margarida', 'Nuno', 'Odete', 'Rodrigo', 'Rosário', 'Sebastião', 'Teresa', 'Tiago', 'Vitória',
+      'Wellington', 'Adriana', 'Benedita', 'Cristiano', 'Débora', 'Edson', 'Fabiana', 'Glória', 'Heitor', 'Iracema', 'Jandira',
+      'Kleber', 'Lúcio', 'Rosângela', 'Thiago', 'Valquíria',
+    ],
+    family: [
+      'Almeida', 'Amaral', 'Barbosa', 'Cardoso', 'Carvalho', 'Castro', 'Coelho', 'Correia', 'Cunha', 'Ferreira', 'Fonseca', 'Gomes',
+      'Lacerda', 'Machado', 'Magalhães', 'Martins', 'Medeiros', 'Moreira', 'Nogueira', 'Oliveira', 'Pacheco', 'Pereira', 'Pinheiro',
+      'Queiroz', 'Rocha', 'Sampaio', 'Siqueira', 'Teixeira', 'Vasconcelos', 'Xavier',
+    ],
+  },
+  {
+    key: 'hebrew',
+    label: 'Hebrew & Yiddish',
+    given: [
+      'Aharon', 'Avital', 'Batsheva', 'Chaim', 'Dalia', 'Eliezer', 'Esther', 'Gideon', 'Hadassah', 'Ilana', 'Itzhak', 'Leah',
+      'Malka', 'Menachem', 'Miriam', 'Moshe', 'Naomi', 'Noam', 'Ofra', 'Raphael', 'Rivka', 'Shira', 'Shlomo', 'Tamar', 'Tova',
+      'Yael', 'Yehuda', 'Yosef', 'Zev', 'Ziva', 'Avraham', 'Bracha', 'Dov', 'Feige', 'Golda', 'Hershel', 'Mendel', 'Perel',
+      'Shoshana', 'Yitzchak',
+    ],
+    family: [
+      'Abramson', 'Adler', 'Ben-Ami', 'Birnbaum', 'Cohen', 'Eisenberg', 'Feldman', 'Friedman', 'Gold', 'Goldberg', 'Grossman',
+      'Horowitz', 'Kaplan', 'Katz', 'Levin', 'Levy', 'Mizrahi', 'Peretz', 'Rabinowitz', 'Rosen', 'Rubin', 'Schechter', 'Segal',
+      'Shapiro', 'Weiss', 'Yosefov', 'Zilberman', 'Halevi', 'Lieberman', 'Teitelbaum',
     ],
   },
 ];

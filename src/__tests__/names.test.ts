@@ -17,8 +17,8 @@ describe('Markov names', () => {
         expect(name.split(' ').length, name).toBeGreaterThanOrEqual(2);
         expect(name, name).not.toMatch(/(\p{L})\1\1|(\p{L}{2})\2\2/iu);
         const [first] = name.split(' ');
-        // The given name (family name first for Japanese) is never lifted verbatim.
-        if (c.key !== 'japanese') expect(known.has(first.toLowerCase()), name).toBe(false);
+        // The given name (written second in family-first traditions) is never lifted verbatim.
+        if (!c.familyFirst) expect(known.has(first.toLowerCase()), name).toBe(false);
       }
     }
   });

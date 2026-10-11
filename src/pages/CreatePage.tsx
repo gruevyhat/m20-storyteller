@@ -199,7 +199,7 @@ function ConceptStep({ b, up }: { b: Build; up: Up }) {
         <div className="flex flex-wrap gap-1">
           <input className="min-w-[12rem] flex-1 basis-full font-display text-lg sm:basis-auto" value={b.name} onChange={(e) => up({ name: e.target.value })} placeholder="Who are they?" aria-label="Name" />
           <select value={style} onChange={(e) => setStyle(e.target.value)} aria-label="Naming tradition">
-            <option value="any">Any tradition</option>
+            <option value="any">Onomastics</option>
             {NAME_STYLES.map((n) => (
               <option key={n.key} value={n.key}>
                 {n.label}

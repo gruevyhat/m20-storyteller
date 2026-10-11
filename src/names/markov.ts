@@ -97,7 +97,7 @@ function modelFor(c: Corpus) {
 
 export const NAME_STYLES = CORPORA.map((c) => ({ key: c.key, label: c.label }));
 
-/** "Any tradition" favours English-language names: together about 40% of picks. */
+/** "Onomastics" (any tradition) favours English-language names: together about 40% of picks. */
 const ANY_WEIGHT: Record<string, number> = { british: 4, american: 3, irish: 2 };
 
 /** A full name in one tradition ("any" picks one at random). Deterministic for a given Random. */
@@ -105,10 +105,9 @@ export function randomName(rng: Random, style = 'any'): string {
   const corpus = CORPORA.find((c) => c.key === style) ?? rng.weighted(CORPORA, (c) => ANY_WEIGHT[c.key] ?? 1);
   const m = modelFor(corpus);
   const given = m.given.generate(rng) ?? rng.pick(corpus.given);
-  let family = m.family.generate(rng) ?? rng.pick(corpus.family);
+  let family = (corpus.fixedFamily ? null : m.family.generate(rng)) ?? rng.pick(corpus.family);
   if (corpus.particles && rng.next() < corpus.particles.chance) family = `${rng.pick(corpus.particles.list)} ${family}`;
-  // Japanese names are written family name first.
-  return corpus.key === 'japanese' ? `${family} ${given}` : `${given} ${family}`;
+  return corpus.familyFirst ? `${family} ${given}` : `${given} ${family}`;
 }
 
 /** A name from crypto randomness, for the "random name" button. */
