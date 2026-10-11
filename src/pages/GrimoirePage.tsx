@@ -51,7 +51,7 @@ export default function GrimoirePage() {
           <div>
             <h1 className="font-display text-3xl leading-tight text-brass">Grimoire</h1>
             <p className="max-w-3xl text-sm text-muted">
-              {CATALOG_SIZE} rotes, each built by combining an M20 Sphere Effect, up to two modifiers and one of {INFLUENCES.length} hands. Every rote lists its Spheres, difficulty,
+              {CATALOG_SIZE} rotes in {INFLUENCES.length} hands, each with its own effect. Every rote lists its Spheres, difficulty,
               successes and rules text, and you can add any of them to a character.
             </p>
           </div>
@@ -196,7 +196,7 @@ export default function GrimoirePage() {
               Conjure twelve more
             </button>
             <span className="text-xs text-muted">
-              Seed <code className="text-parchment">{seed}</code>. Share this page's address to share the same twelve.
+              Seed <code className="text-parchment">{seed}</code>. Share this page's address to share the same twelve, drawn at random from the catalog.
             </span>
           </section>
           <RoteList rotes={conjured} defaultCharacter="" />

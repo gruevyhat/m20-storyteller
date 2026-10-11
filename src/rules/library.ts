@@ -20,9 +20,12 @@ export interface Library {
 const KEY = 'rules-library';
 const MAX_CHUNK = 4000;
 
+/** Obsidian block anchors ("^orphans") at the end of a line or on a line of their own. */
+const stripAnchors = (s: string) => s.replace(/(^|[ \t])\^[A-Za-z0-9-]+[ \t]*$/gm, '').replace(/\n{3,}/g, '\n\n');
+
 const clean = (s: string) =>
-  s
-    .replace(/\[([^\]]+)\]\(#[^)]*\)/g, '$1') // internal links
+  stripAnchors(s)
+    .replace(/\[([^\]]+)\]\([^)\s]*#[^)]*\)/g, '$1') // links to headings or anchors, in this book or another
     .replace(/<[^>]+>/g, '')
     .replace(/\*\*|__/g, '')
     .trim();
@@ -68,7 +71,10 @@ export function buildIndex(sections: Section[]) {
 }
 
 export async function loadLibrary(): Promise<Library> {
-  return (await get<Library>(KEY).catch(() => undefined)) ?? { books: [], sections: [] };
+  const lib = (await get<Library>(KEY).catch(() => undefined)) ?? { books: [], sections: [] };
+  // Books loaded before anchors were stripped at import still carry them.
+  const tidy = (t: string) => clean(t);
+  return { ...lib, sections: lib.sections.map((x) => ({ ...x, heading: tidy(x.heading), path: x.path.map(tidy), text: tidy(x.text) })) };
 }
 
 export async function addBook(lib: Library, name: string, markdown: string): Promise<Library> {

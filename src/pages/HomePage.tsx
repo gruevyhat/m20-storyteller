@@ -134,7 +134,7 @@ export default function HomePage() {
       </Group>
 
       <Group title="Reference" blurb="Things to reach for mid-scene.">
-        <Feature to="/grimoire" title="Grimoire" text={`${CATALOG_SIZE.toLocaleString()} generated rotes across ${INFLUENCES.length} hands, filtered by what a character can actually cast.`}>
+        <Feature to="/grimoire" title="Grimoire" text={`${CATALOG_SIZE.toLocaleString()} rotes in ${INFLUENCES.length} hands, each with its own effect, filtered by what a character can actually cast.`}>
           <RoteSketch />
         </Feature>
         <Feature to="/bestiary" title="Bestiary" text={`${BESTIARY.length} original creatures, from odd wildlife to things that watch from between the stars. Add any as an NPC.`}>

@@ -25,7 +25,6 @@ import { MERITS_FLAWS, type MFCategory } from './meritsFlaws';
 import { MF_SUMMARY } from './meritsFlawsText';
 import { randomName } from '../names/markov';
 import { buildCatalog, castableBy, roteText, sphereLabel, type Rote } from '../grimoire/generate';
-import { EFFECTS } from '../grimoire/effects';
 import { INFLUENCES } from '../grimoire/influences';
 
 export const POSITIONS = [
@@ -525,11 +524,10 @@ export function handsForPractice(practice: string) {
 
 let catalogCache: Rote[] | null = null;
 const catalog = () => (catalogCache ??= buildCatalog());
-const effectSpheres = new Map(EFFECTS.map((e) => [e.id, e.spheres]));
 
 /**
- * For each Sphere the character has, pick a Grimoire rote whose core effect uses that Sphere and
- * whose every requirement (modifiers included) is within the character's ratings. Rotes that use
+ * For each Sphere the character has, pick a Grimoire rote that uses that Sphere and whose every
+ * requirement is within the character's ratings. Rotes that use
  * the full rating in that Sphere are favoured. A separate random stream keeps the rest of the
  * reading unchanged.
  */
@@ -540,10 +538,10 @@ export function startingRotes(spheres: Partial<Record<Sphere, number>>, seed: st
   for (const s of SPHERES) {
     const rating = spheres[s] ?? 0;
     if (!rating) continue;
-    const options = catalog().filter((r) => !used.has(r.effect) && effectSpheres.get(r.effect)?.[s] && castableBy(r, spheres));
+    const options = catalog().filter((r) => !used.has(r.id) && r.spheres[s] && castableBy(r, spheres));
     if (!options.length) continue;
     const rote = rng.weighted(options, (r) => (1 + 3 * ((r.spheres[s] ?? 0) === rating ? 1 : 0)) * (preferredHands.includes(r.influence) ? 8 : 1));
-    used.add(rote.effect);
+    used.add(rote.id);
     out.push({ sphere: s, rote });
   }
   return out;

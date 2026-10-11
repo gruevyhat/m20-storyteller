@@ -4,7 +4,7 @@
 
 ## Introduction
 
-M20-Storyteller is a browser application for running *Mage: The Ascension*. It has character sheets that roll their own dice, a magick and Paradox roller, a tarot reading that becomes a starting character, a catalog of over a thousand generated rotes, a bestiary, handout templates and a second window for the players' screen. It grew out of preparing a one-shot: finishing the characters and NPCs, checking the scenario, and getting game information into a form that worked at the table.
+M20-Storyteller is a browser application for running *Mage: The Ascension*. It has character sheets that roll their own dice, a magick and Paradox roller, a tarot reading that becomes a starting character, a grimoire of rotes, each with its own effect, a bestiary, handout templates and a second window for the players' screen. It grew out of preparing a one-shot: finishing the characters and NPCs, checking the scenario, and getting game information into a form that worked at the table.
 
 Nearly all of it was written by coding assistants (Claude Code and Codex), directed by the GM in plain conversation. This guide is for GMs who know what they want at the table and want an assistant to build it. It covers how to ask, how to correct, what to check, and the mistakes that only showed up later.
 
