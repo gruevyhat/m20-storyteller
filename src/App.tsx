@@ -1,4 +1,4 @@
-import { HashRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { HashRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
 import { ChronicleProvider, useChronicle } from './store/chronicle';
 import { chronicleTitle } from './model/types';
 import darkPackLogo from './assets/darkpack-logo.png';
@@ -12,9 +12,10 @@ import FortunePage from './pages/FortunePage';
 import CreatePage from './pages/CreatePage';
 import GrimoirePage from './pages/GrimoirePage';
 import BestiaryPage from './pages/BestiaryPage';
+import HomePage from './pages/HomePage';
 
 const NAV = [
-  { to: '/', label: 'Table' },
+  { to: '/table', label: 'Table' },
   { to: '/characters', label: 'Characters' },
   { to: '/create', label: 'Create' },
   { to: '/fortune', label: 'Fortune' },
@@ -36,7 +37,9 @@ function Shell() {
       <header className="sticky top-0 z-20 border-b border-line bg-ink/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-1 px-4 py-1.5">
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-xl font-bold text-brass">M20 Storyteller</span>
+            <Link to="/" className="font-display text-xl font-bold text-brass hover:text-brass-bright">
+              M20 Storyteller
+            </Link>
             {chronicleTitle(chronicle) && <span className="truncate text-sm text-muted">{chronicleTitle(chronicle)}</span>}
           </div>
           <nav className="flex flex-wrap gap-1">
@@ -60,7 +63,8 @@ function Shell() {
       </header>
       <main className="mx-auto max-w-[1600px] px-4 py-3">
         <Routes>
-          <Route path="/" element={<TablePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/table" element={<TablePage />} />
           <Route path="/characters" element={<CharactersPage />} />
           <Route path="/characters/:id" element={<CharactersPage />} />
           <Route path="/create" element={<CreatePage />} />
