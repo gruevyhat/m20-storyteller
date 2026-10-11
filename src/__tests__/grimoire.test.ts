@@ -81,6 +81,32 @@ describe('catalog', () => {
   });
 });
 
+describe('starting rotes', () => {
+  it('lean toward the hands that share the character\'s practice', async () => {
+    const { startingRotes, handsForPractice } = await import('../fortune/build');
+    expect(handsForPractice('Voudoun')).toContain('blood');
+    expect(handsForPractice('Hypertech')).toEqual(expect.arrayContaining(['code', 'chrome', 'hive', 'number', 'mesmer']));
+    const spheres = { Life: 2, Mind: 2, Entropy: 1, Prime: 1, Correspondence: 2 } as const;
+    let preferred = 0;
+    let total = 0;
+    for (let i = 0; i < 100; i++) {
+      for (const { rote } of startingRotes(spheres, `pref${i}`, ['blood'])) {
+        total++;
+        if (rote.influence === 'blood') preferred++;
+      }
+    }
+    // One hand in nine would be about 11% by chance.
+    expect(preferred / total).toBeGreaterThan(0.3);
+  });
+
+  it('reach every new hand in character generation', async () => {
+    const { readFortune } = await import('../fortune/build');
+    const seen = new Set<string>();
+    for (let i = 0; i < 400; i++) for (const { rote } of readFortune(`hands${i}`).rotes) seen.add(rote.influence);
+    for (const k of ['blood', 'number', 'mesmer']) expect(seen, k).toContain(k);
+  });
+});
+
 describe('helpers', () => {
   it('conjures fresh, reproducible handfuls', () => {
     expect(conjure('abc').map((r) => r.name)).toEqual(conjure('abc').map((r) => r.name));

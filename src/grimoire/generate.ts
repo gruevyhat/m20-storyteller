@@ -124,7 +124,7 @@ export function makeRote(seed: string, opts: { influence?: string } = {}): Rote 
 }
 
 export const CATALOG_SEED = 'grimoire-v1';
-export const CATALOG_SIZE = 720;
+export const CATALOG_SIZE = 1080; // 120 per hand
 
 /** The standing catalog: the same rotes, ids and names on every load. Each influence gets an equal share. */
 export function buildCatalog(seed = CATALOG_SEED, size = CATALOG_SIZE): Rote[] {

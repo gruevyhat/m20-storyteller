@@ -26,6 +26,7 @@ import { MF_SUMMARY } from './meritsFlawsText';
 import { randomName } from '../names/markov';
 import { buildCatalog, castableBy, roteText, sphereLabel, type Rote } from '../grimoire/generate';
 import { EFFECTS } from '../grimoire/effects';
+import { INFLUENCES } from '../grimoire/influences';
 
 export const POSITIONS = [
   { key: 'heart', title: 'The Heart', gloss: 'who you are when no one is watching' },
@@ -368,7 +369,8 @@ export function readFortune(seed: string, extra: ExtraPick = 0): Reading {
   c.spheres = spheres;
 
   // ---- Starting rotes: one per Sphere, drawn from the Grimoire, all castable -----------------
-  const rotes = startingRotes(spheres, seed);
+  // Rotes lean toward the hands whose practices match the character's own.
+  const rotes = startingRotes(spheres, seed, handsForPractice(c.practice ?? ''));
   c.rotes = rotes.map(({ rote }) => ({ name: `${rote.name} (${sphereLabel(rote.spheres)})`, desc: roteText(rote) }));
   c.willpower = { permanent: willpower, temporary: willpower };
   c.abilities.backgrounds = Object.entries(bg)
@@ -516,6 +518,11 @@ function crossingQuestion(d: Drawn) {
   return q[kindOf(d.card)];
 }
 
+/** Hands (Grimoire styles) that share a practice with the character. */
+export function handsForPractice(practice: string) {
+  return INFLUENCES.filter((i) => i.practices.includes(practice)).map((i) => i.key);
+}
+
 let catalogCache: Rote[] | null = null;
 const catalog = () => (catalogCache ??= buildCatalog());
 const effectSpheres = new Map(EFFECTS.map((e) => [e.id, e.spheres]));
@@ -526,7 +533,7 @@ const effectSpheres = new Map(EFFECTS.map((e) => [e.id, e.spheres]));
  * the full rating in that Sphere are favoured. A separate random stream keeps the rest of the
  * reading unchanged.
  */
-export function startingRotes(spheres: Partial<Record<Sphere, number>>, seed: string) {
+export function startingRotes(spheres: Partial<Record<Sphere, number>>, seed: string, preferredHands: string[] = []) {
   const rng = rngFromSeed(`rotes:${seed}`);
   const used = new Set<string>();
   const out: { sphere: Sphere; rote: Rote }[] = [];
@@ -535,7 +542,7 @@ export function startingRotes(spheres: Partial<Record<Sphere, number>>, seed: st
     if (!rating) continue;
     const options = catalog().filter((r) => !used.has(r.effect) && effectSpheres.get(r.effect)?.[s] && castableBy(r, spheres));
     if (!options.length) continue;
-    const rote = rng.weighted(options, (r) => 1 + 3 * ((r.spheres[s] ?? 0) === rating ? 1 : 0));
+    const rote = rng.weighted(options, (r) => (1 + 3 * ((r.spheres[s] ?? 0) === rating ? 1 : 0)) * (preferredHands.includes(r.influence) ? 8 : 1));
     used.add(rote.effect);
     out.push({ sphere: s, rote });
   }

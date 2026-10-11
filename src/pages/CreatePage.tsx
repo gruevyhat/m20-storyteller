@@ -6,7 +6,8 @@ import { ARCHETYPES, CONCEPTS, PARADIGMS } from '../fortune/deck';
 import { FACTIONS, INSTRUMENTS, OCCUPATIONS, faction, type Camp } from '../fortune/lore';
 import { MERITS_FLAWS } from '../fortune/meritsFlaws';
 import { MF_SUMMARY } from '../fortune/meritsFlawsText';
-import { startingRotes } from '../fortune/build';
+import { handsForPractice, startingRotes } from '../fortune/build';
+import { INFLUENCES } from '../grimoire/influences';
 import { roteText, sphereLabel } from '../grimoire/generate';
 import { DEFAULT_USE } from '../model/abilityDefaults';
 import {
@@ -644,15 +645,18 @@ function FinishStep({ b, up, problems: p }: { b: Build; up: Up; problems: Record
   const { dispatch } = useChronicle();
   const navigate = useNavigate();
   const [withRotes, setWithRotes] = useState(true);
+  // 'auto' follows the practice chosen in Advantages.
+  const [hand, setHand] = useState('auto');
+  const hands = hand === 'auto' ? handsForPractice(b.practice) : hand === 'any' ? [] : [hand];
   const unfinished = (Object.keys(p) as StepKey[]).filter((k) => k !== 'finish' && p[k].length);
   const character = useMemo(() => {
     const c = buildCharacter(b);
     if (withRotes) {
       const spheres = Object.fromEntries(SPHERES.map((s) => [s, finalSphere(b, s)]).filter(([, v]) => v)) as Partial<Record<Sphere, number>>;
-      c.rotes = startingRotes(spheres, `${b.name}:${b.concept}`).map(({ rote }) => ({ name: `${rote.name} (${sphereLabel(rote.spheres)})`, desc: roteText(rote) }));
+      c.rotes = startingRotes(spheres, `${b.name}:${b.concept}`, hands).map(({ rote }) => ({ name: `${rote.name} (${sphereLabel(rote.spheres)})`, desc: roteText(rote) }));
     }
     return c;
-  }, [b, withRotes]);
+  }, [b, withRotes, hand]);
   return (
     <div className="flex flex-col gap-3">
       {unfinished.length > 0 ? (
@@ -678,6 +682,22 @@ function FinishStep({ b, up, problems: p }: { b: Build; up: Up; problems: Record
         <input type="checkbox" className="accent-[#c9a227]" checked={withRotes} onChange={(e) => setWithRotes(e.target.checked)} />
         Add a starting rote for each Sphere, from the Grimoire (all castable)
       </label>
+      {withRotes && (
+        <label className="flex flex-wrap items-center gap-2 text-sm">
+          <span className="label">Style of starting rotes</span>
+          <select value={hand} onChange={(e) => setHand(e.target.value)}>
+            <option value="auto">
+              Match my practice{b.practice ? ` (${handsForPractice(b.practice).map((k) => INFLUENCES.find((i) => i.key === k)!.label).join(', ') || 'any style'})` : ''}
+            </option>
+            <option value="any">Any style</option>
+            {INFLUENCES.map((i) => (
+              <option key={i.key} value={i.key}>
+                {i.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
       {withRotes && character.rotes.length > 0 && (
         <ul className="text-sm text-parchment/85">
           {character.rotes.map((r) => (

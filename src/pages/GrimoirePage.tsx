@@ -51,7 +51,7 @@ export default function GrimoirePage() {
           <div>
             <h1 className="font-display text-3xl leading-tight text-brass">Grimoire</h1>
             <p className="max-w-3xl text-sm text-muted">
-              {CATALOG_SIZE} rotes, each built by combining an M20 Sphere Effect, up to two modifiers and one of six hands. Every rote lists its Spheres, difficulty,
+              {CATALOG_SIZE} rotes, each built by combining an M20 Sphere Effect, up to two modifiers and one of {INFLUENCES.length} hands. Every rote lists its Spheres, difficulty,
               successes and rules text, and you can add any of them to a character.
             </p>
           </div>
@@ -65,7 +65,7 @@ export default function GrimoirePage() {
           />
         </div>
         <details className="text-xs text-muted">
-          <summary className="cursor-pointer">The six hands</summary>
+          <summary className="cursor-pointer">The {INFLUENCES.length} hands</summary>
           <ul className="mt-1 grid gap-x-6 gap-y-0.5 md:grid-cols-2">
             {INFLUENCES.map((i) => (
               <li key={i.key}>
