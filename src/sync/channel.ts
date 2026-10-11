@@ -1,12 +1,28 @@
 // Storyteller ↔ player-window sync. Both windows must be open in the same browser;
 // BroadcastChannel never leaves this device.
-import type { Clock, Handout, LogEntry } from '../model/types';
+import type { Clock, Damage, Handout, HealthLevel, Initiative, LogEntry, Scene } from '../model/types';
+
+/** What players may see of a character: no notes, secrets or full stats. */
+export interface PublicCharacter {
+  id: string;
+  name: string;
+  image?: string;
+  concept?: string;
+  health: { levels: HealthLevel[]; damage: Damage[] };
+  willpower: { permanent: number; temporary: number };
+  quintessence: number;
+  paradox: number;
+}
 
 export interface PublicState {
   chronicle: string;
-  roll: LogEntry | null;
+  /** Most recent public roll first, up to five. */
+  rolls: LogEntry[];
   handout: Handout | null;
   clock: Clock | null;
+  scene: Scene | null;
+  party: PublicCharacter[] | null;
+  initiative: Initiative | null;
 }
 
 export type Message = { type: 'state'; state: PublicState } | { type: 'hello' };

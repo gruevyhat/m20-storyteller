@@ -21,6 +21,8 @@ export default {
         display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+        hand: ['Caveat', '"Segoe Print"', '"Bradley Hand"', 'cursive'],
+        type: ['"Special Elite"', '"Courier New"', 'monospace'],
       },
     },
   },

@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Roller from '../components/Roller';
-import { BoxTrack, DotTrack, HealthTrack, QPWheel } from '../components/ui';
-import type { Character } from '../model/types';
-import { useChronicle } from '../store/chronicle';
+import { BoxTrack, DotTrack, HealthTrack, QPWheel, Toggle } from '../components/ui';
+import { newId, type Character, type Initiative, type InitiativeEntry } from '../model/types';
+import { cryptoD10 } from '../engine/dice';
+import { openPlayerWindow } from '../App';
+import { screenOptions, useChronicle } from '../store/chronicle';
 
 export default function TablePage() {
   return (
@@ -13,12 +15,18 @@ export default function TablePage() {
         {/* On wide screens the sidebar takes the roller's height and the log scrolls inside it. */}
         <div className="relative min-w-0 xl:min-h-[14rem]">
           <div className="flex flex-col gap-3 xl:absolute xl:inset-0">
-            <ClockControl />
             <Log />
           </div>
         </div>
       </div>
       <Party />
+      <div className="grid items-start gap-3 lg:grid-cols-2">
+        <div className="flex min-w-0 flex-col gap-3">
+          <ScreenControl />
+          <ClockControl />
+        </div>
+        <InitiativeControl />
+      </div>
     </div>
   );
 }
@@ -187,6 +195,202 @@ function Log() {
         ))}
         {!chronicle.log.length && <li className="text-sm text-muted">Nothing rolled yet.</li>}
       </ol>
+    </section>
+  );
+}
+
+function ScreenControl() {
+  const { chronicle, dispatch } = useChronicle();
+  const opts = screenOptions(chronicle);
+  const [title, setTitle] = useState(chronicle.scene?.title ?? '');
+  const [subtitle, setSubtitle] = useState(chronicle.scene?.subtitle ?? '');
+  const shown = chronicle.handouts.find((h) => h.id === chronicle.shownHandout);
+  return (
+    <section className="panel flex flex-col gap-2" aria-label="Player screen">
+      <div className="flex items-baseline justify-between gap-2">
+        <h2 className="h-section">Player screen</h2>
+        <button className="btn-ghost text-xs" onClick={openPlayerWindow}>
+          Open ↗
+        </button>
+      </div>
+      <form
+        className="flex flex-col gap-1.5"
+        onSubmit={(e) => {
+          e.preventDefault();
+          dispatch({ type: 'scene', scene: title.trim() || subtitle.trim() ? { title: title.trim(), subtitle: subtitle.trim() } : null });
+        }}
+      >
+        <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Scene, e.g. Prague: Žižkov" aria-label="Scene title" />
+        <input value={subtitle} onChange={(e) => setSubtitle(e.target.value)} placeholder="Subtitle, e.g. 2:14 a.m., the morning after" aria-label="Scene subtitle" />
+        <div className="flex gap-2">
+          <button className="btn-primary" type="submit">
+            Show scene
+          </button>
+          <button
+            className="btn"
+            type="button"
+            disabled={!chronicle.scene}
+            onClick={() => {
+              dispatch({ type: 'scene', scene: null });
+              setTitle('');
+              setSubtitle('');
+            }}
+          >
+            Clear
+          </button>
+        </div>
+      </form>
+      <div className="flex flex-wrap gap-x-4 gap-y-1">
+        <Toggle checked={opts.showParty} onChange={(v) => dispatch({ type: 'screen', screen: { showParty: v } })}>
+          Show the cabal's health, Willpower and wheel
+        </Toggle>
+        <Toggle checked={opts.showRolls} onChange={(v) => dispatch({ type: 'screen', screen: { showRolls: v } })}>
+          Show public rolls
+        </Toggle>
+      </div>
+      <p className="text-xs text-muted">
+        {shown ? (
+          <>
+            Showing handout <b className="text-parchment">{shown.title}</b>.{' '}
+            <button className="underline" onClick={() => dispatch({ type: 'showHandout', id: null })}>
+              Hide it
+            </button>
+          </>
+        ) : (
+          <>
+            No handout showing. <Link className="underline" to="/chronicle">Pick one from the chronicle.</Link>
+          </>
+        )}
+      </p>
+    </section>
+  );
+}
+
+/** M20 initiative: one die plus Dexterity + Wits (p. 399). */
+const initiativeRating = (c: Character) => (c.attributes.Dexterity?.rating ?? 0) + (c.attributes.Wits?.rating ?? 0);
+
+function sortEntries(entries: InitiativeEntry[]) {
+  return [...entries].sort((a, b) => b.score - a.score);
+}
+
+function InitiativeControl() {
+  const { chronicle, dispatch } = useChronicle();
+  const init = chronicle.initiative ?? null;
+  const [name, setName] = useState('');
+  const [rating, setRating] = useState(5);
+  const [npcId, setNpcId] = useState('');
+  const npcs = chronicle.characters.filter((c) => c.kind === 'npc');
+  const save = (next: Initiative | null) => dispatch({ type: 'initiative', initiative: next });
+  const withEntries = (entries: InitiativeEntry[]) => {
+    const current = init?.entries[init.current];
+    const sorted = sortEntries(entries);
+    // Keep the turn marker on whoever was acting.
+    const idx = current ? Math.max(0, sorted.findIndex((e) => e.id === current.id)) : 0;
+    save({ entries: sorted, current: idx, round: init?.round ?? 1 });
+  };
+  const roll = (n: string, r: number, characterId?: string): InitiativeEntry => ({ id: newId(), name: n, score: cryptoD10() + r, characterId });
+
+  return (
+    <section className="panel flex flex-col gap-2" aria-label="Initiative">
+      <div className="flex items-baseline justify-between gap-2">
+        <h2 className="h-section">Initiative</h2>
+        {init && <span className="text-xs text-muted">Round {init.round}</span>}
+      </div>
+      <div className="flex flex-wrap gap-1.5">
+        <button
+          className="btn-primary"
+          onClick={() => {
+            const pcs = chronicle.characters.filter((c) => c.kind === 'pc');
+            const others = (init?.entries ?? []).filter((e) => !pcs.some((p) => p.id === e.characterId));
+            save({ entries: sortEntries([...others, ...pcs.map((c) => roll(c.name, initiativeRating(c), c.id))]), current: 0, round: init?.round ?? 1 });
+          }}
+        >
+          Roll the cabal
+        </button>
+        {npcs.length > 0 && (
+          <span className="flex gap-1">
+            <select value={npcId} onChange={(e) => setNpcId(e.target.value)} aria-label="Storyteller character">
+              <option value="">Add an NPC…</option>
+              {npcs.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.name} ({initiativeRating(c)})
+                </option>
+              ))}
+            </select>
+            <button
+              className="btn"
+              disabled={!npcId}
+              onClick={() => {
+                const c = npcs.find((x) => x.id === npcId)!;
+                withEntries([...(init?.entries ?? []), roll(c.name, initiativeRating(c), c.id)]);
+                setNpcId('');
+              }}
+            >
+              Add
+            </button>
+          </span>
+        )}
+      </div>
+      <form
+        className="flex flex-wrap items-end gap-1.5"
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (!name.trim()) return;
+          withEntries([...(init?.entries ?? []), roll(name.trim(), rating)]);
+          setName('');
+        }}
+      >
+        <input className="min-w-0 flex-1" value={name} onChange={(e) => setName(e.target.value)} placeholder="Opponent, e.g. Grey Suit 1" aria-label="Opponent name" />
+        <label className="flex items-center gap-1 text-xs text-muted">
+          Dex + Wits
+          <input type="number" className="w-14" min={0} max={20} value={rating} onChange={(e) => setRating(Number(e.target.value) || 0)} aria-label="Initiative rating" />
+        </label>
+        <button className="btn" type="submit">
+          Roll in
+        </button>
+      </form>
+      {init && init.entries.length > 0 && (
+        <>
+          <ol className="flex flex-col gap-0.5">
+            {init.entries.map((e, i) => (
+              <li key={e.id} className={`flex items-center gap-2 rounded px-2 py-0.5 ${i === init.current ? 'bg-brass/20 text-brass-bright' : ''}`}>
+                <span className="w-4 text-xs text-muted">{i === init.current ? '▶' : ''}</span>
+                <span className="flex-1 truncate">{e.name}</span>
+                <input
+                  type="number"
+                  className="w-14 py-0 text-right font-mono"
+                  value={e.score}
+                  onChange={(ev) => withEntries(init.entries.map((x) => (x.id === e.id ? { ...x, score: Number(ev.target.value) || 0 } : x)))}
+                  aria-label={`${e.name} initiative`}
+                />
+                <button className="btn-ghost px-1" onClick={() => withEntries(init.entries.filter((x) => x.id !== e.id))} aria-label={`Remove ${e.name}`}>
+                  ✕
+                </button>
+              </li>
+            ))}
+          </ol>
+          <div className="flex flex-wrap gap-1.5">
+            <button
+              className="btn"
+              onClick={() => save({ ...init, current: (init.current - 1 + init.entries.length) % init.entries.length, round: init.current === 0 ? Math.max(1, init.round - 1) : init.round })}
+            >
+              ← Previous
+            </button>
+            <button
+              className="btn-primary"
+              onClick={() => {
+                const last = init.current >= init.entries.length - 1;
+                save({ ...init, current: last ? 0 : init.current + 1, round: last ? init.round + 1 : init.round });
+              }}
+            >
+              Next turn →
+            </button>
+            <button className="btn-ghost" onClick={() => save(null)}>
+              End combat
+            </button>
+          </div>
+        </>
+      )}
     </section>
   );
 }

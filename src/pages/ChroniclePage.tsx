@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { HandoutCard } from '../components/HandoutCard';
 import { Field } from '../components/ui';
 import darkPackLogo from '../assets/darkpack-logo.png';
 import { blankChronicle } from '../model/types';
@@ -8,6 +10,7 @@ export default function ChroniclePage() {
   const { chronicle, dispatch } = useChronicle();
   const [message, setMessage] = useState('');
   const [confirmReset, setConfirmReset] = useState(false);
+  const [editing, setEditing] = useState<string | null>(null);
 
   async function onImport(file: File | undefined) {
     if (!file) return;
@@ -77,6 +80,26 @@ export default function ChroniclePage() {
           )}
         </div>
         {message && <p className="text-sm text-brass">{message}</p>}
+      </section>
+
+      <section className="panel flex flex-col gap-3 lg:col-span-2" aria-labelledby="chronicle-handouts">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 id="chronicle-handouts" className="h-section">
+            Handouts
+          </h2>
+          <Link className="btn" to="/handouts">
+            Make a handout
+          </Link>
+        </div>
+        {chronicle.handouts.length ? (
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+            {chronicle.handouts.map((h) => (
+              <HandoutCard key={h.id} h={h} editing={editing === h.id} onEdit={() => setEditing(editing === h.id ? null : h.id)} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-sm text-muted">No handouts yet. Make one from a template or an image, and add it to the chronicle.</p>
+        )}
       </section>
 
       <section className="panel flex flex-col gap-2 text-sm text-muted lg:col-span-2">

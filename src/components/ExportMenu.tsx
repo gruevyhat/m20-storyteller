@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { characterMarkdown, download, fileSlug } from '../export/markdown';
-import type { Character } from '../model/types';
+import { chronicleTitle, type Character } from '../model/types';
 import { useChronicle } from '../store/chronicle';
 
 /** Download a character as an Obsidian statblock note or as a printable sheet. */
@@ -20,7 +20,7 @@ export function ExportMenu({ c }: { c: Character }) {
           setBusy(true);
           try {
             const { downloadPdf } = await import('../export/pdf');
-            await downloadPdf(c, `${fileSlug(c)}.pdf`, { chronicle: chronicle.name === 'Untitled chronicle' ? '' : chronicle.name });
+            await downloadPdf(c, `${fileSlug(c)}.pdf`, { chronicle: chronicleTitle(chronicle) });
           } finally {
             setBusy(false);
           }

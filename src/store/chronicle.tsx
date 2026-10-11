@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer, useRef, useState, type ReactNode } from 'react';
 import { get, set } from 'idb-keyval';
-import { blankChronicle, newId, type Character, type Chronicle, type Clock, type Handout, type LogEntry } from '../model/types';
+import { blankChronicle, chronicleTitle, newId, type Character, type Chronicle, type Clock, type Handout, type Initiative, type LogEntry, type Scene, type ScreenOptions } from '../model/types';
 import { openChannel, type PublicState } from '../sync/channel';
 
 const KEY = 'chronicle';
@@ -19,7 +19,10 @@ export type Action =
   | { type: 'addHandout'; handout: Handout }
   | { type: 'updateHandout'; id: string; patch: Partial<Handout> }
   | { type: 'removeHandout'; id: string }
-  | { type: 'showHandout'; id: string | null };
+  | { type: 'showHandout'; id: string | null }
+  | { type: 'scene'; scene: Scene | null }
+  | { type: 'initiative'; initiative: Initiative | null }
+  | { type: 'screen'; screen: Partial<ScreenOptions> };
 
 export function reducer(state: Chronicle, a: Action): Chronicle {
   switch (a.type) {
@@ -58,15 +61,40 @@ export function reducer(state: Chronicle, a: Action): Chronicle {
       };
     case 'showHandout':
       return { ...state, shownHandout: a.id };
+    case 'scene':
+      return { ...state, scene: a.scene };
+    case 'initiative':
+      return { ...state, initiative: a.initiative };
+    case 'screen':
+      return { ...state, screen: { ...screenOptions(state), ...a.screen } };
   }
 }
 
+export const screenOptions = (c: Chronicle): ScreenOptions => ({ showParty: true, showRolls: true, ...c.screen });
+
 export function publicState(c: Chronicle): PublicState {
+  const opts = screenOptions(c);
   return {
-    chronicle: c.name,
-    roll: c.log.find((e) => e.public) ?? null,
+    chronicle: chronicleTitle(c),
+    rolls: opts.showRolls ? c.log.filter((e) => e.public).slice(0, 5) : [],
     handout: c.handouts.find((h) => h.id === c.shownHandout) ?? null,
     clock: c.clock,
+    scene: c.scene ?? null,
+    party: opts.showParty
+      ? c.characters
+          .filter((x) => x.kind === 'pc')
+          .map((x) => ({
+            id: x.id,
+            name: x.name,
+            image: x.image,
+            concept: x.concept,
+            health: x.health,
+            willpower: x.willpower,
+            quintessence: x.quintessence,
+            paradox: x.paradox,
+          }))
+      : null,
+    initiative: c.initiative ?? null,
   };
 }
 
@@ -104,7 +132,12 @@ export function ChronicleProvider({ children }: { children: ReactNode }) {
 
   // Only message the player window when what it shows changes; handout images are large.
   const pub = publicState(chronicle);
-  const signature = [pub.chronicle, pub.roll?.id, pub.handout?.id, pub.handout?.title, pub.handout?.text, JSON.stringify(pub.clock)].join('|');
+  // Images are sent only when the handout or party list itself changes, not on every keystroke.
+  const signature = JSON.stringify({
+    ...pub,
+    handout: pub.handout && { id: pub.handout.id, title: pub.handout.title, text: pub.handout.text, style: pub.handout.style },
+    party: pub.party?.map((p) => ({ ...p, image: !!p.image })),
+  });
   useEffect(() => {
     if (ready) channel.current?.post({ type: 'state', state: publicState(latest.current) });
   }, [signature, ready]);

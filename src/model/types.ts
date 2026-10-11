@@ -1,3 +1,4 @@
+import type { HandoutStyle } from '../handouts/templates';
 export const ATTRIBUTES = {
   physical: ['Strength', 'Dexterity', 'Stamina'],
   social: ['Charisma', 'Manipulation', 'Appearance'],
@@ -128,6 +129,8 @@ export interface Handout {
   title: string;
   image?: string; // data URL
   text?: string;
+  /** Template look for a text handout; plain parchment when absent. */
+  style?: HandoutStyle;
 }
 
 export interface LogEntry {
@@ -150,6 +153,31 @@ export interface Clock {
   segments?: { total: number; filled: number };
 }
 
+export interface Scene {
+  title: string;
+  subtitle: string;
+}
+
+export interface InitiativeEntry {
+  id: string;
+  name: string;
+  /** Final initiative: one die + Dexterity + Wits (M20 p. 399). */
+  score: number;
+  characterId?: string;
+}
+
+export interface Initiative {
+  entries: InitiativeEntry[]; // sorted, highest first
+  current: number;
+  round: number;
+}
+
+/** What the player screen shows. */
+export interface ScreenOptions {
+  showParty: boolean;
+  showRolls: boolean;
+}
+
 export interface ChronicleSettings {
   era: string; // e.g. "1990"
   place: string;
@@ -165,12 +193,23 @@ export interface Chronicle {
   log: LogEntry[];
   clock: Clock | null;
   shownHandout: string | null;
+  scene?: Scene | null;
+  initiative?: Initiative | null;
+  screen?: ScreenOptions;
+}
+
+export const UNTITLED_CHRONICLE = 'Untitled chronicle';
+
+/** The chronicle's name if the Storyteller has given it one, otherwise ''. */
+export function chronicleTitle(c: Pick<Chronicle, 'name'>) {
+  const name = c.name.trim();
+  return name === UNTITLED_CHRONICLE ? '' : name;
 }
 
 export function blankChronicle(): Chronicle {
   return {
     version: 1,
-    name: 'Untitled chronicle',
+    name: UNTITLED_CHRONICLE,
     settings: { era: '', place: '', notes: '' },
     characters: [],
     handouts: [],

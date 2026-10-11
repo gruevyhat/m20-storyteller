@@ -1,5 +1,6 @@
 import { HashRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { ChronicleProvider, useChronicle } from './store/chronicle';
+import { chronicleTitle } from './model/types';
 import darkPackLogo from './assets/darkpack-logo.png';
 import TablePage from './pages/TablePage';
 import CharactersPage from './pages/CharactersPage';
@@ -34,7 +35,7 @@ function Shell() {
         <div className="mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-1 px-4 py-1.5">
           <div className="flex items-baseline gap-2">
             <span className="font-display text-xl font-bold text-brass">M20 Storyteller</span>
-            <span className="truncate text-sm text-muted">{chronicle.name}</span>
+            {chronicleTitle(chronicle) && <span className="truncate text-sm text-muted">{chronicleTitle(chronicle)}</span>}
           </div>
           <nav className="flex flex-wrap gap-1">
             {NAV.map((n) => (
