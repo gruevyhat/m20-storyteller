@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { CardBack, CardFace } from '../components/TarotCard';
 import { CharacterEditor } from './CharactersPage';
-import { ALL_POSITIONS, EXTRA_POSITIONS, MAX_EXTRA, POSITIONS, SCORE_RECIPES, newSeed, readFortune, type Drawn, type PositionKey, type Reading } from '../fortune/build';
+import { ALL_POSITIONS, EXTRA_POSITIONS, POSITIONS, SCORE_RECIPES, dealAll, newSeed, readFortune, type Drawn, type PositionKey, type Reading } from '../fortune/build';
 import { newId, type Character } from '../model/types';
 import { useChronicle } from '../store/chronicle';
 
@@ -11,7 +11,7 @@ const GROUPS: { title: string; note: string; keys: PositionKey[] }[] = [
   { title: 'Who you are', note: 'Nature and Demeanor', keys: ['heart', 'mask'] },
   { title: 'What woke you', note: 'Essence, affinity Sphere, Arete and freebies', keys: ['avatar', 'crown'] },
   { title: 'Where you stand', note: 'Affiliation, focus, the life before, and what blocks the way', keys: ['path', 'root', 'crossing'] },
-  { title: 'Gifts & burdens', note: 'Optional: each card brings a Merit and a Flaw of equal points', keys: ['witness', 'omen'] },
+  { title: 'Gifts & burdens', note: 'Optional: turn one to add a Merit and a Flaw of equal points', keys: ['witness', 'omen'] },
 ];
 
 const pos = (k: PositionKey) => ALL_POSITIONS.find((p) => p.key === k)!;
@@ -20,41 +20,44 @@ const DISPLAY_ORDER = GROUPS.flatMap((g) => g.keys);
 export default function FortunePage() {
   const [params, setParams] = useSearchParams();
   const seed = params.get('seed');
-  const extra = Math.max(0, Math.min(MAX_EXTRA, Number(params.get('extra') ?? 0) || 0));
-  const reading = useMemo(() => (seed ? readFortune(seed, extra) : null), [seed, extra]);
   const [turned, setTurned] = useState<Set<PositionKey>>(new Set());
+  // All nine cards are dealt face down; the Witness and Omen count only once they're turned.
+  const cards = useMemo(() => (seed ? dealAll(seed) : []), [seed]);
+  const witness = turned.has('witness');
+  const omen = turned.has('omen');
+  const reading = useMemo(() => (seed ? readFortune(seed, { witness, omen }) : null), [seed, witness, omen]);
   const [draft, setDraft] = useState<Character | null>(null);
   const [added, setAdded] = useState<string | null>(null);
-  const [confirmDraw, setConfirmDraw] = useState(false);
+  const [pendingTurn, setPendingTurn] = useState<PositionKey | null>(null);
   const lastSeed = useRef<string | null>(null);
   const { dispatch } = useChronicle();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (!reading) return;
-    // A new deal turns everything face down. Drawn extra cards also arrive face down, to be turned like the rest.
     if (lastSeed.current !== reading.seed) {
+      // A new deal: every card face down again.
       setTurned(new Set());
       lastSeed.current = reading.seed;
     }
     setAdded(null);
-    setConfirmDraw(false);
+    setPendingTurn(null);
     setDraft(structuredClone(reading.character));
   }, [reading]);
 
-  const allSeven = reading ? POSITIONS.every((p) => turned.has(p.key)) : false;
-  // The reading and character wait until every drawn card, extras included, is face up.
-  const allTurned = reading ? reading.spread.every((d) => turned.has(d.position)) : false;
+  const allSeven = POSITIONS.every((p) => turned.has(p.key));
   const dirty = !!(draft && reading && JSON.stringify(draft) !== JSON.stringify(reading.character));
 
   const deal = () => setParams({ seed: newSeed() });
-  const drawExtra = () => {
-    if (!seed) return;
-    if (dirty && !confirmDraw) {
-      setConfirmDraw(true);
+  /** Turn a card. Turning an optional card changes the character, so ask first if the draft has been edited. */
+  const turn = (k: PositionKey, confirmed = false) => {
+    const optional = EXTRA_POSITIONS.some((p) => p.key === k);
+    if (optional && allSeven && dirty && !confirmed) {
+      setPendingTurn(k);
       return;
     }
-    setParams({ seed, extra: String(extra + 1) });
+    setPendingTurn(null);
+    setTurned((t) => new Set([...t, k]));
   };
 
   function addToChronicle() {
@@ -73,8 +76,8 @@ export default function FortunePage() {
           <div>
             <h1 className="font-display text-3xl leading-tight text-brass">The Awakening Spread</h1>
             <p className="max-w-3xl text-sm text-muted">
-              Seven cards tell a seeker's fortune, and the fortune becomes a starting M20 mage. Each card decides part of the character; hover over a turned card to see what. The suits
-              and Major Arcana across the whole spread decide the rest. Once all seven are turned you may draw up to two more; each brings a Merit and a balancing Flaw, and can shift the totals.
+              Nine cards tell a seeker's fortune, and the fortune becomes a starting M20 mage. Turn the cards in any order; hover over a turned card to see what it
+              decided. Once the seven core cards are face up, the character appears. The two Gifts & burdens cards are optional: turn one to add its Merit and Flaw.
             </p>
           </div>
           <button className="btn-primary px-3" onClick={deal}>
@@ -84,11 +87,10 @@ export default function FortunePage() {
         {reading && (
           <div className="flex flex-wrap items-center gap-3 text-xs text-muted">
             <span>
-              Seed <code className="text-parchment">{reading.seed}</code>
-              {extra ? ` with ${extra} extra card${extra === 1 ? '' : 's'}` : ''}. Share this page's address to share the reading.
+              Seed <code className="text-parchment">{reading.seed}</code>. Share this page's address to share the deal.
             </span>
             {!allSeven && (
-              <button className="btn-ghost" onClick={() => setTurned(new Set(reading.spread.map((d) => d.position)))}>
+              <button className="btn-ghost" onClick={() => setTurned((t) => new Set([...t, ...POSITIONS.map((p) => p.key)]))}>
                 Reveal all
               </button>
             )}
@@ -107,33 +109,17 @@ export default function FortunePage() {
                   </div>
                   <div className="flex items-start gap-2">
                     {g.keys.map((k) => {
-                      const d = reading.spread.find((x) => x.position === k);
-                      const isExtra = EXTRA_POSITIONS.some((p) => p.key === k);
+                      const d = cards.find((x) => x.position === k)!;
                       const column = DISPLAY_ORDER.indexOf(k);
                       const align = column < 2 ? 'left' : column > DISPLAY_ORDER.length - 4 ? 'right' : 'center';
-                      if (!d) {
-                        if (!isExtra) return null;
-                        const next = EXTRA_POSITIONS[extra]?.key === k;
-                        return (
-                          <ExtraCard
-                            key={k}
-                            k={k}
-                            canDraw={next && allSeven}
-                            locked={!allSeven}
-                            confirm={next && confirmDraw}
-                            onDraw={drawExtra}
-                            onCancel={() => setConfirmDraw(false)}
-                          />
-                        );
-                      }
-                      const line = reading.lines.find((l) => l.position === k)!;
+                      const line = reading.lines.find((l) => l.position === k);
                       return (
                         <RowCard
                           key={`${reading.seed}-${k}`}
                           d={d}
                           faceUp={turned.has(k)}
-                          onTurn={() => setTurned(new Set([...turned, k]))}
-                          effects={line.effects}
+                          onTurn={() => turn(k)}
+                          effects={line?.effects ?? []}
                           index={column}
                           align={align}
                         />
@@ -143,14 +129,27 @@ export default function FortunePage() {
                 </div>
               ))}
             </div>
+            {pendingTurn && (
+              <div className="mx-auto mt-3 flex max-w-2xl flex-wrap items-center justify-center gap-2 rounded border border-wound/60 bg-wound/10 px-3 py-2 text-sm" role="alert">
+                <span>Turning {pos(pendingTurn).title} adds its Merit and Flaw and rebuilds the character, discarding your edits.</span>
+                <button className="btn border-wound text-wound" onClick={() => turn(pendingTurn, true)}>
+                  Turn it
+                </button>
+                <button className="btn" onClick={() => setPendingTurn(null)}>
+                  Keep my edits
+                </button>
+              </div>
+            )}
             <p className="mt-3 text-center text-xs text-muted">
-              {allSeven ? 'Hover over a card, or tap it, to see what it decided.' : 'Click a card to turn it over. Hover over a turned card to read it.'}
+              {allSeven
+                ? 'Hover over a card, or tap it, to see what it decided. The Gifts & burdens cards stay optional.'
+                : 'Click a card to turn it over, in any order. Hover over a turned card to read it.'}
             </p>
           </section>
 
-          {allTurned && <WholeSpread reading={reading} />}
+          {allSeven && <WholeSpread reading={reading} />}
 
-          {allTurned && (
+          {allSeven && (
             <section className="panel flex flex-col gap-1.5" aria-label="The reading">
               <h2 className="font-display text-2xl leading-tight">The reading</h2>
               <div className="gap-6 lg:columns-2">
@@ -168,7 +167,7 @@ export default function FortunePage() {
             </section>
           )}
 
-          {allTurned && draft && (
+          {allSeven && draft && (
             <section className="flex flex-col gap-2" aria-label="The character">
               <div className="panel flex flex-wrap items-center gap-3 py-2">
                 <p className="flex-1 text-sm text-muted">
@@ -289,56 +288,6 @@ function RowCard({
   );
 }
 
-/** An optional card not yet drawn: a card-sized space with a Draw button. */
-function ExtraCard({
-  k,
-  canDraw,
-  locked,
-  confirm,
-  onDraw,
-  onCancel,
-}: {
-  k: PositionKey;
-  canDraw: boolean;
-  locked: boolean;
-  confirm: boolean;
-  onDraw: () => void;
-  onCancel: () => void;
-}) {
-  const p = pos(k);
-  return (
-    <div className="flex flex-col items-center gap-1">
-      <div
-        className={`${CARD_W} flex flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-line p-2 text-center`}
-        style={{ aspectRatio: '120 / 200' }}
-      >
-        {confirm ? (
-          <>
-            <span className="text-xs text-wound">This rebuilds the character and discards your edits.</span>
-            <button className="btn border-wound px-2 text-xs text-wound" onClick={onDraw}>
-              Draw anyway
-            </button>
-            <button className="btn px-2 text-xs" onClick={onCancel}>
-              Keep edits
-            </button>
-          </>
-        ) : canDraw ? (
-          <button className="btn-primary px-2" onClick={onDraw}>
-            Draw
-          </button>
-        ) : (
-          <span className="text-xs text-muted">{locked ? 'Turn all seven first' : 'Draw the Witness first'}</span>
-        )}
-        <span className="text-[11px] leading-tight text-muted">optional · a Merit and a Flaw</span>
-      </div>
-      <div className={`${CARD_W} text-center`}>
-        <div className="font-display text-lg leading-tight text-parchment/80">{p.title}</div>
-        <div className="text-xs leading-tight text-muted">{p.gloss}</div>
-      </div>
-    </div>
-  );
-}
-
 type Kind = 'wands' | 'cups' | 'swords' | 'pentacles' | 'major';
 
 const KINDS: { key: Kind; label: string; theme: string; color: string }[] = [
@@ -431,7 +380,7 @@ function WholeSpread({ reading }: { reading: Reading }) {
         )}
         {(c.meritsFlaws ?? []).length > 0 && (
           <p className="rounded bg-raised/40 px-3 py-2">
-            <b className="text-brass-bright">Merits & Flaws.</b> Each extra card gave a Merit and a Flaw worth the same points (
+            <b className="text-brass-bright">Merits & Flaws.</b> Each Gifts & burdens card you turned gave a Merit and a Flaw worth the same points (
             {(c.meritsFlaws ?? [])
               .filter((m) => m.kind === 'merit')
               .reduce((n, m) => n + m.points, 0)}{' '}

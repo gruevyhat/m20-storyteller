@@ -97,19 +97,29 @@ const kindOf = (c: Card): SuitOrMajor => (c.arcana === 'major' ? 'major' : c.sui
  * Shuffle the whole deck, deal seven, and decide which come up reversed (about one in three).
  * Extra cards come off the same deck afterwards, so drawing them never changes the first seven.
  */
-export function deal(seed: string, extra = 0): Drawn[] {
+/** Which optional cards count: a number (first n of Witness, Omen) or an explicit pick. */
+export type ExtraPick = number | { witness?: boolean; omen?: boolean };
+
+function includes(pick: ExtraPick, key: PositionKey) {
+  if (typeof pick === 'number') return EXTRA_POSITIONS.findIndex((p) => p.key === key) < Math.max(0, Math.min(MAX_EXTRA, pick));
+  return !!pick[key as 'witness' | 'omen'];
+}
+
+/** All nine cards in a fixed order: the same cards and reversals whichever extras end up counting. */
+export function dealAll(seed: string): Drawn[] {
   const rng = rngFromSeed(`deal:${seed}`);
   const deck = rng.shuffle(DECK);
   const seven: Drawn[] = POSITIONS.map((p, i) => ({ position: p.key, card: deck[i], reversed: rng.next() < 0.33 }));
-  const more: Drawn[] = EXTRA_POSITIONS.slice(0, Math.max(0, Math.min(MAX_EXTRA, extra))).map((p, k) => ({
-    position: p.key,
-    card: deck[POSITIONS.length + k],
-    reversed: rng.next() < 0.33,
-  }));
-  return [...seven, ...more];
+  const extras: Drawn[] = EXTRA_POSITIONS.map((p, k) => ({ position: p.key, card: deck[POSITIONS.length + k], reversed: rng.next() < 0.33 }));
+  return [...seven, ...extras];
 }
 
-export function readFortune(seed: string, extra = 0): Reading {
+/** The seven core cards plus whichever optional cards are picked. */
+export function deal(seed: string, pick: ExtraPick = 0): Drawn[] {
+  return dealAll(seed).filter((d) => POSITIONS.some((p) => p.key === d.position) || includes(pick, d.position));
+}
+
+export function readFortune(seed: string, extra: ExtraPick = 0): Reading {
   const spread = deal(seed, extra);
   const rng = rngFromSeed(`build:${seed}`);
   const at = (k: PositionKey) => spread.find((d) => d.position === k)!;
@@ -343,7 +353,9 @@ export function readFortune(seed: string, extra = 0): Reading {
   c.meritsFlaws = [];
   let flawBudget = MAX_FLAW_POINTS;
   for (const d of spread.filter((x) => x.position === 'witness' || x.position === 'omen')) {
-    const pair = pickMeritFlaw(d.card, Math.min(mfValue(d.card), flawBudget), rng);
+    // Each card has its own stream, so its Merit and Flaw don't change when the other card is turned.
+    const taken = new Set(c.meritsFlaws.map((m) => m.name));
+    const pair = pickMeritFlaw(d.card, Math.min(mfValue(d.card), flawBudget), rngFromSeed(`mf:${seed}:${d.position}`), taken);
     if (!pair) continue;
     flawBudget -= pair.points;
     const from = d.position === 'witness' ? 'the Witness' : 'the Omen';
@@ -452,7 +464,10 @@ export function readFortune(seed: string, extra = 0): Reading {
 
   c.notes = [...lines.map((l) => `${ALL_POSITIONS.find((p) => p.key === l.position)!.title}. ${l.text}`), '', ...summary].join('\n\n');
   c.extra = {
-    fortune: `Seed ${seed}${extra ? `, ${extra} extra card${extra === 1 ? '' : 's'}` : ''}`,
+    fortune: `Seed ${seed}${(() => {
+      const extras = spread.filter((d) => !POSITIONS.some((p) => p.key === d.position)).map((d) => (d.position === 'witness' ? 'Witness' : 'Omen'));
+      return extras.length ? `, with the ${extras.join(' and ')}` : '';
+    })()}`,
     'build ledger': [
       `Attributes: ${attrOrder.map((g, i) => `${cap(g)} ${[7, 5, 3][i]}`).join(', ')}`,
       `Abilities: ${abilityOrder.map((g, i) => `${cap(g)} ${[13, 9, 5][i]}`).join(', ')}`,
@@ -553,14 +568,28 @@ function mfValue(card: Card) {
   return 4;
 }
 
-function pickMeritFlaw(card: Card, value: number, rng: Random) {
+function pickMeritFlaw(card: Card, value: number, rng: Random, taken: Set<string> = new Set()) {
   const [mc, fc] = MF_CATEGORIES[kindOf(card)];
+  // Pick from the full list and re-pick only on a clash, so one card's choice never shifts
+  // because of what the other card took.
+  const pickFree = (pool: { name: string }[], avoid: Set<string>) => {
+    for (let i = 0; i < 20; i++) {
+      const m = rng.pick(pool);
+      if (!avoid.has(m.name)) return m.name;
+    }
+    return pool.find((m) => !avoid.has(m.name))?.name ?? null;
+  };
   for (let v = value; v >= 1; v--) {
     const ok = (kind: 'merit' | 'flaw', cats: MFCategory[]) =>
       MERITS_FLAWS.filter((m) => m.kind === kind && cats.includes(m.category) && m.costs.includes(v) && !MF_EXCLUDE.has(m.name));
     const merits = ok('merit', mc);
     const flaws = ok('flaw', fc);
-    if (merits.length && flaws.length) return { merit: rng.pick(merits).name, flaw: rng.pick(flaws).name, points: v };
+    if (!merits.length || !flaws.length) continue;
+    const merit = pickFree(merits, taken);
+    if (!merit) continue;
+    const flaw = pickFree(flaws, new Set([...taken, merit]));
+    if (!flaw) continue;
+    return { merit, flaw, points: v };
   }
   return null;
 }

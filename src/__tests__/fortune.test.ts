@@ -83,6 +83,32 @@ describe('readFortune', () => {
       const pts = (k: string) => mf.filter((m) => m.kind === k).reduce((t, m) => t + m.points, 0);
       expect(pts('merit')).toBe(pts('flaw'));
       expect(pts('flaw')).toBeLessThanOrEqual(7);
+      expect(new Set(mf.map((m) => m.name)).size, `mf${i}`).toBe(4);
+    }
+  });
+
+  it('can count the Omen without the Witness', () => {
+    const r = readFortune('omen-only', { omen: true });
+    expect(r.spread.map((d) => d.position)).toEqual(['heart', 'mask', 'avatar', 'path', 'root', 'crossing', 'crown', 'omen']);
+    expect(validate(r)).toEqual([]);
+    expect(r.character.meritsFlaws!.every((m) => m.note === 'from the Omen')).toBe(true);
+    // The Omen is the same card whether or not the Witness is turned.
+    expect(r.spread.at(-1)).toEqual(readFortune('omen-only', 2).spread.at(-1));
+  });
+
+  it("keeps each card's Merit and Flaw when the other card is turned too", () => {
+    for (let i = 0; i < 300; i++) {
+      const seed = `stable${i}`;
+      const names = (pick: Parameters<typeof readFortune>[1]) => readFortune(seed, pick).character.meritsFlaws!.map((m) => `${m.note}:${m.name}`);
+      const both = names(2);
+      const omen = names({ omen: true });
+      const witness = names({ witness: true });
+      expect(both.filter((x) => x.startsWith('from the Witness'))).toEqual(witness);
+      // The Omen's pair only changes if the Witness used up the 7-point Flaw limit.
+      // (An Omen pick can also change if the Witness already took that exact trait.)
+      const sameValue = readFortune(seed, 2).character.meritsFlaws!.filter((m) => m.note === 'from the Omen')[0]?.points === readFortune(seed, { omen: true }).character.meritsFlaws![0].points;
+      const clash = omen.some((x) => witness.some((w) => w.split(':')[1] === x.split(':')[1]));
+      if (sameValue && !clash) expect(both.filter((x) => x.startsWith('from the Omen'))).toEqual(omen);
     }
   });
 

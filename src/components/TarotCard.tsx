@@ -195,16 +195,32 @@ function Hand({ flip = false, nail = true }: { flip?: boolean; nail?: boolean })
   );
 }
 
-function Spine() {
+/** Death: a cracked skull, weeping blood. */
+function Skull() {
   return (
-    <g>
-      {[-30, -20, -10, 0, 10, 20].map((y, i) => (
-        <g key={y}>
-          <path d={`M-9 ${y} C-14 ${y - 3} -14 ${y + 4} -9 ${y + 5} H9 C14 ${y + 4} 14 ${y - 3} 9 ${y}Z`} fill={BONE} stroke={CLOT} strokeWidth={1.2} />
-          <path d={`M-5 ${y + 6} H5`} stroke={BLOOD} strokeWidth={2} opacity={i % 2 ? 0.8 : 0.5} />
-        </g>
+    <g strokeLinejoin="round" strokeLinecap="round">
+      {/* Cranium and cheekbones */}
+      <path
+        d="M0 -30 C-17 -30 -25 -18 -25 -5 C-25 4 -21 10 -16 13 L-15 21 C-15 24 -12 26 -9 26 H9 C12 26 15 24 15 21 L16 13 C21 10 25 4 25 -5 C25 -18 17 -30 0 -30Z"
+        fill={BONE}
+        stroke={CLOT}
+        strokeWidth={1.4}
+      />
+      {/* Eye sockets */}
+      <path d="M-15 -3 C-15 -10 -5 -11 -4 -4 C-3 3 -9 6 -12 4 C-14 3 -15 0 -15 -3Z" fill={CLOT} />
+      <path d="M15 -3 C15 -10 5 -11 4 -4 C3 3 9 6 12 4 C14 3 15 0 15 -3Z" fill={CLOT} />
+      {/* Nose */}
+      <path d="M0 6 L-3 12 H3Z" fill={CLOT} />
+      {/* Teeth */}
+      <path d="M-10 17 H10" stroke={CLOT} strokeWidth={1.1} />
+      {[-7, -3.5, 0, 3.5, 7].map((x) => (
+        <path key={x} d={`M${x} 15 V22`} stroke={CLOT} strokeWidth={0.9} />
       ))}
-      <path d="M0 26 C2 30 0 34 -2 36" stroke={BLOOD} strokeWidth={2} fill="none" strokeLinecap="round" />
+      {/* A crack across the brow */}
+      <path d="M-4 -30 L-2 -22 L-6 -17 L-3 -11" fill="none" stroke={CLOT} strokeWidth={1.1} />
+      {/* A tear of blood from the left socket */}
+      <path d="M-10 4 C-10 9 -11 12 -10.5 16" fill="none" stroke={BLOOD} strokeWidth={1.8} />
+      <circle cx={-10.5} cy={17.5} r={1.6} fill={BLOOD} />
     </g>
   );
 }
@@ -492,7 +508,7 @@ const MAJOR_EMBLEMS: (() => ReactNode)[] = [
   () => <Clock25 />, // Wheel of Fortune
   () => <Scales />, // Justice
   () => <Cocoon />, // Hanged Man
-  () => <Spine />, // Death
+  () => <Skull />, // Death
   () => <Vials />, // Temperance
   () => <Mask horned />, // Devil
   () => <Door torn />, // Tower
