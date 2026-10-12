@@ -11,7 +11,7 @@ const GROUPS: { title: string; note: string; keys: PositionKey[] }[] = [
   { title: 'Who you are', note: 'Nature and Demeanor', keys: ['heart', 'mask'] },
   { title: 'What woke you', note: 'Essence, affinity Sphere, Arete and freebies', keys: ['avatar', 'crown'] },
   { title: 'Where you stand', note: 'Affiliation, focus, the life before, and what blocks the way', keys: ['path', 'root', 'crossing'] },
-  { title: 'Gifts & burdens', note: 'Optional: turn one to add a Merit and a Flaw of equal points', keys: ['witness', 'omen'] },
+  { title: 'Gifts & burdens (Optional)', note: 'Optional: turn one to add a Merit and a Flaw of equal points', keys: ['witness', 'omen'] },
 ];
 
 const pos = (k: PositionKey) => ALL_POSITIONS.find((p) => p.key === k)!;
@@ -49,6 +49,10 @@ export default function FortunePage() {
   const dirty = !!(draft && reading && JSON.stringify(draft) !== JSON.stringify(reading.character));
 
   const deal = () => setParams({ seed: newSeed() });
+  // Arriving without a seed deals a spread straight away, every card face down. Replace, so Back still leaves the page.
+  useEffect(() => {
+    if (!seed) setParams({ seed: newSeed() }, { replace: true });
+  }, [seed, setParams]);
   /** Turn a card. Turning an optional card changes the character, so ask first if the draft has been edited. */
   const turn = (k: PositionKey, confirmed = false) => {
     const optional = EXTRA_POSITIONS.some((p) => p.key === k);
