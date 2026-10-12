@@ -3,6 +3,7 @@
 import { stringify } from 'yaml';
 import { ATTRIBUTES, SPHERES, WHEEL_SIZE, type Character, type Trait } from '../model/types';
 import { MF_SUMMARY } from '../fortune/meritsFlawsText';
+import { xpTotals } from '../model/experience';
 
 export function dots(rating: number, max = 5) {
   const n = Math.max(0, Math.min(max, rating));
@@ -51,6 +52,8 @@ export function toStatblock(c: Character): Record<string, unknown> {
       .map((s) => `${s} ${dots(c.spheres[s]!)}`)
       .join(', '),
   );
+  put('affinity', c.affinity);
+  put('resonance', (c.resonance ?? []).map((r) => `${r.kind[0].toUpperCase()}${r.kind.slice(1)} (${r.trait}) ${r.rating}`).join(', '));
   put('arete', c.arete);
   put('willpower', c.willpower.permanent);
   put('quintessence', `${c.quintessence}/${WHEEL_SIZE}`);
@@ -61,6 +64,12 @@ export function toStatblock(c: Character): Record<string, unknown> {
   put('merits', mf.filter((m) => m.kind === 'merit').map((m) => `${m.name} ${m.points}`).join(', '));
   put('flaws', mf.filter((m) => m.kind === 'flaw').map((m) => `${m.name} ${m.points}`).join(', '));
   put('rotes', c.rotes.map((r) => ({ name: r.name, desc: r.desc })));
+  put('wonders', (c.wonders ?? []).map((w) => ({ ...w })));
+  put('avatar_notes', c.avatar?.trim());
+  if (c.experience?.log.length) {
+    const xp = xpTotals(c);
+    put('experience', `${xp.earned} earned, ${xp.spent} spent`);
+  }
   for (const [k, v] of Object.entries(c.extra)) if (!(k in block) && !v.includes('\n')) put(k, v);
   return block;
 }
@@ -84,6 +93,12 @@ export function characterMarkdown(c: Character) {
     lines.push('');
   }
   if (c.flaws.length) lines.push('## Paradox Flaws', '', ...c.flaws.map((f) => `- ${f}`), '');
+  if (c.experience?.log.length) {
+    const xp = xpTotals(c);
+    lines.push('## Experience', '', `${xp.available} available · ${xp.earned} earned · ${xp.spent} spent`, '');
+    for (const e of c.experience.log) lines.push(`- ${e.xp > 0 ? '+' : ''}${e.xp} ${e.note}`);
+    lines.push('');
+  }
   if (c.notes.trim()) lines.push('## Notes', '', c.notes.trim(), '');
   for (const [k, v] of Object.entries(c.extra)) {
     if (v.includes('\n')) lines.push(`## ${k[0].toUpperCase()}${k.slice(1)}`, '', ...v.split('\n').map((l) => `- ${l}`), '');

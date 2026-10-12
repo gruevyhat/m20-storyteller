@@ -16,7 +16,7 @@
   .label { @apply text-[10px] uppercase tracking-widest text-muted; }
   .btn { @apply inline-flex items-center justify-center gap-1 rounded border border-line bg-raised px-2.5 py-1 text-sm hover:border-brass-dim disabled:opacity-40 disabled:pointer-events-none; }
   .btn-primary { @apply btn bg-brass text-ink border-brass font-semibold hover:bg-brass-bright; }
-  .btn-ghost { @apply inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-sm text-muted hover:text-parchment hover:bg-raised; }
+  .btn-ghost { @apply inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-sm text-muted hover:text-parchment hover:bg-raised disabled:opacity-40 disabled:pointer-events-none; }
   .chip { @apply rounded-full border border-line px-2 py-px text-xs; }
   .die { @apply grid h-9 w-9 place-items-center rounded-md border border-line bg-raised font-mono text-base; }
   .h-section { @apply font-display text-xl leading-none; }

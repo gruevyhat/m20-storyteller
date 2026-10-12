@@ -7,6 +7,7 @@ import { HandoutView } from '../components/HandoutView';
 import { CardFace } from '../components/TarotCard';
 import { DECK } from '../fortune/deck';
 import { CATALOG_SIZE } from '../grimoire/generate';
+import { VAULT } from '../wonders/catalog';
 import { INFLUENCES } from '../grimoire/influences';
 import { HANDOUT_TEMPLATES } from '../handouts/templates';
 import { chronicleTitle } from '../model/types';
@@ -97,7 +98,7 @@ export default function HomePage() {
 
       {/* What's inside */}
       <Group title="At the table" blurb="The live session: dice, wounds, initiative and what the players see.">
-        <Feature to="/table" title="Table" text="Dice pools and magick difficulty, Paradox, initiative, a session log and a clock, with the whole cabal at a glance.">
+        <Feature to="/table" title="Table" text="Dice pools, magick with a planner that works out Spheres and successes, Paradox, initiative, a session log and a clock, with the whole cabal at a glance.">
           <DiceRow />
         </Feature>
         <Feature to="/handouts" title="Handouts" text={`${HANDOUT_TEMPLATES.length} paper looks, from telegrams to police reports, with secrets that stay secret.`}>
@@ -128,17 +129,20 @@ export default function HomePage() {
         <Feature to="/create" title="Create" text={`Guided creation that follows the M20 steps, with live checks, a freebie budget and Markov-chain names from ${NAME_STYLES.length} traditions.`}>
           <StepsSketch />
         </Feature>
-        <Feature to="/characters" title="Characters" text="Sheet-style trackers, a dice popup on every trait, and Markdown and PDF export.">
+        <Feature to="/characters" title="Characters" text="Sheet-style trackers, a dice popup on every trait, Resonance and Wonders, experience with costs worked out, and Markdown and PDF export.">
           <SheetSketch />
         </Feature>
       </Group>
 
-      <Group title="Reference" blurb="Things to reach for mid-scene.">
+      <Group title="Reference" blurb="Things to reach for mid-scene." wide>
         <Feature to="/grimoire" title="Grimoire" text={`${CATALOG_SIZE.toLocaleString()} rotes in ${INFLUENCES.length} hands, each with its own effect, filtered by what a character can actually cast.`}>
           <RoteSketch />
         </Feature>
         <Feature to="/bestiary" title="Bestiary" text={`${BESTIARY.length} original creatures, from odd wildlife to things that watch from between the stars. Add any as an NPC.`}>
           <img src={beastImage(featured)} alt={featured.appearance} className="h-28 w-full rounded-sm object-cover" loading="lazy" />
+        </Feature>
+        <Feature to="/vault" title="Vault" text={`${VAULT.length} original Wonders, from Trinkets to Talismans, each with its rating, cost, Spheres and history. Give one to a character or buy it with experience.`}>
+          <VaultSketch />
         </Feature>
         <Feature to="/rules" title="Rules" text="Search rulebooks you own. Your files are read locally and never leave the browser.">
           <SearchSketch />
@@ -166,14 +170,14 @@ export default function HomePage() {
   );
 }
 
-function Group({ title, blurb, children }: { title: string; blurb: string; children: ReactNode }) {
+function Group({ title, blurb, wide, children }: { title: string; blurb: string; wide?: boolean; children: ReactNode }) {
   return (
     <section className="flex flex-col gap-3">
       <div className="flex flex-wrap items-baseline gap-x-3 border-b border-line pb-1.5">
         <h2 className="font-display text-2xl text-parchment">{title}</h2>
         <p className="text-sm text-muted">{blurb}</p>
       </div>
-      <div className="grid gap-3 md:grid-cols-3">{children}</div>
+      <div className={`grid gap-3 ${wide ? 'md:grid-cols-2 xl:grid-cols-4' : 'md:grid-cols-3'}`}>{children}</div>
     </section>
   );
 }
@@ -264,6 +268,16 @@ function RoteSketch() {
       <span className="label text-verdigris">Correspondence ●● · Mind ●</span>
       <span className="font-display text-lg leading-tight text-parchment">The Second Witness</span>
       <span className="text-xs text-muted">Sees a room through the eyes of the last person to leave it.</span>
+    </div>
+  );
+}
+
+function VaultSketch() {
+  return (
+    <div className="flex h-28 flex-col justify-center gap-1 rounded-sm bg-ink/60 px-4">
+      <span className="label text-verdigris">Talisman ●●●●● · Time ●●●●●</span>
+      <span className="font-display text-lg leading-tight text-parchment">The Hour-Thief’s Watch</span>
+      <span className="text-xs text-muted">Thirteen hours on its face. It runs a minute fast a day, and so does its owner.</span>
     </div>
   );
 }

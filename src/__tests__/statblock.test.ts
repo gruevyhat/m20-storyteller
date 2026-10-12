@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { importMarkdown, parseHealthTrack, parseTraitList } from '../importers/statblock';
+import { importMarkdown, parseHealthTrack, parseResonance, parseTraitList } from '../importers/statblock';
 import { highestSphere } from '../model/types';
 
 const NOTE = `---
@@ -60,6 +60,20 @@ describe('statblock importer', () => {
     expect(c.health.levels[5]).toEqual({ name: 'Crippled', penalty: -5 });
     expect(c.rotes[0].name).toBe('Last Rites (Spirit 2)');
     expect(c.extra.question).toBe('Who was I before?');
+    expect(c.affinity).toBe('Spirit');
+  });
+
+  it('reads Resonance as the notes write it, and keeps text it cannot read', () => {
+    expect(parseResonance('Entropic (Clinical) 3, Static (Patient) 2')).toEqual([
+      { trait: 'Clinical', kind: 'entropic', rating: 3 },
+      { trait: 'Patient', kind: 'static', rating: 2 },
+    ]);
+    expect(parseResonance('Hushed ●● (static)')).toEqual([{ trait: 'Hushed', kind: 'static', rating: 2 }]);
+    const md = '```statblock\nname: Odd\nresonance: crackling, a little sad\naffinity: Forces (secondary Prime)\n```';
+    const c = importMarkdown(md, 'o.md', 'pc').characters[0];
+    expect(c.resonance).toBeUndefined();
+    expect(c.extra.resonance).toBe('crackling, a little sad');
+    expect(c.extra.affinity).toBe('Forces (secondary Prime)');
   });
 
   it('keeps commas inside specialties out of trait names', () => {

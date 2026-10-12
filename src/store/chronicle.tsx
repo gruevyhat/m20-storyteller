@@ -1,14 +1,16 @@
-import { createContext, useContext, useEffect, useReducer, useRef, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useReducer, useRef, useState, type ReactNode } from 'react';
 import { get, set } from 'idb-keyval';
 import { blankChronicle, chronicleTitle, newId, type Character, type Chronicle, type Clock, type Handout, type Initiative, type LogEntry, type Scene, type ScreenOptions } from '../model/types';
 import { redact } from '../handouts/templates';
 import { openChannel, type PublicState } from '../sync/channel';
+import { createCheckpointer, historyReducer, startHistory } from './history';
 
 const KEY = 'chronicle';
 const LOG_LIMIT = 300;
 
 export type Action =
-  | { type: 'load'; chronicle: Chronicle }
+  /** `fresh` marks the startup load from storage, which starts undo history over. */
+  | { type: 'load'; chronicle: Chronicle; fresh?: boolean }
   | { type: 'rename'; name: string }
   | { type: 'settings'; settings: Partial<Chronicle['settings']> }
   | { type: 'addCharacters'; characters: Character[] }
@@ -110,12 +112,21 @@ interface Ctx {
   chronicle: Chronicle;
   dispatch: (a: Action) => void;
   ready: boolean;
+  undo: () => void;
+  redo: () => void;
+  canUndo: boolean;
+  canRedo: boolean;
 }
 
 const ChronicleContext = createContext<Ctx | null>(null);
 
 export function ChronicleProvider({ children }: { children: ReactNode }) {
-  const [chronicle, dispatch] = useReducer(reducer, undefined, blankChronicle);
+  const [history, dispatchHistory] = useReducer(historyReducer, undefined, () => startHistory(blankChronicle()));
+  const chronicle = history.present;
+  const checkpoint = useRef(createCheckpointer());
+  const dispatch = useCallback((action: Action) => dispatchHistory({ type: 'do', action, checkpoint: checkpoint.current(action) }), []);
+  const undo = useCallback(() => dispatchHistory({ type: 'undo' }), []);
+  const redo = useCallback(() => dispatchHistory({ type: 'redo' }), []);
   const [ready, setReady] = useState(false);
   const channel = useRef<ReturnType<typeof openChannel> | null>(null);
   const latest = useRef(chronicle);
@@ -123,7 +134,7 @@ export function ChronicleProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     get<Chronicle>(KEY)
-      .then((saved) => saved && dispatch({ type: 'load', chronicle: saved }))
+      .then((saved) => saved && dispatch({ type: 'load', chronicle: saved, fresh: true }))
       .catch(() => {})
       .finally(() => setReady(true));
     channel.current = openChannel((m) => {
@@ -150,7 +161,27 @@ export function ChronicleProvider({ children }: { children: ReactNode }) {
     if (ready) channel.current?.post({ type: 'state', state: publicState(latest.current) });
   }, [signature, ready]);
 
-  return <ChronicleContext.Provider value={{ chronicle, dispatch, ready }}>{children}</ChronicleContext.Provider>;
+  // Cmd/Ctrl+Z undoes chronicle changes, Shift+Cmd/Ctrl+Z or Ctrl+Y redoes. Text fields keep their own undo.
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (!(e.metaKey || e.ctrlKey) || e.altKey) return;
+      const t = e.target as HTMLElement | null;
+      if (t && (t.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName))) return;
+      const k = e.key.toLowerCase();
+      if (k === 'z' && !e.shiftKey) undo();
+      else if ((k === 'z' && e.shiftKey) || k === 'y') redo();
+      else return;
+      e.preventDefault();
+    }
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [undo, redo]);
+
+  return (
+    <ChronicleContext.Provider value={{ chronicle, dispatch, ready, undo, redo, canUndo: history.past.length > 0, canRedo: history.future.length > 0 }}>
+      {children}
+    </ChronicleContext.Provider>
+  );
 }
 
 export function useChronicle() {

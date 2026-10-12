@@ -3,11 +3,13 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { BoxTrack, DieButton, DotTrack, Dots, Field, HealthTrack, QPWheel, Stepper, readImageScaled } from '../components/ui';
 import { RollDialog, type RollPreset } from '../components/RollDialog';
 import { guessKind, importMarkdown } from '../importers/statblock';
-import { ATTRIBUTES, SPHERES, WHEEL_SIZE, blankCharacter, type AbilityCategory, type Character, type MeritFlaw, type Trait } from '../model/types';
+import { ATTRIBUTES, SPHERES, WHEEL_SIZE, blankCharacter, type AbilityCategory, type Character, type MeritFlaw, type Sphere, type Trait } from '../model/types';
 import { useChronicle } from '../store/chronicle';
 import { ExportMenu } from '../components/ExportMenu';
 import { NAME_STYLES, freshName } from '../names/markov';
 import { MF_SUMMARY } from '../fortune/meritsFlawsText';
+import { ExperiencePanel, ResonanceList, WonderList } from '../components/SheetExtras';
+import { redrawBackgroundWonder, syncWonderBackground, wonderBackgroundRating } from '../wonders/background';
 
 export default function CharactersPage() {
   const { id } = useParams();
@@ -136,7 +138,13 @@ export function CharacterEditor({ c, onPatch, onDelete }: { c: Character; onPatc
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [rollPreset, setRollPreset] = useState<RollPreset | null>(null);
   const [nameStyle, setNameStyle] = useState('any');
-  const patch = onPatch;
+  // Any change to Backgrounds keeps the Wonder Background's drawn Wonder in step.
+  const patch = (p: Partial<Character>) => {
+    if (!p.abilities) return onPatch(p);
+    const next = { ...c, ...p };
+    const synced = syncWonderBackground(c, next);
+    onPatch(synced.wonders === next.wonders ? p : { ...p, wonders: synced.wonders });
+  };
   const text = (key: keyof Character, label: string, area = false) => (
     <Field label={label}>
       {area ? (
@@ -268,10 +276,24 @@ export function CharacterEditor({ c, onPatch, onDelete }: { c: Character; onPatc
       </Section>
 
       <Section title="Spheres">
+        <label className="flex w-fit items-center gap-2 text-sm">
+          <span className="label">Affinity</span>
+          <select className="py-0" value={c.affinity ?? ''} onChange={(e) => patch({ affinity: (e.target.value || undefined) as Sphere | undefined })}>
+            <option value="">None set</option>
+            {SPHERES.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+        </label>
         <div className="grid gap-x-8 gap-y-0.5 sm:grid-cols-3">
           {SPHERES.map((s) => (
             <div key={s} className="flex items-center justify-between gap-2">
-              <span className={(c.spheres[s] ?? 0) > c.arete ? 'text-wound' : ''}>{s}</span>
+              <span className={(c.spheres[s] ?? 0) > c.arete ? 'text-wound' : s === c.affinity ? 'text-brass-bright' : ''}>
+                {s}
+                {s === c.affinity && <span className="text-[10px] text-muted"> affinity</span>}
+              </span>
               <Dots label={s} value={c.spheres[s] ?? 0} onChange={(v) => patch({ spheres: { ...c.spheres, [s]: v } })} />
             </div>
           ))}
@@ -349,6 +371,34 @@ export function CharacterEditor({ c, onPatch, onDelete }: { c: Character; onPatc
           Add rote
         </button>
       </Section>
+
+      <div className="grid gap-x-8 lg:grid-cols-2">
+        <Section title="Avatar & Resonance">
+          <textarea
+            rows={2}
+            className="text-xs"
+            value={c.avatar ?? ''}
+            placeholder="How the Avatar appears and speaks; Seekings set and passed"
+            onChange={(e) => patch({ avatar: e.target.value })}
+            aria-label="Avatar"
+          />
+          <ResonanceList items={c.resonance ?? []} onChange={(resonance) => patch({ resonance })} />
+        </Section>
+        <Section title="Wonders">
+          <WonderList
+            items={c.wonders ?? []}
+            onChange={(wonders) => patch({ wonders })}
+            backgroundRating={wonderBackgroundRating(c)}
+            onDraw={() => patch({ wonders: redrawBackgroundWonder(c).wonders })}
+          />
+        </Section>
+      </div>
+
+      {c.kind === 'pc' && (
+        <Section title="Experience">
+          <ExperiencePanel c={c} onPatch={patch} />
+        </Section>
+      )}
 
       <Section title="Notes">
         <div className="grid gap-3 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">

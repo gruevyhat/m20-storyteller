@@ -31,6 +31,44 @@ export interface MeritFlaw {
   note?: string;
 }
 
+export type ResonanceKind = 'dynamic' | 'entropic' | 'static';
+
+/** One Resonance trait: an adjective the mage's magick leaves behind, rated 1–5. */
+export interface Resonance {
+  trait: string;
+  kind: ResonanceKind;
+  rating: number;
+}
+
+export const WONDER_KINDS = ['Talisman', 'Device', 'Artifact', 'Invention', 'Fetish', 'Periapt', 'Matrix', 'Charm', 'Gadget', 'Trinket', 'Other'] as const;
+export type WonderKind = (typeof WONDER_KINDS)[number];
+
+/** A Wonder the mage owns. `rating` is its Wonder Background dots. */
+export interface Wonder {
+  name: string;
+  kind: WonderKind;
+  rating: number;
+  /** Talismans and Artifacts roll their own Arete. */
+  arete?: number;
+  /** Stored Quintessence, for Periapts, Matrices and anything else that holds it. */
+  quintessence?: number;
+  quintessenceMax?: number;
+  powers: string;
+  /** Drawn from the Vault for the Wonder Background; redrawn when that rating changes. */
+  fromBackground?: boolean;
+}
+
+/** One award or purchase in the experience log. Positive `xp` is earned, negative is spent. */
+export interface XpEntry {
+  at: number;
+  xp: number;
+  note: string;
+}
+
+export interface Experience {
+  log: XpEntry[];
+}
+
 export interface Character {
   id: string;
   kind: 'pc' | 'npc';
@@ -47,6 +85,8 @@ export interface Character {
   attributes: Record<string, Trait>;
   abilities: Record<AbilityCategory, Trait[]>;
   spheres: Partial<Record<Sphere, number>>;
+  /** Affinity Sphere; it costs less experience to raise. Older saves may lack this. */
+  affinity?: Sphere;
   arete: number;
   willpower: { permanent: number; temporary: number };
   quintessence: number;
@@ -58,6 +98,12 @@ export interface Character {
   /** Character-creation Merits and Flaws (Book of Secrets). Older saves may lack this. */
   meritsFlaws?: MeritFlaw[];
   rotes: { name: string; desc: string }[];
+  /** The rest are optional so older saves and chronicle files load unchanged. */
+  resonance?: Resonance[];
+  wonders?: Wonder[];
+  /** The Avatar's look and manner, and the Seekings it has set. */
+  avatar?: string;
+  experience?: Experience;
   notes: string;
   extra: Record<string, string>; // unmapped statblock fields, shown read-only
 }

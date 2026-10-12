@@ -21,6 +21,7 @@ import {
   type SuitOrMajor,
 } from './lore';
 import { rngFromSeed, type Random } from './random';
+import { syncWonderBackground } from '../wonders/background';
 import { MERITS_FLAWS, type MFCategory } from './meritsFlaws';
 import { MF_SUMMARY } from './meritsFlawsText';
 import { randomName } from '../names/markov';
@@ -366,6 +367,7 @@ export function readFortune(seed: string, extra: ExtraPick = 0): Reading {
   }
 
   c.spheres = spheres;
+  c.affinity = affinity;
 
   // ---- Starting rotes: one per Sphere, drawn from the Grimoire, all castable -----------------
   // Rotes lean toward the hands whose practices match the character's own.
@@ -377,6 +379,9 @@ export function readFortune(seed: string, extra: ExtraPick = 0): Reading {
     .map(([name, rating]) => ({ name, rating }));
   c.quintessence = bg.Avatar + quintessenceBonus;
   c.paradox = 0;
+  // Its own stream, so the draw never shifts anything else the seed decides.
+  const wonderRng = rngFromSeed(`wonder:${seed}`);
+  Object.assign(c, syncWonderBackground(null, c, () => wonderRng.next()));
 
   const topBg = c.abilities.backgrounds
     .filter((b) => b.name !== 'Avatar')
@@ -384,6 +389,8 @@ export function readFortune(seed: string, extra: ExtraPick = 0): Reading {
     .slice(0, 2)
     .map((b) => b.name);
   effects.root.push(`Backgrounds lean to ${topBg.join(' and ')}`);
+  const wonder = c.wonders?.find((w) => w.fromBackground);
+  if (wonder) effects.root.push(`Wonder: ${wonder.name} (${wonder.kind}, ${wonder.rating} ${wonder.rating === 1 ? 'dot' : 'dots'})`);
   if (witness) effects.witness.push(`Backgrounds: ${BACKGROUND_LEANINGS[kindOf(witness.card)].slice(0, 2).join(' or ')} weigh more`);
   if (omen) effects.omen.push('Story hook for the Storyteller');
 

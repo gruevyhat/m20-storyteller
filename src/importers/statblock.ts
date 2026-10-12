@@ -9,11 +9,14 @@ import {
   ATTRIBUTES,
   SPHERES,
   STANDARD_HEALTH,
+  WONDER_KINDS,
   blankCharacter,
   type AbilityCategory,
   type Character,
   type HealthLevel,
+  type Resonance,
   type Trait,
+  type Wonder,
 } from '../model/types';
 
 const BLOCK = /```statblock\s*\n([\s\S]*?)```/g;
@@ -77,6 +80,7 @@ const MAPPED = new Set([
   'layout', 'name', 'concept', 'affiliation', 'image', 'nature', 'demeanor', 'essence', 'paradigm', 'practice',
   'instruments', 'physical', 'social', 'mental', 'abilities', 'talents', 'skills', 'knowledges', 'backgrounds', 'spheres',
   'arete', 'willpower', 'quintessence', 'paradox', 'health', 'health_track', 'rotes', 'merits', 'flaws',
+  'affinity', 'resonance', 'wonders', 'avatar_notes', 'experience',
 ]);
 
 /** "Lucky 3, Cursed (2 pt.), Iron Will" → name and points. */
@@ -129,10 +133,68 @@ export function characterFromStatblock(data: Record<string, unknown>, kind: Char
   if (Array.isArray(data.rotes)) {
     c.rotes = (data.rotes as Record<string, unknown>[]).map((r) => ({ name: String(r?.name ?? ''), desc: String(r?.desc ?? '') }));
   }
+  c.affinity = parseAffinity(data.affinity) ?? parseAffinity(String(data.spheres ?? '').match(/(\w+)\s*[●○]+[^,]*\(affinity\)/i)?.[1]);
+  const resonance = parseResonance(data.resonance);
+  if (resonance) c.resonance = resonance;
+  if (Array.isArray(data.wonders)) c.wonders = (data.wonders as Record<string, unknown>[]).map(parseWonder);
+  if (str('avatar_notes')) c.avatar = str('avatar_notes');
+  // "12 earned, 8 spent": the log itself isn't in the statblock, so it comes back as two lines.
+  const xp = str('experience')?.match(/(\d+)\s*earned\D+(\d+)\s*spent/i);
+  if (xp) {
+    const log = [{ at: 0, xp: Number(xp[1]), note: 'Earned before import' }];
+    if (Number(xp[2])) log.push({ at: 0, xp: -Number(xp[2]), note: 'Spent before import' });
+    c.experience = { log };
+  }
+  // Anything in a shape we couldn't read stays visible as an extra field rather than vanishing.
+  const unread: Record<string, boolean> = {
+    affinity: data.affinity != null && !parseAffinity(data.affinity),
+    resonance: data.resonance != null && !resonance,
+    wonders: data.wonders != null && !Array.isArray(data.wonders),
+    experience: data.experience != null && !xp,
+  };
+  for (const [k, v] of Object.entries(unread)) if (v) c.extra[k] = formatExtra(data[k]);
   for (const [k, v] of Object.entries(data)) {
     if (!MAPPED.has(k) && v != null) c.extra[k] = formatExtra(v);
   }
   return c;
+}
+
+const parseAffinity = (v: unknown) => SPHERES.find((s) => s.toLowerCase() === String(v ?? '').trim().toLowerCase());
+
+const RESONANCE_KINDS = ['dynamic', 'entropic', 'static'] as const;
+
+/**
+ * "Entropic (Clinical) 3, Static (Patient) 2" or "Clinical ●●● (entropic)". Returns undefined
+ * unless every entry reads cleanly, so the caller can keep the original text.
+ */
+export function parseResonance(value: unknown): Resonance[] | undefined {
+  const parts = String(value ?? '').split(',').map((x) => x.trim()).filter(Boolean);
+  if (!parts.length) return undefined;
+  const kindOf = (k: string) => RESONANCE_KINDS.find((x) => x === k.toLowerCase());
+  const out: Resonance[] = [];
+  for (const part of parts) {
+    const a = part.match(/^(\w+)\s*\(([^)]+)\)\s*(\d+|[●○]+)?$/);
+    const b = part.match(/^(.+?)\s+(\d+|[●○]+)\s*\((\w+)\)$/);
+    const kind = a ? kindOf(a[1]) : b ? kindOf(b[3]) : undefined;
+    if (!kind) return undefined;
+    const raw = (a ? a[3] : b![2]) ?? '1';
+    out.push({ trait: (a ? a[2] : b![1]).trim(), kind, rating: Math.max(1, /\d/.test(raw) ? Number(raw) : dots(raw)) });
+  }
+  return out;
+}
+
+function parseWonder(w: Record<string, unknown>): Wonder {
+  const num = (v: unknown) => (v == null || v === '' || Number.isNaN(Number(v)) ? undefined : Number(v));
+  return {
+    name: String(w?.name ?? 'Wonder'),
+    kind: WONDER_KINDS.find((k) => k.toLowerCase() === String(w?.kind ?? '').toLowerCase()) ?? 'Other',
+    rating: num(w?.rating) ?? 1,
+    arete: num(w?.arete),
+    quintessence: num(w?.quintessence),
+    quintessenceMax: num(w?.quintessenceMax),
+    powers: String(w?.powers ?? ''),
+    ...(w?.fromBackground === true && { fromBackground: true }),
+  };
 }
 
 function formatExtra(v: unknown): string {

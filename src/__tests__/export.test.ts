@@ -10,6 +10,26 @@ c.abilities.talents[0] = { ...c.abilities.talents[0], specialty: 'ghosts, mostly
 c.rotes = [{ name: 'Last Rites (Spirit 2)', desc: 'Speak with a shade: "who were you?"' }];
 
 describe('markdown export', () => {
+  it('round-trips affinity, Resonance, Wonders, Avatar and experience', () => {
+    const m = {
+      ...c,
+      affinity: 'Spirit' as const,
+      resonance: [{ trait: 'Hushed', kind: 'static' as const, rating: 2 }],
+      wonders: [{ name: 'Grandmother’s rosary', kind: 'Periapt' as const, rating: 2, quintessence: 4, quintessenceMax: 10, powers: 'Holds Quintessence.' }],
+      avatar: 'A drowned saint who speaks in hymns.',
+      experience: { log: [{ at: 1, xp: 12, note: 'Story one' }, { at: 2, xp: -5, note: 'Occult 2 → 3' }] },
+    };
+    const md = characterMarkdown(m);
+    expect(md).toContain('## Experience');
+    const back = importMarkdown(md, 'x.md', 'pc').characters[0];
+    expect(back.affinity).toBe('Spirit');
+    expect(back.resonance).toEqual(m.resonance);
+    expect(back.wonders).toEqual([{ ...m.wonders[0], arete: undefined }]);
+    expect(back.avatar).toBe(m.avatar);
+    expect(back.experience!.log.map((e) => e.xp)).toEqual([12, -5]);
+    expect(Object.keys(back.extra)).not.toContain('wonders');
+  });
+
   it('round-trips through the statblock importer', () => {
     const md = characterMarkdown(c);
     expect(md).toContain('```statblock');

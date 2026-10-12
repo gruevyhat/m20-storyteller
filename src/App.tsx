@@ -12,6 +12,7 @@ import FortunePage from './pages/FortunePage';
 import CreatePage from './pages/CreatePage';
 import GrimoirePage from './pages/GrimoirePage';
 import BestiaryPage from './pages/BestiaryPage';
+import VaultPage from './pages/VaultPage';
 import HomePage from './pages/HomePage';
 
 const NAV = [
@@ -21,6 +22,7 @@ const NAV = [
   { to: '/fortune', label: 'Fortune' },
   { to: '/grimoire', label: 'Grimoire' },
   { to: '/bestiary', label: 'Bestiary' },
+  { to: '/vault', label: 'Vault' },
   { to: '/handouts', label: 'Handouts' },
   { to: '/rules', label: 'Rules' },
   { to: '/chronicle', label: 'Chronicle' },
@@ -31,7 +33,8 @@ export function openPlayerWindow() {
 }
 
 function Shell() {
-  const { chronicle } = useChronicle();
+  const { chronicle, undo, redo, canUndo, canRedo } = useChronicle();
+  const mod = /Mac|iPhone|iPad/.test(navigator.platform) ? '⌘' : 'Ctrl+';
   return (
     <div className="min-h-screen">
       <header className="sticky top-0 z-20 border-b border-line bg-ink/95 backdrop-blur">
@@ -56,7 +59,15 @@ function Shell() {
               </NavLink>
             ))}
           </nav>
-          <button className="btn ml-auto" onClick={openPlayerWindow} title="Open the player screen in a new window. Drag it to the second monitor.">
+          <span className="ml-auto flex gap-1">
+            <button className="btn-ghost" onClick={undo} disabled={!canUndo} title={`Undo the last change to the chronicle (${mod}Z)`}>
+              ↶ Undo
+            </button>
+            <button className="btn-ghost" onClick={redo} disabled={!canRedo} title={`Redo (${mod}⇧Z)`}>
+              ↷ Redo
+            </button>
+          </span>
+          <button className="btn" onClick={openPlayerWindow} title="Open the player screen in a new window. Drag it to the second monitor.">
             Player screen ↗
           </button>
         </div>
@@ -72,6 +83,8 @@ function Shell() {
           <Route path="/grimoire" element={<GrimoirePage />} />
           <Route path="/bestiary" element={<BestiaryPage />} />
           <Route path="/bestiary/:id" element={<BestiaryPage />} />
+          <Route path="/vault" element={<VaultPage />} />
+          <Route path="/vault/:id" element={<VaultPage />} />
           <Route path="/handouts" element={<HandoutsPage />} />
           <Route path="/rules" element={<RulesPage />} />
           <Route path="/chronicle" element={<ChroniclePage />} />

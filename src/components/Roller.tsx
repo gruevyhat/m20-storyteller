@@ -16,6 +16,8 @@ import { abandonRitual, acceptBotch, nextTarget, rollRitual, saveBotch, startRit
 import { ATTRIBUTE_NAMES, WHEEL_SIZE, allTraits, highestSphere, woundPenalty, type Character } from '../model/types';
 import { useChronicle } from '../store/chronicle';
 import { Stepper, Tabs, Toggle } from './ui';
+import { EffectBuilder } from './EffectBuilder';
+import { chartOutcome } from '../engine/effect';
 
 type Mode = 'pool' | 'magick' | 'ritual';
 
@@ -52,6 +54,7 @@ export default function Roller() {
   const [effect, setEffect] = useState<EffectKind>('coincidental');
   const [mods, setMods] = useState<Required<MagickModifiers>>({ instruments: 0, quintessence: 0, time: 0, other: 0 });
   const [ritual, setRitual] = useState<RitualState | null>(null);
+  const [building, setBuilding] = useState(false);
 
   const [shown, setShown] = useState<Shown | null>(null);
 
@@ -150,7 +153,10 @@ export default function Roller() {
     if (who && mods.quintessence) patchWho((c) => ({ ...c, quintessence: Math.max(0, c.quintessence - mods.quintessence) }));
     addParadox(paradox);
     const title = label || `Magick (${EFFECT_LABEL[effect].toLowerCase()})`;
-    const detail = `Arete ${setup.pool} at ${setup.difficulty}, need ${setup.need} · ${EFFECT_LABEL[effect]}`;
+    const chart = chartOutcome(r.net);
+    const detail = `Arete ${setup.pool} at ${setup.difficulty}, need ${setup.need} · ${EFFECT_LABEL[effect]}${
+      r.success ? ` · on the Base Damage or Duration chart, ${r.net === 1 ? '1 success gives' : `${r.net} successes give`} ${chart.damage ? `${chart.damage} levels of damage (one more success with Forces) or lasts` : 'no damage; lasts'} ${chart.duration.toLowerCase()}` : ''
+    }`;
     log(r, title, `${verdict(r)} (${detail})${paradox ? ` · +${paradox} Paradox` : ''}`, paradox);
     setShown({
       title,
@@ -285,6 +291,22 @@ export default function Roller() {
 
         {mode !== 'pool' && (
           <>
+            <button className="btn-ghost w-fit" onClick={() => setBuilding(!building)} aria-expanded={building}>
+              {building ? '▾' : '▸'} Work out the Spheres and successes
+            </button>
+            {building && (
+              <EffectBuilder
+                who={who}
+                onUse={(e) => {
+                  setSphere(Math.max(1, e.highestSphere));
+                  setNeed(e.need);
+                  if (e.name !== 'Effect') setLabel(e.name);
+                  setRitual(null);
+                  setBuilding(false);
+                }}
+                onSaveRote={(e) => patchWho((c) => ({ ...c, rotes: [...c.rotes, { name: e.name, desc: e.summary }] }))}
+              />
+            )}
             <div className="flex flex-wrap gap-3">
               <Stepper label="Arete" value={arete} onChange={setArete} min={1} max={10} />
               <Stepper label="Highest Sphere used" value={sphere} onChange={setSphere} min={1} max={5} />

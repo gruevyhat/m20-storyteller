@@ -1,5 +1,7 @@
 // Guided character creation, following the M20 process (p. 250) and freebie chart (p. 253).
 // Pure functions: a Build in, a Character and a list of problems out.
+import { rngFromSeed } from '../fortune/random';
+import { syncWonderBackground } from '../wonders/background';
 import { ATTRIBUTES, SPHERES, STANDARD_HEALTH, blankCharacter, type AbilityCategory, type Character, type Sphere } from './types';
 import { KNOWLEDGES, SKILLS, TALENTS, faction } from '../fortune/lore';
 
@@ -214,6 +216,7 @@ export function buildCharacter(b: Build): Character {
   }
   c.abilities.backgrounds = BACKGROUNDS.filter((n) => finalBackground(b, n) > 0).map((n) => ({ name: n, rating: finalBackground(b, n) }));
   c.arete = b.arete;
+  if (b.affinity) c.affinity = b.affinity;
   for (const s of SPHERES) if (finalSphere(b, s)) c.spheres[s] = finalSphere(b, s);
   const wp = 5 + b.freebie.willpower;
   c.willpower = { permanent: wp, temporary: wp };
@@ -222,5 +225,7 @@ export function buildCharacter(b: Build): Character {
   c.meritsFlaws = [...b.merits.map((m) => ({ ...m, kind: 'merit' as const })), ...b.flaws.map((m) => ({ ...m, kind: 'flaw' as const }))];
   c.notes = b.notes;
   c.extra = { created: 'Guided character creation (M20 pp. 250–253)' };
-  return c;
+  // Seeded so the preview keeps the same Wonder while other choices change.
+  const draw = rngFromSeed(`wonder:${c.name}:${b.faction}:${finalBackground(b, 'Wonder')}`);
+  return syncWonderBackground(null, c, () => draw.next());
 }

@@ -5,6 +5,7 @@
 import type { jsPDF as JsPDF } from 'jspdf';
 import { ATTRIBUTES, SPHERES, WHEEL_SIZE, type Character, type Trait } from '../model/types';
 import { MF_SUMMARY } from '../fortune/meritsFlawsText';
+import { xpTotals } from '../model/experience';
 
 const TALENTS = ['Alertness', 'Art', 'Athletics', 'Awareness', 'Brawl', 'Empathy', 'Expression', 'Intimidation', 'Leadership', 'Streetwise', 'Subterfuge'];
 const SKILLS = ['Crafts', 'Drive', 'Etiquette', 'Firearms', 'Martial Arts', 'Meditation', 'Melee', 'Research', 'Stealth', 'Survival', 'Technology'];
@@ -270,6 +271,29 @@ function page2(doc: JsPDF, c: Character, overflow: Trait[], moreHealth: number) 
   block('More Traits', overflow.map((t) => `${t.name} ${t.rating}${t.specialty ? ` (${t.specialty})` : ''}`).join('\n'));
   if (moreHealth > 0) block('Health', `${moreHealth} more health level${moreHealth === 1 ? '' : 's'} than the sheet shows: ${c.health.levels.map((l) => l.name).join(', ')}.`);
   block('Paradox Flaws', c.flaws.join('\n'));
+  block(
+    'Avatar & Resonance',
+    [
+      c.affinity ? `Affinity Sphere: ${c.affinity}` : '',
+      c.avatar ?? '',
+      ...(c.resonance ?? []).map((r) => `Resonance: ${r.trait} ${r.rating} (${r.kind})`),
+    ]
+      .filter(Boolean)
+      .join('\n'),
+  );
+  block(
+    'Wonders',
+    (c.wonders ?? [])
+      .map(
+        (w) =>
+          `${w.name}, ${w.kind} ${w.rating}${w.arete ? `, Arete ${w.arete}` : ''}${w.quintessenceMax !== undefined ? `, Quintessence ${w.quintessence ?? 0}/${w.quintessenceMax}` : ''}${w.powers.trim() ? `. ${w.powers.trim()}` : ''}`,
+      )
+      .join('\n'),
+  );
+  if (c.experience?.log.length) {
+    const xp = xpTotals(c);
+    block('Experience', `${xp.available} available, ${xp.earned} earned, ${xp.spent} spent.`);
+  }
   block('Notes', c.notes);
   const extras = Object.entries(c.extra)
     .map(([k, v]) => `${k[0].toUpperCase()}${k.slice(1)}: ${v.replace(/\n/g, '; ')}`)
