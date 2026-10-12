@@ -44,7 +44,7 @@ export default function BestiaryPage() {
         <p className="max-w-3xl text-sm text-muted">{BESTIARY.length} original homebrew creatures: strange wildlife, restless machines, uncanny visitors and a few hungrier things that should not be found. Find a creature for your scene and add it to your chronicle as an editable NPC.</p>
         <details className="mt-2 text-xs text-muted">
           <summary className="cursor-pointer">About these templates</summary>
-          <p className="mt-1 max-w-3xl">These concepts, stat blocks and encounter rules were created for this app. They are homebrew suggestions for M20 play; adjust them to your chronicle. Resolve armor, damage and special actions manually. Unlisted Social Attributes remain unset. A rating range lets you choose lower or upper values when adding an NPC. Illustrations were generated locally with mflux and Z-Image Turbo.</p>
+          <p className="mt-1 max-w-3xl">These concepts, stat blocks and encounter rules were created for this app. Umbrood use the M20 spirit rules: Rage, Gnosis, Essence and Charms. They are homebrew suggestions for M20 play; adjust them to your chronicle. Resolve armor, damage and special actions manually. Unlisted Social Attributes remain unset. A rating range lets you choose lower or upper values when adding an NPC. Illustrations were generated locally with mflux and Z-Image Turbo.</p>
         </details>
       </section>
 
@@ -82,7 +82,7 @@ export default function BestiaryPage() {
               <div className="flex flex-wrap gap-1"><span className="chip text-verdigris">{beast.category}</span><span className="chip text-muted">{beast.habitat}</span></div>
               <h2 className="font-display text-xl leading-tight text-brass">{beast.name}</h2>
               <p className="text-sm text-muted">{beast.description}</p>
-              <p className="mt-auto pt-1 text-xs">Willpower {beast.willpower} · {beast.health.length ? `${beast.health.length} health levels · Armor ${beast.armor}` : 'Reference only'}</p>
+              <p className="mt-auto pt-1 text-xs">Willpower {beast.willpower}{beast.spirit ? ` · Rage ${beast.spirit.rage} · Gnosis ${beast.spirit.gnosis}` : ''} · {beast.health.length ? `${beast.health.length} health levels · Armor ${beast.armor}` : 'Reference only'}</p>
               <span className="text-xs text-brass">View stat block →</span>
             </div>
           </Link>
@@ -141,7 +141,10 @@ function BeastDetail({ beast }: { beast: Beast }) {
             <div className="flex flex-wrap gap-1.5">{beast.abilities.map((t) => <span className="chip" key={t.name}>{t.name}{t.specialty ? ` (${t.specialty})` : ''} <b className="text-brass-bright">{t.rating}</b></span>)}</div>
           </section>
           <section className="flex flex-col gap-3" aria-label="Combat reference">
-            <div className="flex flex-wrap gap-5"><p><span className="label">Willpower</span> <b>{beast.willpower}</b></p><p><span className="label">Armor rating</span> <b>{beast.armor ?? 'N/A'}</b></p></div>
+            <div className="flex flex-wrap gap-5"><p><span className="label">Willpower</span> <b>{beast.willpower}</b></p><p><span className="label">Armor rating</span> <b>{beast.armor ?? 'N/A'}</b></p>
+              {beast.spirit && <><p><span className="label">Rage</span> <b>{beast.spirit.rage}</b></p><p><span className="label">Gnosis</span> <b>{beast.spirit.gnosis}</b></p><p><span className="label">Essence</span> <b>{beast.spirit.essence}</b></p></>}</div>
+            {beast.spirit && <div><h2 className="h-section mb-2">Charms</h2><div className="flex flex-wrap gap-1.5">{beast.spirit.charms.map((charm) => <span className="chip" key={charm}>{charm}</span>)}</div>
+              <p className="mt-1 text-xs text-muted">Charms follow the M20 Spirit Charms rules and spend Essence. {beast.spirit.charms.includes('Materialize') ? 'Materialized, it uses the Physical Attributes above and its Gnosis for Social and Mental ones.' : 'It has no physical form on this side of the Gauntlet.'}</p></div>}
             <div>
               <h2 className="h-section mb-2">Health</h2>
               {beast.health.length ? <ol className="flex flex-wrap gap-1" aria-label="Health levels">{beast.health.map((level, i) => <li key={i} className={`rounded border border-line px-2 py-1 font-mono text-xs ${level.penalty <= -99 ? 'text-wound' : ''}`}>{level.name}</li>)}</ol> : <p className="text-muted">No physical health track.</p>}

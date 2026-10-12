@@ -2,6 +2,14 @@ import creatures from './creatures.json';
 import { blankCharacter, type Character, type HealthLevel, type Trait } from '../model/types';
 import { categorize } from '../importers/statblock';
 
+/** Umbrood traits (M20 spirit rules): Rage, Gnosis, Essence and Charms from the core Charm list. */
+export interface SpiritTraits {
+  rage: number;
+  gnosis: number;
+  essence: number;
+  charms: string[];
+}
+
 export interface Beast {
   id: string;
   name: string;
@@ -18,7 +26,10 @@ export interface Beast {
   willpower: number;
   health: HealthLevel[];
   armor: number | null;
+  spirit?: SpiritTraits;
 }
+
+export const spiritLine = (s: SpiritTraits) => `Rage ${s.rage}, Gnosis ${s.gnosis}, Essence ${s.essence}. Charms: ${s.charms.join(', ')}.`;
 
 export const BESTIARY_ORIGIN = 'Original homebrew · M20 Storyteller';
 
@@ -41,7 +52,7 @@ export function filterBestiary(query: string, category = '', habitat = '') {
     if (category && beast.category !== category) return false;
     if (habitat && beast.habitat !== habitat) return false;
     const text = [beast.name, beast.category, beast.description, beast.ecology, beast.attacks, beast.notes,
-      beast.habitat, beast.appearance, ...beast.abilities.map((t) => `${t.name} ${t.specialty ?? ''}`)].join(' ').toLocaleLowerCase();
+      beast.habitat, beast.appearance, ...(beast.spirit?.charms ?? []), ...beast.abilities.map((t) => `${t.name} ${t.specialty ?? ''}`)].join(' ').toLocaleLowerCase();
     return words.every((word) => text.includes(word));
   });
 }
@@ -66,7 +77,8 @@ export function beastToCharacter(beast: Beast, range: 'low' | 'high' = 'low'): C
   c.willpower = { permanent: beast.willpower, temporary: beast.willpower };
   c.health = { levels: beast.health.map((level) => ({ ...level })), damage: [] };
   const ranges = Object.entries(beast.attributes).filter(([, values]) => values.length > 1);
-  c.notes = [beast.description, `Ecology: ${beast.ecology}`, `Attacks: ${beast.attacks}`, beast.notes,
+  c.notes = [beast.description, beast.spirit ? `Spirit: ${spiritLine(beast.spirit)} Materialized: use Gnosis for Social and Mental Attributes.` : '',
+    `Ecology: ${beast.ecology}`, `Attacks: ${beast.attacks}`, beast.notes,
     'Attack damage, armor and supernatural powers are reference notes; resolve their special rules manually.',
     ranges.length ? `Template ranges: ${ranges.map(([name, values]) => `${name} ${values.join('–')}`).join(', ')}. Created using ${range === 'low' ? 'lower' : 'upper'} ratings.` : '',
     `Origin: ${BESTIARY_ORIGIN}. Habitat: ${beast.habitat}.`].filter(Boolean).join('\n\n');
@@ -77,6 +89,7 @@ export function beastToCharacter(beast: Beast, range: 'low' | 'high' = 'low'): C
     'Armor rating': String(beast.armor ?? 'N/A'),
     'Attacks': beast.attacks,
     ...(beast.notes ? { 'Creature notes': beast.notes } : {}),
+    ...(beast.spirit ? { 'Spirit traits': spiritLine(beast.spirit) } : {}),
   };
   return c;
 }

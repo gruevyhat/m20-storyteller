@@ -77,7 +77,7 @@ describe('Bestiary workflow', () => {
     const random = [...host.querySelectorAll('button')].find((button) => button.textContent === 'Random creature')!;
     expect(random.disabled).toBe(true);
     await click('Clear filters');
-    expect(host.querySelector('[role="status"]')?.textContent).toBe('72 creatures');
+    expect(host.querySelector('[role="status"]')?.textContent).toBe('108 creatures');
     expect(host.querySelectorAll('li')).toHaveLength(24);
     await click('Show 24 more');
     expect(host.querySelectorAll('li')).toHaveLength(48);

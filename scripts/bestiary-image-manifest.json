@@ -718,5 +718,365 @@
     "width": 768,
     "height": 512,
     "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. Marrow Moth: Large grey dusty moths with bone-white patterned wings clustered on the bare shoulder of a sleeping figure in a dim bedroom, moonlight through net curtains, unsettling and quiet. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, borders, logos, watermarks, or duplicate subjects."
+  },
+  "cut-off-chorister": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 201,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A gaunt translucent choir singer in a frayed robe of an unfamiliar cut, standing in a dusty empty chapel, mouth open in song, faint gold light threading from its throat toward a bricked-up doorway behind the altar. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "reversed-neighbour": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 202,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. An ordinary middle-aged person on a doorstep under a streetlamp, every detail of their clothing subtly mirror-reversed, buttons on the wrong side and parting on the wrong side, with a reflection in the door glass that faces the other way. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "dimmed-sun-surveyor": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 203,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A tall tripod survey machine of riveted grey steel and frosted lenses standing knee-deep in a cold estuary at dusk, a dim lamp on its head, a long sounding spike lowered into the mud, ice on its legs though the water is not frozen. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "penitent-echo": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 204,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A faceless robed figure of grey wax caught mid-gesture with one hand raised, standing in an abandoned ritual room among overturned candles, faint afterimages of the same pose overlapping behind it like a multiple exposure. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "sunstarved-strider": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 205,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A towering flightless bird with overlapping bronze armour plates, a long crested head and milky blinded eyes, stumbling out of a limestone cave mouth into a moonlit pasture, golden light glowing faintly from the cave behind it. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "ether-shoal": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 206,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A dense school of slender glowing blue-white fish streaming through a black starry void around a brass and glass aether ship, their light reflected in the ship's portholes, sparks trailing from their fins. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "signal-mouth": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 207,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A lonely radio telescope dish on a high desert plateau at night, tiny in the lower corner, beneath an enormous glowing open mouth with lips and rows of faint teeth formed from swirling nebula clouds that fills the starry sky above it, cosmic and quiet. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "spore-courtier": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 208,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A tall slender humanoid figure built from layered pale fungal gills and lace-like mycelium, wearing a cape of moss, bowing with courtly grace in a damp forest clearing, mushrooms rising wherever its feet have stepped. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "clockwrack-pilgrim": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 209,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A single figure in a long travelling coat standing on a city street at night, rendered as three overlapping ghostly ages at once: a child, an adult and a very old person, a pocket watch with spinning hands hanging from their fingers. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "many-angled-courier": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 210,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A lean courier in a grey uniform and peaked cap, seen as several overlapping copies at different angles standing in front of a row of terraced house doors at once, each copy holding the same sealed envelope. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "lucid-intruder": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 211,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A beautiful young figure in an old-fashioned party dress and bare feet standing in a dark apartment hallway, its edges dissolving into drifting feathers and moth wings, a sleepwalking person visible in the bedroom behind it. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "corridor-custodian": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 212,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A tall stooped janitor in a grey boiler suit, with no face beneath a low cap, pushing a battered steel cleaning cart through a door in a warehouse wall that opens onto an endless fluorescent-lit grey corridor. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "anchor-warden": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 213,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A massive weathered stone guardian figure, half-sunk into a hillside beside an ancient standing stone carved with spirals, moss on its shoulders, eyes glowing faintly amber at dusk, mist in the valley behind. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "folded-surveyor": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 214,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A strange geometric creature appearing as overlapping translucent cross-sections of a larger shape, slices of a spiny ringed form hovering in a dim laboratory, thin cuts of light where it intersects tables and instruments. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "comet-grub": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 215,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A pale segmented grub the size of a dog with a shining iron-grey head and mandibles, chewing through a rusted farm gate in a field beside a smoking fresh meteorite crater at night. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "varnished-wanderer": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 216,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A gentleman in an old-fashioned frock coat whose body is made of thick visible oil-paint brushstrokes, stepping out of a gilded picture frame in a dim museum gallery onto the polished floor, varnish gleaming on its skin. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "oblivion-sifter": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 217,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A hunched gaunt grey creature with no shell, a long bowed spine covered in a wide mesh of fine bone like a sieve, and very long delicate clawed fingers sifting drifting ash and broken household objects in a pale featureless void, objects dissolving as they fall through its mesh. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "second-sun-envoy": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 218,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A tall robed envoy with a serene golden mask, holding a brass lantern with a tiny burning sun inside it, standing in a dark city alley that is lit as bright as noon in a circle around it. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "mossback-usher": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 219,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A broad low spirit like a moss-covered stone tortoise with a long gentle face and lichen beard, glowing faintly green, walking along a misty silver path through a dreamlike ancient forest. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "blight-tick": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 220,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A swollen tick-like spirit the size of a fist, translucent sickly green with an oily rainbow sheen, clinging to the shoulder of a pale ghostly traveller in a grey polluted spirit landscape full of smoke. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "lamplighter-of-the-vulgate": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 221,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A very tall thin spirit in a long dark coat with a pale featureless face, lifting a long brass lighting pole to a glowing lamp that floats above a symbol in a misty abstract landscape of floating shapes and pillars. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "argument-hounds": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 222,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A pack of lean grey spirit hounds with mouths full of floating letters and glowing eyes running across a pale astral plain of broken columns, a translucent silver-corded astral traveller fleeing ahead. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "moonpath-tinker": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 223,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A wiry hunched spirit with silver skin and a long patched coat, carrying a huge pack full of glowing pieces of road, kneeling on a broken moonlit path that floats across a starry misty void, fitting a glowing slab into a gap. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "saltwind-elemental": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 224,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A towering figure of whirling white salt spray and wind on a storm-lashed harbour wall, faint glowing eyes inside the spray, fishing boats tossing in the grey sea behind it. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "stovelight-grandam": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 225,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A translucent glowing ghostly old woman made entirely of rippling orange heat haze and stove light, her lower body trailing like smoke from the open firebox of an old iron cooking range, in a cluttered dark kitchen at night, steam rising from pots, the kitchen seen through her body. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "deprecated-sprite": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 226,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A small glitching pixelated spirit like a cartoon assistant figure with half its image missing, floating in a dark digital void full of green grid lines and old floating window frames, offering a glowing outstretched hand. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "firewall-mastiff": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 227,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A massive spirit guard dog made of dense red wireframe and glowing code, lying across a doorway of light in a dark digital corridor, eyes glowing, chains of glowing text around its neck. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "tempest-gulls": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 228,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A flock of grey ragged spirit seabirds with hollow white eyes swooping down through a dark stormy sky toward flowers and candles laid on a grave in a misty cemetery at night. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "errata-clerk": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 229,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A tired grey-suited clerk with a stamp-pad complexion and no eyes behind thick spectacles, standing in a city street holding a huge ledger and a red pen, red correction marks hanging in the air around warped buildings. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "recoil": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 230,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A barely visible shimmering humanoid shape of distorted air and heat ripples throwing a punch inside an industrial yard, dust and sparks bursting around it, a figure reeling back from the blow. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "crossroads-hare": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 231,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A lean silver-grey hare with very long ears and knowing amber eyes sitting upright at a misty crossroads in a dreamlike spirit landscape, a rolled letter clutched in its forepaws. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "grid-mason": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 232,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A tall angular crystalline spirit built of transparent rods and right angles, laying glowing straight lines of crystal across a misty spirit reflection of a new housing development, old crooked trees being straightened beside it. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "weather-that-changed-its-mind": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 237,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A living storm cloud spirit shaped like a great tangled knot of cloud with a faint watchful face in it, hovering low over an empty heather moor, raining sleet, sunbeams, rainbow fragments and glass leaves all at once from its underside onto heather turned to crystal; no people, no animals, no human figures. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "grudge-lamprey": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 234,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A long translucent black eel-like spirit with a round sucker mouth wrapped around the shoulders of a sleeping figure in a dim bedroom, its tail disappearing into the shadowed wall behind the bed. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "pillow-lantern": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 235,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A small glowing paper lantern spirit with a tiny kind face floating through a dark surreal dreamscape of endless staircases and doors, leading a sleepy child in pyjamas by a thread of warm light. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
+  },
+  "siege-ox-of-the-spires": {
+    "model": "filipstrand/Z-Image-Turbo-mflux-4bit",
+    "engine": "mflux",
+    "seed": 236,
+    "steps": 4,
+    "computePrecision": "float16",
+    "width": 768,
+    "height": 512,
+    "prompt": "Original dark fantasy horror field-guide illustration, rich ink and watercolor with fine textured brushwork. A gigantic grey stone-hided ox spirit with vast curling horns hauling enormous chains attached to a towering fortress wall up a misty spiral mountain path in an abstract sky, tiny figures at its feet for scale. Creature is unsettling and dreadful, anatomically coherent, not gory. Full subject visible, large readable silhouette, centered landscape composition with generous margins. Atmospheric setting softly recedes behind it. Muted charcoal, bone and verdigris palette with cold rim light and deep shadows. Painterly rather than photographic. No readable text, lettering, title, captions, borders, logos, watermarks, nudity, or duplicate subjects."
   }
 }

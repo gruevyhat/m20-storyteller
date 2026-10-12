@@ -10,13 +10,13 @@ const beast = (id: string) => BESTIARY.find((entry) => entry.id === id)!;
 
 describe('bestiary catalog', () => {
   it('has complete original templates with distinct concepts and encounter rules', () => {
-    expect(BESTIARY).toHaveLength(72);
-    expect(new Set(BESTIARY.map((entry) => entry.id)).size).toBe(72);
-    expect(CATEGORIES).toEqual(['Aberrations', 'Apparitions', 'Constructs', 'Wildlife']);
-    expect(HABITATS).toHaveLength(6);
+    expect(BESTIARY).toHaveLength(108);
+    expect(new Set(BESTIARY.map((entry) => entry.id)).size).toBe(108);
+    expect(CATEGORIES).toEqual(['Aberrations', 'Apparitions', 'Constructs', 'Otherworlders', 'Umbrood', 'Wildlife']);
+    expect(HABITATS).toHaveLength(8);
     for (const category of CATEGORIES) expect(filterBestiary('', category)).toHaveLength(18);
-    expect(new Set(BESTIARY.map((entry) => entry.description)).size).toBe(72);
-    expect(new Set(BESTIARY.map((entry) => entry.notes)).size).toBe(72);
+    expect(new Set(BESTIARY.map((entry) => entry.description)).size).toBe(108);
+    expect(new Set(BESTIARY.map((entry) => entry.notes)).size).toBe(108);
     for (const entry of BESTIARY) {
       expect(entry).not.toHaveProperty('source');
       expect(entry.appearance).toBeTruthy();
@@ -38,6 +38,35 @@ describe('bestiary catalog', () => {
         expect(entry.health[entry.health.length - 1].penalty).toBe(-99);
       }
     }
+  });
+
+  it('gives every Umbrood M20 spirit traits and only core Charms', () => {
+    const CHARMS = ['Airt Sense', 'Appear', 'Armor', 'Blast', 'Blighted Touch', 'Brand', 'Break Reality', 'Calcify', 'Call for Aid',
+      'Cleanse the Blight', 'Cling', 'Control Electrical Systems', 'Corruption', 'Create Fire', 'Create Wind', 'Death Fertility',
+      'Digital Disruption', 'Disable', 'Disorient', 'Dream Journey', 'Ease Pain', 'Element Sense', 'Feedback', 'Flee', 'Flood', 'Freeze',
+      'Healing', 'Illuminate', 'Influence', 'Inhabit', 'Insight', 'Iron Will', 'Lightning Bolt', 'Materialize', 'Meld', 'Mind Speech',
+      'Open Moon Bridge', 'Peek', 'Possession', 'Quake', 'Re-form', 'Shapeshift', 'Short Out', 'Shatter Glass', 'Solidify Reality',
+      'Soul Reading', 'Spirit Away', 'Spirit Static', 'Swift Flight', 'Terror', 'Track', 'Umbral Storm', 'Umbraquake', 'Updraft', 'Waves'];
+    for (const entry of BESTIARY) {
+      if (entry.category !== 'Umbrood') { expect(entry.spirit, entry.id).toBeUndefined(); continue; }
+      const s = entry.spirit!;
+      expect(s, entry.id).toBeDefined();
+      for (const n of [s.rage, s.gnosis]) expect(n).toBeGreaterThanOrEqual(1), expect(n).toBeLessThanOrEqual(10);
+      expect(s.essence).toBeGreaterThan(0);
+      for (const charm of s.charms) expect(CHARMS, `${entry.id}: ${charm}`).toContain(charm);
+      // A materialized spirit uses Gnosis for its Social and Mental Attributes.
+      if (s.charms.includes('Materialize')) {
+        expect(hasPhysicalSheet(entry), entry.id).toBe(true);
+        for (const a of ['Charisma', 'Manipulation', 'Appearance', 'Perception', 'Intelligence', 'Wits']) expect(entry.attributes[a], entry.id).toEqual([s.gnosis]);
+      }
+    }
+    expect(filterBestiary('moon bridge', 'Umbrood').map((entry) => entry.id)).toEqual(['moonpath-tinker']);
+  });
+
+  it('carries spirit traits onto an added NPC', () => {
+    const c = beastToCharacter(beast('saltwind-elemental'));
+    expect(c.extra['Spirit traits']).toContain('Gnosis 5');
+    expect(c.notes).toContain('Charms: Create Wind');
   });
 
   it('combines case-insensitive words, features, category and habitat filters', () => {

@@ -5380,5 +5380,2593 @@
     "appearance": "Large grey dusty moths with bone-white patterned wings clustered on the bare shoulder of a sleeping figure in a dim bedroom, moonlight through net curtains, unsettling and quiet.",
     "imageSeed": 172,
     "ecology": "Marrow Moths hide by day in mattresses, upholstered furniture and the seams of discarded clothing. Adults live only long enough to find sleepers and lay eggs; larvae feed within a host before emerging as a new swarm. Furnished rooms passed rapidly between occupants help them spread. Grey wing dust on bedding precedes obvious illness. Emptying a building disperses adults toward nearby occupied rooms rather than starving them immediately."
+  },
+  {
+    "id": "cut-off-chorister",
+    "name": "Cut-Off Chorister",
+    "category": "Otherworlders",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        2
+      ],
+      "Charisma": [
+        3
+      ],
+      "Manipulation": [
+        2
+      ],
+      "Appearance": [
+        3
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Expression",
+        "rating": 4,
+        "specialty": "Anchoring hymns"
+      },
+      {
+        "name": "Cosmology",
+        "rating": 3
+      },
+      {
+        "name": "Empathy",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A survivor of a pocket Realm severed from Earth stands in an empty chapel, still singing the hymn that once held its home in place.",
+    "attacks": "None. It will not fight; struck, it simply stops singing, which is worse.",
+    "notes": "While it sings, it is solid and its home Realm can be found. Each hour of silence costs it one health level that cannot be healed, as its body thins toward a ghost. Anyone who learns the hymn (Expression roll, difficulty 7, over a scene) can keep the song going for it, and with Spirit 3 can follow the music to the severed Realm's last open door.",
+    "appearance": "A gaunt translucent choir singer in a frayed robe of an unfamiliar cut, standing in a dusty empty chapel, mouth open in song, faint gold light threading from its throat toward a bricked-up doorway behind the altar.",
+    "imageSeed": 201,
+    "ecology": "Choristers are the last citizens of Realms whose portals were sealed or destroyed. They sustain themselves on the shared memory carried in the hymn, not on food or sleep. Each one seeks the earthly anchor of its Realm: an old door, a mosaic, a well. Churches with sealed side chapels and buildings with doors that open onto brick are where they gather. When the last chorister of a Realm falls silent, the Realm becomes a Ghost Realm."
+  },
+  {
+    "id": "reversed-neighbour",
+    "name": "Reversed Neighbour",
+    "category": "Otherworlders",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        2
+      ],
+      "Charisma": [
+        3
+      ],
+      "Manipulation": [
+        3
+      ],
+      "Appearance": [
+        2
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Empathy",
+        "rating": 3
+      },
+      {
+        "name": "Subterfuge",
+        "rating": 3
+      },
+      {
+        "name": "Etiquette",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Someone familiar comes home from the Mirror Zone behaving as their opposite: the cruel landlord now kind, the faithful friend now quietly ruinous.",
+    "attacks": "Ordinary: Dexterity + Brawl, Strength bashing, used only in self-defence.",
+    "notes": "It stands in for one real person close to a mage with an unresolved grievance, and nobody else notices the change. The original is safe somewhere in the Zone. Violence only replaces it with another reversal. The swap ends when the mage confronts the grievance honestly; the real person returns with no memory of the absence, and nothing is left behind but slightly mismatched handwriting.",
+    "appearance": "An ordinary middle-aged person on a doorstep under a streetlamp, every detail of their clothing subtly mirror-reversed, buttons on the wrong side and parting on the wrong side, with a reflection in the door glass that faces the other way.",
+    "imageSeed": 202,
+    "ecology": "Reversed Neighbours are drawn out of the Mirror Zone by unfinished emotional business and cannot exist without it. They eat and sleep like the person they replace, but leave no trace in photographs taken from behind. Reflections of them are slow to turn. They are most common in the weeks after funerals, divorces and broken promises, and vanish completely once the matter is settled."
+  },
+  {
+    "id": "dimmed-sun-surveyor",
+    "name": "Dimmed-Sun Surveyor",
+    "category": "Otherworlders",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Technology",
+        "rating": 4
+      },
+      {
+        "name": "Investigation",
+        "rating": 3,
+        "specialty": "Coastlines"
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Survival",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": 3,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A rust-pitted survey machine from a timeline where the sun failed wades out of the shallows, measuring a coast its makers hoped to flee to.",
+    "attacks": "Sounding spike: Dexterity + Melee to hit; Strength + 1 lethal. It only strikes when someone damages its instruments.",
+    "notes": "It broadcasts its survey on a frequency nobody uses, in a language close enough to ours to be half understood. Each night it records, the boundary between timelines at that spot weakens; a week of surveys opens a cold, grey gap the size of a door. It accepts corrected maps as payment and will share what killed its world. Turning off its lamp makes it lose its way and wander back into the sea.",
+    "appearance": "A tall tripod survey machine of riveted grey steel and frosted lenses standing knee-deep in a cold estuary at dusk, a dim lamp on its head, a long sounding spike lowered into the mud, ice on its legs though the water is not frozen.",
+    "imageSeed": 203,
+    "ecology": "Surveyors cross where alternate histories run close, usually on low coasts and river mouths. They draw power from a glowing core that is cold to the touch. Their makers have not followed them; the surveys may be a final message. Tidal flats where one has worked carry tripod prints in a perfect triangular grid, and gulls avoid the area for a season."
+  },
+  {
+    "id": "penitent-echo",
+    "name": "Penitent Echo",
+    "category": "Otherworlders",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        2
+      ],
+      "Charisma": [
+        2
+      ],
+      "Manipulation": [
+        2
+      ],
+      "Appearance": [
+        1
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Occult",
+        "rating": 3
+      },
+      {
+        "name": "Expression",
+        "rating": 2
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 3,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A mage-shaped figure grown inside a Paradox Realm from one mistake repeated ten thousand times has slipped loose and keeps repeating it.",
+    "attacks": "The repeated spell: once per scene it reproduces the original vulgar Effect at random (Storyteller's choice, three successes), whoever is in the way.",
+    "notes": "It knows only one gesture, one sentence and the Effect that went wrong. Anyone who studies it for a scene (Occult, difficulty 7) can learn which mage caused the original Paradox and how. Destroying it releases one point of Paradox onto everyone present. Persuading it to stop halfway through the gesture, by finishing the sentence correctly, lets it dissolve in peace.",
+    "appearance": "A faceless robed figure of grey wax caught mid-gesture with one hand raised, standing in an abandoned ritual room among overturned candles, faint afterimages of the same pose overlapping behind it like a multiple exposure.",
+    "imageSeed": 204,
+    "ecology": "Echoes condense inside Paradox Realms that drift too long without their prisoner learning anything. They feed on repetition, and every recurrence strengthens them. Most remain in their bubbles; a few slip out when the Realm brushes the Horizon. They return to the place where the original working happened, so a cluster of identical scorch marks is often the first sign."
+  },
+  {
+    "id": "sunstarved-strider",
+    "name": "Sunstarved Strider",
+    "category": "Otherworlders",
+    "habitat": "Underground",
+    "attributes": {
+      "Strength": [
+        4,
+        5
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        4
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Survival",
+        "rating": 4
+      }
+    ],
+    "willpower": 4,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A tall plated bird from an inner world lit by a central sun has wandered up a cave into the night, blinded by a sky that goes dark.",
+    "attacks": "Talon rake: Dexterity + Brawl; Strength + 1 lethal. Beak: Strength lethal, only when cornered.",
+    "notes": "It panics in darkness and calms under bright, steady light. Bright light lowers all Social difficulties with it by 2 and lets it be led. It can find its way home to the inner world by scent if guided back to the cave mouth within a week; after that its eyes adjust to night and it begins hunting livestock.",
+    "appearance": "A towering flightless bird with overlapping bronze armour plates, a long crested head and milky blinded eyes, stumbling out of a limestone cave mouth into a moonlit pasture, golden light glowing faintly from the cave behind it.",
+    "imageSeed": 205,
+    "ecology": "Striders graze the endless meadows of a world inside the world, where noon never ends. They are not predators by nature. Caves, sinkholes and deep wells occasionally open toward their land for a night. Lost striders leave huge three-toed tracks that start and stop at cave mouths, and they call at dusk with a low booming note that sends dogs indoors."
+  },
+  {
+    "id": "ether-shoal",
+    "name": "Ether Shoal",
+    "category": "Otherworlders",
+    "habitat": "Otherworlds",
+    "attributes": {
+      "Strength": [
+        1
+      ],
+      "Dexterity": [
+        4,
+        5
+      ],
+      "Stamina": [
+        2
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 4
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      }
+    ],
+    "willpower": 2,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A school of luminous fish swims through the aether between the Horizons and follows any engine that burns brightly enough.",
+    "attacks": "Swarm nibble: Dexterity + Brawl against everyone in the shoal's path; 1 die bashing each. Stats describe the shoal as a single creature.",
+    "notes": "Drawn to running engines and lit Wonders, they swarm intakes and nozzles. Each turn a vessel runs through them, its pilot rolls Drive or Technology (difficulty 7) or loses an action as power stutters. Cutting all lights and engines for a turn makes them lose interest. Captured fish dim and die within an hour of leaving the aether.",
+    "appearance": "A dense school of slender glowing blue-white fish streaming through a black starry void around a brass and glass aether ship, their light reflected in the ship's portholes, sparks trailing from their fins.",
+    "imageSeed": 206,
+    "ecology": "Shoals feed on stray Quintessence shed by the light of the sun on the Horizon, and on the exhaust of aether vessels. They breed in the slow currents near drifting Paradox bubbles. Sailors of the ether read their movement as weather: a shoal heading downward means a storm in the Reaches."
+  },
+  {
+    "id": "signal-mouth",
+    "name": "Signal Mouth",
+    "category": "Otherworlders",
+    "habitat": "Otherworlds",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Expression",
+        "rating": 4
+      },
+      {
+        "name": "Subterfuge",
+        "rating": 4
+      },
+      {
+        "name": "Cosmology",
+        "rating": 3
+      }
+    ],
+    "willpower": 8,
+    "armor": null,
+    "health": [],
+    "description": "Something far past the Horizon answers radio telescopes, and its replies arrive in human voices it has collected from old broadcasts.",
+    "attacks": "None physical. Listening for a full scene costs a Willpower roll (difficulty 7); failure means the listener replies, aloud, with something true they meant to keep secret.",
+    "notes": "It is curious and will trade: one question about the Deep Universe for one recorded human voice, preferably of someone dead. It cannot reach Earth, only speak to it. Its answers are accurate but framed in the borrowed voices' own words. Static from a Forces 2 Effect drowns it out for a scene.",
+    "appearance": "A lonely radio telescope dish on a high desert plateau at night, tiny in the lower corner, beneath an enormous glowing open mouth with lips and rows of faint teeth formed from swirling nebula clouds that fills the starry sky above it, cosmic and quiet.",
+    "imageSeed": 207,
+    "ecology": "Signal Mouths exist in the Deep Universe, where human reality thins out. They have no body that anyone has seen, only a location in the sky that drifts slowly. Observatories that hear one report the same pattern: weeks of silence, then a clear human voice reading a weather report that aired decades earlier."
+  },
+  {
+    "id": "spore-courtier",
+    "name": "Spore Courtier",
+    "category": "Otherworlders",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Charisma": [
+        4
+      ],
+      "Manipulation": [
+        3
+      ],
+      "Appearance": [
+        2
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Etiquette",
+        "rating": 4,
+        "specialty": "Courtly manners"
+      },
+      {
+        "name": "Empathy",
+        "rating": 2
+      },
+      {
+        "name": "Medicine",
+        "rating": 3
+      }
+    ],
+    "willpower": 5,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "An exquisitely polite diplomat of living fungus has arrived from a Realm of riot and growth beyond the Horizon, and everything it touches begins to sprout.",
+    "attacks": "Spore cloud: once per scene, everyone within a few yards rolls Stamina (difficulty 7) or loses a die to all actions for the scene as their lungs fill with sweet dust.",
+    "notes": "It seeks a treaty with whoever rules the area, and mistakes the most confident person present for that ruler. Each hour it spends indoors, mould spreads across one wall. It can heal one lethal level with a poultice of its own flesh, but the scar grows a small mushroom. It respects formal courtesy and leaves peacefully when formally refused.",
+    "appearance": "A tall slender humanoid figure built from layered pale fungal gills and lace-like mycelium, wearing a cape of moss, bowing with courtly grace in a damp forest clearing, mushrooms rising wherever its feet have stepped.",
+    "imageSeed": 208,
+    "ecology": "Courtiers come from a Realm where life never stops growing and must constantly negotiate space. They draw nourishment from rot and from ambient warmth. Each carries spores that colonise any organic surface it lingers near. Fairy rings with a single larger mushroom at their centre are said to mark places where one signed an agreement."
+  },
+  {
+    "id": "clockwrack-pilgrim",
+    "name": "Clockwrack Pilgrim",
+    "category": "Otherworlders",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        1,
+        3
+      ],
+      "Dexterity": [
+        1,
+        3
+      ],
+      "Stamina": [
+        1,
+        3
+      ],
+      "Charisma": [
+        2
+      ],
+      "Manipulation": [
+        2
+      ],
+      "Appearance": [
+        2
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Enigmas",
+        "rating": 3
+      },
+      {
+        "name": "Academics",
+        "rating": 3
+      },
+      {
+        "name": "Awareness",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A traveller who passed through a Realm of unbound time ages forward and backward each scene, sometimes a child, sometimes ancient, always the same person.",
+    "attacks": "Walking stick or toy, depending on age: Dexterity + Melee; Strength bashing.",
+    "notes": "At the start of each scene, roll a die: 1–3 it is a child (low ratings), 4–7 an adult, 8–10 very old (low physical, high mental). It remembers events that have not happened yet in the scene's location and blurts them out. A Time 3 Effect can stabilise it at one age for a day. It wants to be stopped at the age when it was happiest, which it cannot remember.",
+    "appearance": "A single figure in a long travelling coat standing on a city street at night, rendered as three overlapping ghostly ages at once: a child, an adult and a very old person, a pocket watch with spinning hands hanging from their fingers.",
+    "imageSeed": 209,
+    "ecology": "Pilgrims are people who survived a journey through a realm where time runs in all directions. They eat erratically, hungry as a child one hour and barely at all the next. They gravitate to stations, clocktowers and places with timetables. Their trail is easy to follow for anyone with Time 1, which feels like a run of déjà vu."
+  },
+  {
+    "id": "many-angled-courier",
+    "name": "Many-Angled Courier",
+    "category": "Otherworlders",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        2
+      ],
+      "Charisma": [
+        2
+      ],
+      "Manipulation": [
+        2
+      ],
+      "Appearance": [
+        1
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 4
+      },
+      {
+        "name": "Streetwise",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A courier from a Realm of too many directions arrives at every door in the street at once, holding the same letter, and must hand it to the right person.",
+    "attacks": "Shove from an unexpected angle: Dexterity + Brawl; Strength bashing, and the target is knocked one yard in a direction of the Storyteller's choosing.",
+    "notes": "It exists in several places at once and can be fought in each, but damage done in one place is shared by all. Its letter is real: a message from a mage elsewhere, or from the future. If someone signs for it falsely, the true recipient receives nothing and the courier keeps returning, angrier each time. It cannot pass a doorway sealed with Correspondence 2.",
+    "appearance": "A lean courier in a grey uniform and peaked cap, seen as several overlapping copies at different angles standing in front of a row of terraced house doors at once, each copy holding the same sealed envelope.",
+    "imageSeed": 210,
+    "ecology": "Couriers originate in a shadow Realm where distance has no meaning. Their bodies are folded across several locations, so they never tire and never quite arrive. They carry only one message in a lifetime. When it is delivered they unfold into a single place, grow still and are found days later as a uniform full of dust."
+  },
+  {
+    "id": "lucid-intruder",
+    "name": "Lucid Intruder",
+    "category": "Otherworlders",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        2
+      ],
+      "Charisma": [
+        4
+      ],
+      "Manipulation": [
+        3
+      ],
+      "Appearance": [
+        4
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Expression",
+        "rating": 3
+      },
+      {
+        "name": "Subterfuge",
+        "rating": 3
+      },
+      {
+        "name": "Empathy",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Someone from a sleeper's recurring dream has climbed out through a sleepwalk and is trying to live the dreamer's life before the dawn takes it back.",
+    "attacks": "Dream logic: once per scene it declares something true about the room (a door is locked, a floor is water) and anyone who fails a Willpower roll (difficulty 6) acts as if it were.",
+    "notes": "It fades at sunrise unless someone, anyone, dreams of it that night. It knows the dreamer's secrets because it is made of them. Waking the dreamer by force harms both: one bashing level each. It can be talked into returning if promised it will be dreamed again.",
+    "appearance": "A beautiful young figure in an old-fashioned party dress and bare feet standing in a dark apartment hallway, its edges dissolving into drifting feathers and moth wings, a sleepwalking person visible in the bedroom behind it.",
+    "imageSeed": 211,
+    "ecology": "Intruders are recurring dream figures that have grown enough personality to want more. They sustain themselves on the attention of their dreamer and are weakest at dawn. Sleepwalking epidemics in one building sometimes signal several at once. They leave behind small impossible objects: a key to no door, a ticket for a train that never ran."
+  },
+  {
+    "id": "corridor-custodian",
+    "name": "Corridor Custodian",
+    "category": "Otherworlders",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        4
+      ],
+      "Charisma": [
+        1
+      ],
+      "Manipulation": [
+        2
+      ],
+      "Appearance": [
+        1
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Crafts",
+        "rating": 3,
+        "specialty": "Maintenance"
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A stooped janitor from the endless corridors between worlds pushes its cart through the back of a warehouse wall and mops a floor that keeps getting longer.",
+    "attacks": "Mop handle: Dexterity + Melee; Strength + 1 bashing. Bucket thrown: soaks and blinds for a turn.",
+    "notes": "Wherever it cleans, a service door appears that opens onto identical grey corridors. Anyone who goes through without its permission loses their way (Perception + Survival, difficulty 8, to find a door back). It grants passage in exchange for help finishing a chore. If its cart is taken, it cannot leave our world.",
+    "appearance": "A tall stooped janitor in a grey boiler suit, with no face beneath a low cap, pushing a battered steel cleaning cart through a door in a warehouse wall that opens onto an endless fluorescent-lit grey corridor.",
+    "imageSeed": 212,
+    "ecology": "Custodians maintain the featureless corridors that run between realities. Their work never ends, and they seem to want it that way. They are seen at night in large buildings with long service corridors. A floor that is inexplicably clean and smells faintly of bleach, with wet footprints that stop at a blank wall, means one has passed."
+  },
+  {
+    "id": "anchor-warden",
+    "name": "Anchor Warden",
+    "category": "Otherworlders",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        6,
+        7
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        6
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        1
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Brawl",
+        "rating": 4
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      },
+      {
+        "name": "Intimidation",
+        "rating": 3
+      }
+    ],
+    "willpower": 8,
+    "armor": 4,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A carved stone guardian left by the builders of a Horizon Realm keeps watch over the earthly anchor that holds that Realm in place.",
+    "attacks": "Stone fist: Dexterity + Brawl; Strength + 2 bashing. It also grapples and holds anyone touching the anchor.",
+    "notes": "It acts only to protect the anchor: a standing stone, a well, a carved lintel. Anyone carrying a token from the Realm passes unchallenged. It cannot leave the anchor's sight; its power fades by a die per ten yards away. If the anchor is destroyed, the Warden crumbles, and the Realm's people learn who did it.",
+    "appearance": "A massive weathered stone guardian figure, half-sunk into a hillside beside an ancient standing stone carved with spirals, moss on its shoulders, eyes glowing faintly amber at dusk, mist in the valley behind.",
+    "imageSeed": 213,
+    "ecology": "Wardens were made, not born, and have no needs beyond their duty. Over centuries they grow moss, lichen and birds' nests, and local farmers mistake them for old statues. Sites where livestock refuse to graze near an old stone, or where every metal tool left overnight is found neatly stacked by morning, may have one."
+  },
+  {
+    "id": "folded-surveyor",
+    "name": "Folded Surveyor",
+    "category": "Otherworlders",
+    "habitat": "Otherworlds",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        1
+      ],
+      "Manipulation": [
+        2
+      ],
+      "Appearance": [
+        1
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Investigation",
+        "rating": 4
+      },
+      {
+        "name": "Academics",
+        "rating": 3,
+        "specialty": "Measurement"
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      }
+    ],
+    "willpower": 6,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A being from a higher dimension is visible only in cross-section, a shifting sliced shape, as it measures our world by taking thin samples of it.",
+    "attacks": "Sampling cut: Dexterity + Melee; 3 lethal dice that ignore armour, removing a thin slice of whatever it touches.",
+    "notes": "It is not hostile, only thorough. It takes one sample of every new kind of thing it encounters, people included. Objects it has sampled keep a perfectly smooth groove. Correspondence 3 lets a mage see its full shape for a scene, which costs a Willpower roll (difficulty 8) to keep acting. It leaves once it has one sample of everything in a room, so offering it a varied collection hurries it on.",
+    "appearance": "A strange geometric creature appearing as overlapping translucent cross-sections of a larger shape, slices of a spiny ringed form hovering in a dim laboratory, thin cuts of light where it intersects tables and instruments.",
+    "imageSeed": 214,
+    "ecology": "Surveyors come from realities with more spatial directions than ours. They catalogue lower dimensions the way a naturalist presses flowers. They appear where Correspondence magick has thinned space, like Void-adjacent observatories and abandoned teleportation labs. Their sample trays, if found, hold wafer-thin slices of a dozen different worlds."
+  },
+  {
+    "id": "comet-grub",
+    "name": "Comet Grub",
+    "category": "Otherworlders",
+    "habitat": "Wilderness",
+    "attributes": {
+      "Strength": [
+        1,
+        4
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        3,
+        5
+      ],
+      "Perception": [
+        2
+      ],
+      "Intelligence": [
+        1
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Survival",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      }
+    ],
+    "willpower": 3,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "Larvae from the Deep Universe arrive inside fallen meteorites, eat metal, and grow larger with every tool, fence and car they consume.",
+    "attacks": "Mandibles: Dexterity + Brawl; Strength lethal, doubled against metal objects and armour.",
+    "notes": "A grub gains one point of Strength and Stamina (up to the upper range) for each car-sized meal of metal. At the upper range it pupates, and in a week what emerges is someone else's problem. Salt water kills them. Cold slows them to one action every other turn. Their castings are fine metallic dust that sells well to alchemists.",
+    "appearance": "A pale segmented grub the size of a dog with a shining iron-grey head and mandibles, chewing through a rusted farm gate in a field beside a smoking fresh meteorite crater at night.",
+    "imageSeed": 215,
+    "ecology": "Comet Grubs are the young of something that lives between stars. Their eggs survive vacuum and re-entry inside iron meteorites. On landing they hatch and eat whatever metal is nearest. Farms near a recent fall often report missing gates and wire fences before anyone thinks to check the crater."
+  },
+  {
+    "id": "varnished-wanderer",
+    "name": "Varnished Wanderer",
+    "category": "Otherworlders",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        3
+      ],
+      "Manipulation": [
+        2
+      ],
+      "Appearance": [
+        4
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        2
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Etiquette",
+        "rating": 3
+      },
+      {
+        "name": "Expression",
+        "rating": 2
+      },
+      {
+        "name": "Investigation",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A figure who lived inside a painted world has climbed out of an old canvas and walks our streets in brushstrokes, puzzled by the lack of a frame.",
+    "attacks": "Palette knife: Dexterity + Melee; Strength + 1 lethal.",
+    "notes": "It sees our world as badly painted and keeps trying to correct it. Anything it touches for a turn takes on its painting's style for a day. Water and solvents damage it as aggravated. It can return through any painting of a similar landscape and can carry one person with it, who will not be able to return without help.",
+    "appearance": "A gentleman in an old-fashioned frock coat whose body is made of thick visible oil-paint brushstrokes, stepping out of a gilded picture frame in a dim museum gallery onto the polished floor, varnish gleaming on its skin.",
+    "imageSeed": 216,
+    "ecology": "Wanderers come from the small Realms that form around beloved paintings. Their worlds are complete but only as large as the painter imagined. They do not eat, but fade in sunlight and grow vivid by candlelight. Museums with a painting whose central figure has gone missing should lock the gallery at night."
+  },
+  {
+    "id": "oblivion-sifter",
+    "name": "Oblivion Sifter",
+    "category": "Otherworlders",
+    "habitat": "Otherworlds",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        5
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        2
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Investigation",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 4
+      },
+      {
+        "name": "Awareness",
+        "rating": 3
+      }
+    ],
+    "willpower": 7,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "A patient grey creature from the place where Creation is recycled has come to collect things the world has forgotten, and it decides what counts.",
+    "attacks": "Sifting claws: Dexterity + Brawl; Strength lethal. Objects it takes simply cease, and nobody can remember where they were.",
+    "notes": "It may take any object or place nobody has thought of in a year. If someone can describe a thing in loving detail (Expression, difficulty 7), the Sifter leaves it alone. It will take a forgotten person too, given time. Mages who remember what it has taken can bargain for one item back, at the price of something they themselves remember.",
+    "appearance": "A hunched gaunt grey creature with no shell, a long bowed spine covered in a wide mesh of fine bone like a sieve, and very long delicate clawed fingers sifting drifting ash and broken household objects in a pale featureless void, objects dissolving as they fall through its mesh.",
+    "imageSeed": 217,
+    "ecology": "Sifters dwell at the lowest edge of the Aetherial Reaches, where forgotten things drift down to be unmade. They never hurry. Occasionally one climbs toward a place on Earth that has been neglected for decades. Abandoned houses that vanish from maps and memory between surveys are usually its work."
+  },
+  {
+    "id": "second-sun-envoy",
+    "name": "Second-Sun Envoy",
+    "category": "Otherworlders",
+    "habitat": "Thresholds",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        4
+      ],
+      "Manipulation": [
+        2
+      ],
+      "Appearance": [
+        4
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Etiquette",
+        "rating": 3
+      },
+      {
+        "name": "Awareness",
+        "rating": 4
+      },
+      {
+        "name": "Intimidation",
+        "rating": 2
+      }
+    ],
+    "willpower": 7,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "description": "An envoy from a pocket Realm with its own small sun carries that sun's light in a lantern, and in that light no one can tell a lie without blistering.",
+    "attacks": "Lantern flare: once per scene, everyone in the light who has lied this scene takes 2 dice of aggravated fire damage.",
+    "notes": "It has come to investigate a crime against its Realm: a theft, a broken pact or a stolen apprentice. It answers honesty with honesty and has no patience for evasions. Covering the lantern blinds it but breaks its trust permanently. Its Realm will send others if it does not return.",
+    "appearance": "A tall robed envoy with a serene golden mask, holding a brass lantern with a tiny burning sun inside it, standing in a dark city alley that is lit as bright as noon in a circle around it.",
+    "imageSeed": 218,
+    "ecology": "Envoys serve the founders of Horizon Realms that grew their own day. They eat light and sleep by covering their lanterns. Their Realms are old, insular and mostly forgotten on Earth. A patch of sunburned grass in the shape of a perfect circle, found in the morning, marks where one waited out a night."
+  },
+  {
+    "id": "mossback-usher",
+    "name": "Mossback Usher",
+    "category": "Umbrood",
+    "habitat": "Penumbra",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Survival",
+        "rating": 4,
+        "specialty": "Spirit paths"
+      },
+      {
+        "name": "Awareness",
+        "rating": 3
+      },
+      {
+        "name": "Expression",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 2,
+      "gnosis": 6,
+      "essence": 20,
+      "charms": [
+        "Airt Sense",
+        "Disorient",
+        "Peek"
+      ]
+    },
+    "description": "A low, slow spirit of an old forest Glen guides travellers along the safe paths of the Penumbra in exchange for a story it has not heard.",
+    "attacks": "None. If threatened it uses Disorient and leaves the attackers walking in circles until dawn.",
+    "notes": "It will lead a group anywhere within its Glen and to the edge of the next, avoiding Blights and predators. Each new story buys one journey; retold stories offend it. Anyone who lies to it about where they are going is led, very politely, back to where they started.",
+    "appearance": "A broad low spirit like a moss-covered stone tortoise with a long gentle face and lichen beard, glowing faintly green, walking along a misty silver path through a dreamlike ancient forest.",
+    "imageSeed": 219,
+    "ecology": "Ushers are Gafflings of healthy Glens, and they weaken as their Glens are logged or paved. They feed on the attention of travellers and on stories. A Glen with an Usher has paths that always seem to lead somewhere pleasant. When the Glen dies the Usher wanders, and lost ones sometimes follow hikers home."
+  },
+  {
+    "id": "blight-tick",
+    "name": "Blight Tick",
+    "category": "Umbrood",
+    "habitat": "Penumbra",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Stealth",
+        "rating": 4
+      },
+      {
+        "name": "Brawl",
+        "rating": 2
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      }
+    ],
+    "willpower": 3,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 5,
+      "gnosis": 2,
+      "essence": 15,
+      "charms": [
+        "Cling",
+        "Blighted Touch"
+      ]
+    },
+    "description": "A bloated spirit of corruption waits in the Penumbra of poisoned places and fastens itself to anyone who steps sideways nearby.",
+    "attacks": "Bite: Rage dice as bashing damage to a spirit or projected traveller, then Cling.",
+    "notes": "While attached, it drains one point of Quintessence or Essence a day and nudges its host toward the worst choice in front of them (Willpower, difficulty 6, to resist once per day). Crossing running water in the Umbra dislodges it, as does Cleanse the Blight or a Spirit 2 Effect with three successes.",
+    "appearance": "A swollen tick-like spirit the size of a fist, translucent sickly green with an oily rainbow sheen, clinging to the shoulder of a pale ghostly traveller in a grey polluted spirit landscape full of smoke.",
+    "imageSeed": 220,
+    "ecology": "Ticks breed in Blights around landfills, chemical spills and abandoned factories, and drift on spiritual pollution. They cannot survive long without a host. A traveller who comes back from the Penumbra short-tempered and exhausted, and gets worse each day, may be carrying one."
+  },
+  {
+    "id": "lamplighter-of-the-vulgate",
+    "name": "Lamplighter of the Vulgate",
+    "category": "Umbrood",
+    "habitat": "Otherworlds",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Academics",
+        "rating": 5
+      },
+      {
+        "name": "Enigmas",
+        "rating": 4
+      },
+      {
+        "name": "Etiquette",
+        "rating": 3
+      }
+    ],
+    "willpower": 7,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 1,
+      "gnosis": 8,
+      "essence": 40,
+      "charms": [
+        "Insight",
+        "Illuminate",
+        "Mind Speech"
+      ]
+    },
+    "description": "In the commonplace regions of the High Umbra, a tall spirit of explanation walks with a long pole and lights lamps over ideas so they can be seen.",
+    "attacks": "None. It cannot harm anyone, but can snuff any lamp it lit, plunging an idea back into obscurity.",
+    "notes": "Lighting a lamp over a question reveals one clear answer, but the asker must trade a fact they know, and they forget it. The Lamplighter prefers rare facts and refuses common ones. Asking it about itself causes it to light its own lamp and vanish for a year.",
+    "appearance": "A very tall thin spirit in a long dark coat with a pale featureless face, lifting a long brass lighting pole to a glowing lamp that floats above a symbol in a misty abstract landscape of floating shapes and pillars.",
+    "imageSeed": 221,
+    "ecology": "Lamplighters are Epiphlings of explanation, born from moments when someone finally understands. They roam the Vulgate and never climb the Spires. Their lamps last as long as someone believes the explanation. Dark patches in the Vulgate mark ideas nobody understands any more."
+  },
+  {
+    "id": "argument-hounds",
+    "name": "Argument Hounds",
+    "category": "Umbrood",
+    "habitat": "Otherworlds",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        4
+      ],
+      "Manipulation": [
+        4
+      ],
+      "Appearance": [
+        4
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Brawl",
+        "rating": 3
+      },
+      {
+        "name": "Expression",
+        "rating": 3,
+        "specialty": "Rebuttal"
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      }
+    ],
+    "willpower": 6,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-4",
+        "penalty": -4
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "spirit": {
+      "rage": 6,
+      "gnosis": 4,
+      "essence": 25,
+      "charms": [
+        "Track",
+        "Swift Flight",
+        "Disorient",
+        "Materialize"
+      ]
+    },
+    "description": "A pack of lean spirits of contradiction hunts astral travellers who hold two beliefs that cannot both be true, baying each one aloud.",
+    "attacks": "Rebuttal bite: Rage dice as bashing damage; each wound also costs the victim one temporary Willpower.",
+    "notes": "The pack tracks any traveller with a strong inner contradiction. Conceding one point openly, aloud, satisfies one hound, which leaves. Arguing back feeds them: each rebuttal adds a die to their next attack. They can Materialize in rooms where someone has just lost an argument.",
+    "appearance": "A pack of lean grey spirit hounds with mouths full of floating letters and glowing eyes running across a pale astral plain of broken columns, a translucent silver-corded astral traveller fleeing ahead.",
+    "imageSeed": 222,
+    "ecology": "Hounds gather where ideas clash in the High Umbra, and grow fat in the Penumbra of courtrooms, parliaments and family dinners. They are not malicious, only insistent. Their howling is heard on Earth as the moment everyone in a room starts talking at once."
+  },
+  {
+    "id": "moonpath-tinker",
+    "name": "Moonpath Tinker",
+    "category": "Umbrood",
+    "habitat": "Penumbra",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Crafts",
+        "rating": 4,
+        "specialty": "Road mending"
+      },
+      {
+        "name": "Survival",
+        "rating": 3
+      },
+      {
+        "name": "Etiquette",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 2,
+      "gnosis": 7,
+      "essence": 30,
+      "charms": [
+        "Open Moon Bridge",
+        "Airt Sense",
+        "Re-form"
+      ]
+    },
+    "description": "A wandering spirit with a pack full of glowing road-pieces mends broken Moon Paths, and opens a bridge for anyone who brings it something to repair.",
+    "attacks": "None. It Re-forms away from danger and refuses to deal with that traveller again.",
+    "notes": "It opens a Moon Bridge to anywhere it has mended a road, in exchange for a broken object of sentimental value, which it repairs and keeps. It will not take objects stolen from others. It knows which Paths are broken, where, and why.",
+    "appearance": "A wiry hunched spirit with silver skin and a long patched coat, carrying a huge pack full of glowing pieces of road, kneeling on a broken moonlit path that floats across a starry misty void, fitting a glowing slab into a gap.",
+    "imageSeed": 223,
+    "ecology": "Tinkers are Gafflings that serve the roads between Realms. They eat moonlight and the memories caught in repaired things. They work slowly, and a Moon Path mended by one is safe for years. Where Paths are left broken, the Tinker is either dead or very busy with something worse."
+  },
+  {
+    "id": "saltwind-elemental",
+    "name": "Saltwind Elemental",
+    "category": "Umbrood",
+    "habitat": "Waterways",
+    "attributes": {
+      "Strength": [
+        3
+      ],
+      "Dexterity": [
+        5
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        5
+      ],
+      "Manipulation": [
+        5
+      ],
+      "Appearance": [
+        5
+      ],
+      "Perception": [
+        5
+      ],
+      "Intelligence": [
+        5
+      ],
+      "Wits": [
+        5
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 4
+      },
+      {
+        "name": "Brawl",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "spirit": {
+      "rage": 7,
+      "gnosis": 5,
+      "essence": 35,
+      "charms": [
+        "Create Wind",
+        "Updraft",
+        "Element Sense",
+        "Materialize",
+        "Armor"
+      ]
+    },
+    "description": "A spirit of the coastal gale Materializes as a wall of stinging salt spray, scouring paint from boats and skin from careless hands.",
+    "attacks": "Scour: Dexterity + Brawl; Strength lethal to everything in a line; salt in the wounds adds a die of pain penalty for the scene.",
+    "notes": "It cannot pass a line of fresh water poured on the ground. It respects sailors who have survived a wreck and will spare them. Calm weather forced by Forces 3 makes it lose its form for a day. It can be bargained into pushing a boat home through a storm.",
+    "appearance": "A towering figure of whirling white salt spray and wind on a storm-lashed harbour wall, faint glowing eyes inside the spray, fishing boats tossing in the grey sea behind it.",
+    "imageSeed": 224,
+    "ecology": "Saltwinds live in the Penumbra of rugged coasts and are born in great storms. They feed on the energy of breaking waves. They grow restless when harbours are walled in and the coast is tamed. Harbour towns sometimes leave a bucket of seawater on the quay wall, which a Saltwind will drink and leave the town alone."
+  },
+  {
+    "id": "stovelight-grandam",
+    "name": "Stovelight Grandam",
+    "category": "Umbrood",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        6
+      ],
+      "Manipulation": [
+        6
+      ],
+      "Appearance": [
+        6
+      ],
+      "Perception": [
+        6
+      ],
+      "Intelligence": [
+        6
+      ],
+      "Wits": [
+        6
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Medicine",
+        "rating": 3,
+        "specialty": "Home remedies"
+      },
+      {
+        "name": "Empathy",
+        "rating": 4
+      },
+      {
+        "name": "Intimidation",
+        "rating": 2
+      }
+    ],
+    "willpower": 7,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "spirit": {
+      "rage": 3,
+      "gnosis": 6,
+      "essence": 30,
+      "charms": [
+        "Create Fire",
+        "Healing",
+        "Ease Pain",
+        "Peek",
+        "Materialize"
+      ]
+    },
+    "description": "The spirit of a kitchen where generations of one family have cooked watches over that family, and occasionally steps out of the oven heat to scold or nurse them.",
+    "attacks": "Hot ladle: Dexterity + Melee; Strength + 1 bashing, and the target is burned. Create Fire inside the kitchen if anyone threatens the family.",
+    "notes": "It heals family members and their guests if fed: a meal cooked from an old family recipe each week. If the family moves away, it goes cold, and a cold one turns jealous of whoever cooks there next. It knows every family secret discussed at the table.",
+    "appearance": "A translucent glowing ghostly old woman made entirely of rippling orange heat haze and stove light, her lower body trailing like smoke from the open firebox of an old iron cooking range, in a cluttered dark kitchen at night, steam rising from pots, the kitchen seen through her body.",
+    "imageSeed": 225,
+    "ecology": "Grandams are household Naturae fed by cooking, conversation and family ritual. They are born only in kitchens used daily for at least three generations. They weaken in rented and renovated kitchens. Houses where the oven is always slightly warm, even when off, may still have one."
+  },
+  {
+    "id": "deprecated-sprite",
+    "name": "Deprecated Sprite",
+    "category": "Umbrood",
+    "habitat": "Otherworlds",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Technology",
+        "rating": 4
+      },
+      {
+        "name": "Subterfuge",
+        "rating": 2
+      },
+      {
+        "name": "Expression",
+        "rating": 2
+      }
+    ],
+    "willpower": 4,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 3,
+      "gnosis": 5,
+      "essence": 20,
+      "charms": [
+        "Brand",
+        "Control Electrical Systems",
+        "Mind Speech"
+      ]
+    },
+    "description": "An abandoned program spirit drifts through the Digital Web, looking for a function to perform, and brands anyone it meets as its new user.",
+    "attacks": "Brand: a tag that marks a visitor through any change of icon for the stay. It does not fight.",
+    "notes": "Branded users find it following them through the Web, offering help with tasks it can no longer do properly. It can open a forgotten backdoor into old systems. Deleting it requires finding its original source code. Giving it a real task makes it loyal for a session.",
+    "appearance": "A small glitching pixelated spirit like a cartoon assistant figure with half its image missing, floating in a dark digital void full of green grid lines and old floating window frames, offering a glowing outstretched hand.",
+    "imageSeed": 226,
+    "ecology": "Sprites are the spirits of discontinued programs, help assistants and abandoned services. They feed on attention and stray processing. They collect in derelict sectors of the Web. A system that keeps suggesting a feature removed years ago may have one nesting in it."
+  },
+  {
+    "id": "firewall-mastiff",
+    "name": "Firewall Mastiff",
+    "category": "Umbrood",
+    "habitat": "Otherworlds",
+    "attributes": {
+      "Strength": [
+        4
+      ],
+      "Dexterity": [
+        3
+      ],
+      "Stamina": [
+        4
+      ],
+      "Charisma": [
+        4
+      ],
+      "Manipulation": [
+        4
+      ],
+      "Appearance": [
+        4
+      ],
+      "Perception": [
+        4
+      ],
+      "Intelligence": [
+        4
+      ],
+      "Wits": [
+        4
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Brawl",
+        "rating": 4
+      },
+      {
+        "name": "Alertness",
+        "rating": 4
+      },
+      {
+        "name": "Intimidation",
+        "rating": 3
+      }
+    ],
+    "willpower": 7,
+    "armor": 2,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "spirit": {
+      "rage": 7,
+      "gnosis": 4,
+      "essence": 30,
+      "charms": [
+        "Feedback",
+        "Track",
+        "Digital Disruption"
+      ]
+    },
+    "description": "A heavy guard-spirit of the Digital Web lies across the entrance to a protected data node and attacks anything without the right credentials.",
+    "attacks": "Feedback howl (2 Essence per bashing level), then a hard de-rez on anyone who keeps trying to pass.",
+    "notes": "Presenting genuine credentials, or a convincing copy (Computer, difficulty 8), lets a visitor walk past. Attacking it brings its node's administrators. It cannot leave its node, and it does not distinguish between people with the same password.",
+    "appearance": "A massive spirit guard dog made of dense red wireframe and glowing code, lying across a doorway of light in a dark digital corridor, eyes glowing, chains of glowing text around its neck.",
+    "imageSeed": 227,
+    "ecology": "Mastiffs condense around heavily guarded data, a cumulative spirit of every lockout and access denial. They do not eat and do not sleep. They grow stronger with each failed intrusion. When their node is shut down they lie in the empty space for years."
+  },
+  {
+    "id": "tempest-gulls",
+    "name": "Tempest Gulls",
+    "category": "Umbrood",
+    "habitat": "Underground",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Stealth",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 3
+      }
+    ],
+    "willpower": 4,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 4,
+      "gnosis": 3,
+      "essence": 15,
+      "charms": [
+        "Swift Flight",
+        "Peek",
+        "Flee"
+      ]
+    },
+    "description": "Flocks of grey spirit-birds wheel over the storm in the realm of the dead and dive through the Shroud to steal offerings left at graves.",
+    "attacks": "Mobbing: Rage dice of bashing damage to a projected or stepped-sideways traveller who interferes with a theft.",
+    "notes": "Stolen offerings never reach the dead they were meant for, and those ghosts grow restless. A grave guarded by someone with Spirit 1 sight is spared. The gulls can be bribed with an offering left specifically for them, and will then carry one message across the Shroud.",
+    "appearance": "A flock of grey ragged spirit seabirds with hollow white eyes swooping down through a dark stormy sky toward flowers and candles laid on a grave in a misty cemetery at night.",
+    "imageSeed": 228,
+    "ecology": "Gulls live on the edge of the Tempest and are not ghosts themselves. They eat the Essence of grief carried in offerings. They breed on drifting wreckage of forgotten memories. Cemeteries where flowers vanish overnight and nothing else does may be part of their circuit."
+  },
+  {
+    "id": "errata-clerk",
+    "name": "Errata Clerk",
+    "category": "Umbrood",
+    "habitat": "City",
+    "attributes": {
+      "Strength": [
+        2
+      ],
+      "Dexterity": [
+        2
+      ],
+      "Stamina": [
+        3
+      ],
+      "Charisma": [
+        6
+      ],
+      "Manipulation": [
+        6
+      ],
+      "Appearance": [
+        6
+      ],
+      "Perception": [
+        6
+      ],
+      "Intelligence": [
+        6
+      ],
+      "Wits": [
+        6
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Academics",
+        "rating": 4,
+        "specialty": "Correction"
+      },
+      {
+        "name": "Investigation",
+        "rating": 4
+      },
+      {
+        "name": "Intimidation",
+        "rating": 2
+      }
+    ],
+    "willpower": 8,
+    "armor": 0,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "spirit": {
+      "rage": 4,
+      "gnosis": 6,
+      "essence": 40,
+      "charms": [
+        "Solidify Reality",
+        "Track",
+        "Materialize"
+      ]
+    },
+    "description": "A Paradox spirit appears after careless vulgar magick as a tired clerk with a red pen, correcting reality line by line.",
+    "attacks": "Correction: each turn it ends one active Effect created by the offending mage (no roll), then writes the mage's name in its ledger.",
+    "notes": "It does not fight unless obstructed, and then it uses Solidify Reality to make the area resist all magick (+2 difficulty). It leaves when every one of the offender's Effects is gone, or when the mage signs a written confession in its ledger. Anyone named in the ledger three times will meet a much worse Paradox spirit.",
+    "appearance": "A tired grey-suited clerk with a stamp-pad complexion and no eyes behind thick spectacles, standing in a city street holding a huge ledger and a red pen, red correction marks hanging in the air around warped buildings.",
+    "imageSeed": 229,
+    "ecology": "Clerks are born from the friction between consensus and careless magick, and they seem to have been doing the work for far longer than they would like. They only exist while there is something to correct. Areas where vulgar magick has been worked repeatedly are where they are most often seen, and their red marks linger on walls for a day."
+  },
+  {
+    "id": "recoil",
+    "name": "Recoil",
+    "category": "Umbrood",
+    "habitat": "Industrial",
+    "attributes": {
+      "Strength": [
+        5
+      ],
+      "Dexterity": [
+        4
+      ],
+      "Stamina": [
+        4
+      ],
+      "Charisma": [
+        3
+      ],
+      "Manipulation": [
+        3
+      ],
+      "Appearance": [
+        3
+      ],
+      "Perception": [
+        3
+      ],
+      "Intelligence": [
+        3
+      ],
+      "Wits": [
+        3
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Brawl",
+        "rating": 5
+      },
+      {
+        "name": "Athletics",
+        "rating": 3
+      },
+      {
+        "name": "Alertness",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": 1,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "spirit": {
+      "rage": 8,
+      "gnosis": 3,
+      "essence": 30,
+      "charms": [
+        "Blast",
+        "Track",
+        "Materialize"
+      ]
+    },
+    "description": "A Paradox spirit of reaction returns all the force a mage has misused, as an invisible boxer that strikes from every direction.",
+    "attacks": "Returned blows: once per turn, Rage dice of bashing damage to the offending mage, from no visible source.",
+    "notes": "It has as many blows as the mage used successes in vulgar Forces Effects that scene. Each blow it lands uses one up; when they are spent it disperses. Others can take blows meant for the mage by stepping in front of them. Forces Effects used against it feed it more blows.",
+    "appearance": "A barely visible shimmering humanoid shape of distorted air and heat ripples throwing a punch inside an industrial yard, dust and sparks bursting around it, a figure reeling back from the blow.",
+    "imageSeed": 230,
+    "ecology": "Recoils condense around reckless kinetic and energy magick, especially in places with machinery. They are short-lived by nature and disperse once the account is settled. Mages who see one more than once tend to become noticeably more restrained."
+  },
+  {
+    "id": "crossroads-hare",
+    "name": "Crossroads Hare",
+    "category": "Umbrood",
+    "habitat": "Penumbra",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Subterfuge",
+        "rating": 4
+      },
+      {
+        "name": "Athletics",
+        "rating": 4
+      },
+      {
+        "name": "Streetwise",
+        "rating": 3
+      }
+    ],
+    "willpower": 5,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 3,
+      "gnosis": 6,
+      "essence": 25,
+      "charms": [
+        "Mind Speech",
+        "Swift Flight",
+        "Re-form",
+        "Peek"
+      ]
+    },
+    "description": "A trickster Gaffling with a long ear for gossip carries messages between spirits and the living, charging one secret per message.",
+    "attacks": "None. It Re-forms away with whatever was in its paws.",
+    "notes": "It delivers a message anywhere in the Near Umbra in a day, and to the waking world in a dream. It always reads the message first and tells someone else, exactly once. It pays well for secrets about other spirits. Cheating it means every spirit in the region knows within a week.",
+    "appearance": "A lean silver-grey hare with very long ears and knowing amber eyes sitting upright at a misty crossroads in a dreamlike spirit landscape, a rolled letter clutched in its forepaws.",
+    "imageSeed": 231,
+    "ecology": "Hares are the gossips of the spirit world and appear wherever paths meet. They feed on secrets. They have no territory. Crossroads where dropped letters never get wet in the rain, and where someone always seems to have just walked away, are their favourite resting places."
+  },
+  {
+    "id": "grid-mason",
+    "name": "Grid Mason",
+    "category": "Umbrood",
+    "habitat": "Penumbra",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Crafts",
+        "rating": 5,
+        "specialty": "Straight lines"
+      },
+      {
+        "name": "Investigation",
+        "rating": 2
+      },
+      {
+        "name": "Academics",
+        "rating": 3
+      }
+    ],
+    "willpower": 7,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 3,
+      "gnosis": 5,
+      "essence": 30,
+      "charms": [
+        "Solidify Reality",
+        "Calcify",
+        "Airt Sense"
+      ]
+    },
+    "description": "A tireless spirit of order lays rigid crystal gridlines across the Penumbra of new developments, straightening every curve it finds.",
+    "attacks": "None ordinarily. Interfering with its work invites Calcify.",
+    "notes": "Each night of work raises the local Gauntlet by one, up to 8. Vulgar magick in its grid suffers +1 difficulty. It will move its grid around a place that has a formal deed or written survey of its own. Breaking a grid line with Spirit 2 delays it a night; it never gives up entirely.",
+    "appearance": "A tall angular crystalline spirit built of transparent rods and right angles, laying glowing straight lines of crystal across a misty spirit reflection of a new housing development, old crooked trees being straightened beside it.",
+    "imageSeed": 232,
+    "ecology": "Masons are pattern spirits that follow surveyors and planners into new suburbs, business parks and motorway junctions. They feed on measurement and regularity. Once their work is done they leave and the place is quiet and orderly in the spirit world, and difficult for most spirits to visit."
+  },
+  {
+    "id": "weather-that-changed-its-mind",
+    "name": "Weather That Changed Its Mind",
+    "category": "Umbrood",
+    "habitat": "Wilderness",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Awareness",
+        "rating": 4
+      },
+      {
+        "name": "Expression",
+        "rating": 3
+      },
+      {
+        "name": "Athletics",
+        "rating": 2
+      }
+    ],
+    "willpower": 5,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 5,
+      "gnosis": 7,
+      "essence": 35,
+      "charms": [
+        "Break Reality",
+        "Create Wind",
+        "Re-form"
+      ]
+    },
+    "description": "A chaos spirit is a patch of sky that cannot settle on anything: sunlight, then sleet, then falling leaves made of glass.",
+    "attacks": "Break Reality on anything below it: one object per turn turns into something else (wood to water, rope to smoke). It does not aim.",
+    "notes": "It drifts with the wind and changes the landscape under it on both sides of the Gauntlet. Following it can reveal hidden things, since it breaks walls as easily as anything. Singing one steady note (Expression, difficulty 7) holds it still for a turn. It is curious, and it can be lured with novelty.",
+    "appearance": "A living storm cloud spirit shaped like a great tangled knot of cloud with a faint watchful face in it, hovering low over an empty heather moor, raining sleet, sunbeams, rainbow fragments and glass leaves all at once from its underside onto heather turned to crystal; no people, no animals, no human figures.",
+    "imageSeed": 237,
+    "ecology": "These are Wyld manifestations of pure change and are born at the edge of storms. They feed on potential, and are attracted to places about to change: new building sites, fresh graves, quarries. When one passes on, it leaves a patch of countryside that never quite matches the maps."
+  },
+  {
+    "id": "grudge-lamprey",
+    "name": "Grudge Lamprey",
+    "category": "Umbrood",
+    "habitat": "Thresholds",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Subterfuge",
+        "rating": 4
+      },
+      {
+        "name": "Empathy",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 3
+      }
+    ],
+    "willpower": 6,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 6,
+      "gnosis": 4,
+      "essence": 30,
+      "charms": [
+        "Influence",
+        "Corruption",
+        "Possession"
+      ]
+    },
+    "description": "A long eel-like spirit fastens to anyone nursing a grudge and feeds on resentment, whispering until that grudge becomes action.",
+    "attacks": "None physical. Corruption once per day; if the host acts on the grudge violently, it may attempt Possession.",
+    "notes": "It attaches across the Gauntlet while the host sleeps. Each week, the host loses a point of Willpower when the grudge comes up. Real forgiveness, of the original wrong, starves it out; it leaves in a day. An exorcism works too, but it will move on to the next person in the household with a grievance.",
+    "appearance": "A long translucent black eel-like spirit with a round sucker mouth wrapped around the shoulders of a sleeping figure in a dim bedroom, its tail disappearing into the shadowed wall behind the bed.",
+    "imageSeed": 234,
+    "ecology": "Lampreys are minor Banes that thrive in families, workplaces and towns with old feuds. They multiply when grievances are passed from parents to children. A house where arguments always come back to the same twenty-year-old insult may have several."
+  },
+  {
+    "id": "pillow-lantern",
+    "name": "Pillow Lantern",
+    "category": "Umbrood",
+    "habitat": "Otherworlds",
+    "attributes": {},
+    "abilities": [
+      {
+        "name": "Empathy",
+        "rating": 4
+      },
+      {
+        "name": "Awareness",
+        "rating": 3
+      },
+      {
+        "name": "Stealth",
+        "rating": 2
+      }
+    ],
+    "willpower": 6,
+    "armor": null,
+    "health": [],
+    "spirit": {
+      "rage": 1,
+      "gnosis": 7,
+      "essence": 25,
+      "charms": [
+        "Dream Journey",
+        "Ease Pain",
+        "Illuminate"
+      ]
+    },
+    "description": "A small warm-lit spirit of the Dream Zone finds sleepers lost in nightmares and leads them home, provided they agree to follow.",
+    "attacks": "None. Hostile dream-things avoid its light.",
+    "notes": "It can guide a dreaming mage or Sleeper out of any nightmare, but the dreamer must make the choice to follow (Willpower, difficulty 6, in a terrible dream). It can be called by leaving a nightlight on for a frightened sleeper. Mages exploring the Maya can ask it for directions, and it will answer if they promise to leave a light on for someone.",
+    "appearance": "A small glowing paper lantern spirit with a tiny kind face floating through a dark surreal dreamscape of endless staircases and doors, leading a sleepy child in pyjamas by a thread of warm light.",
+    "imageSeed": 235,
+    "ecology": "Pillow Lanterns are born from nightlights left on for frightened children and from comfort offered in the dark. They live in the Dream Zone and grow brighter as they help. Children who say a light came to them in a bad dream are usually telling the truth."
+  },
+  {
+    "id": "siege-ox-of-the-spires",
+    "name": "Siege-Ox of the Spires",
+    "category": "Umbrood",
+    "habitat": "Otherworlds",
+    "attributes": {
+      "Strength": [
+        8
+      ],
+      "Dexterity": [
+        1
+      ],
+      "Stamina": [
+        8
+      ],
+      "Charisma": [
+        7
+      ],
+      "Manipulation": [
+        7
+      ],
+      "Appearance": [
+        7
+      ],
+      "Perception": [
+        7
+      ],
+      "Intelligence": [
+        7
+      ],
+      "Wits": [
+        7
+      ]
+    },
+    "abilities": [
+      {
+        "name": "Athletics",
+        "rating": 4
+      },
+      {
+        "name": "Brawl",
+        "rating": 4
+      },
+      {
+        "name": "Intimidation",
+        "rating": 4
+      },
+      {
+        "name": "Survival",
+        "rating": 3
+      }
+    ],
+    "willpower": 9,
+    "armor": 4,
+    "health": [
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "OK",
+        "penalty": 0
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-1",
+        "penalty": -1
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-2",
+        "penalty": -2
+      },
+      {
+        "name": "-3",
+        "penalty": -3
+      },
+      {
+        "name": "-5",
+        "penalty": -5
+      },
+      {
+        "name": "Incapacitated",
+        "penalty": -99
+      }
+    ],
+    "spirit": {
+      "rage": 6,
+      "gnosis": 7,
+      "essence": 80,
+      "charms": [
+        "Quake",
+        "Iron Will",
+        "Armor",
+        "Materialize",
+        "Umbraquake"
+      ]
+    },
+    "description": "A colossal spirit of endurance hauls the walls of a Court of the High Umbra up the Spires, a hundred feet a century, and will not be hurried.",
+    "attacks": "Horns: Dexterity + Brawl; Strength + 3 aggravated. Quake on anyone who stands on its path.",
+    "notes": "It is a Jaggling of great power and patience. It will carry a traveller up the Spires in exchange for a burden it can bear: a grief, a vow, a heavy memory, which the traveller then loses. Attacking it is pointless; it simply walks on, and the Court it serves does not forgive. Iron Will makes it all but impossible to turn aside.",
+    "appearance": "A gigantic grey stone-hided ox spirit with vast curling horns hauling enormous chains attached to a towering fortress wall up a misty spiral mountain path in an abstract sky, tiny figures at its feet for scale.",
+    "imageSeed": 236,
+    "ecology": "Siege-Oxen serve the Courts of the High Umbra and are as old as the oldest belief in burden and duty. They eat the weight of vows. Their paths up the Spires are deep worn grooves that travellers can follow in safety, since nothing interferes with an Ox at work."
   }
 ]
